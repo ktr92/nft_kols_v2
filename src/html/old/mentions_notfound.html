@@ -1,0 +1,124 @@
+<% var data={ title: "MAIN" , author: "" }; %>
+  <%= _.template(require('../includes/head.html').default)(data) %>
+    <%= _.template(require('../includes/header.html').default)(data) %>
+      <main>
+        <div class="breadcrumbs">
+          <div class="container">
+            <div class="breadcrumbs__items">
+              <ul>
+                <li>
+                  <a href="/">
+                    <span>
+                      <img src="img/Home.svg" alt="">
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span>Victor Ivanov</span>
+                  </a>
+                </li>
+                <li>
+                  <span>The Ugly Duck</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <section class='desktopcontent'>
+
+
+          <div class="topcontent topcontent_left">
+            <div class="container">
+              <div class="pagetitle pagetitle_left">
+                <div class="pagetitle__title text-left">Wallet Analyzer</div>
+              </div>
+              <div class="pagecontent">
+                <div class="pagecontent__text">
+                  <p>Leaderboard for top alpha callers on our website</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="maincontent">
+            <div class="container">
+              <div class="tabsnav ">
+                <div class="tabsnav__links flex content-between items-center tabsnav__links_wallets">
+                  <ul class="flex">
+                    <li class="active">
+                      <a class="change_leaderboard_tab" data-name="popular_tokens" href="#">Profitability Calculator</a>
+                    </li>
+                    <li>
+                      <a class="change_leaderboard_tab" data-name="popular_presales" href="#">Smart Wallets</a>
+                    </li>
+                    <li>
+                      <a class="change_leaderboard_tab" data-name="top_calls" href="#">Favorite</a>
+                    </li>
+
+                  </ul>
+                  <div class="itemsnav itemsnav_table flex items-center content-between mt-0">
+                    <div class="itemsnav__right">
+                      <div class="pagesearch" data-togglewrapper="suggestions">
+                        <div class="pagesearch__form">
+                          <form action="">
+                            <div class="pagesearch__input">
+                              <div class="searchinput">
+                                <input type="text" placeholder="Search" oninput=""
+                                  value='0x618D4e1FfdFa2829E1D50C489E725123Cc4bd554'>
+                                <a href="#" data-toggleclick="headersearch" class="headersearch__close">
+                                  <img src="img/closesearch.svg" alt="">
+                                </a>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="emptyblock emptyblock_lg">
+                <div class="emptyblock__wrapper flex column items-center">
+                  <div class="emptyblock__image">
+                    <div class="emptyblock__img">
+                      <img src="img/empty_folder.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="emptyblock__text"> Your wallet not found </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="mobilecontent">
+          <div class="unavaible">
+            <div class="unavaible__wrapper flex items-center content-center justify-center">
+              <div class="unavaible__content">
+                <div class="unavaible__image"><img src="img/Wavy_Tech-12_Single-10.svg" alt=""></div>
+                <!-- /.unavaible__image -->
+                <div class="unavaible__main">
+                  <div class="unavaible__title unavaible__title_tab">This tool not availvale on your device</div>
+                  <!-- /.unavaible__title -->
+                  <div class="unavaible__title unavaible__title_mob">Page not found</div>
+                  <!-- /.unavaible__title -->
+                  <div class="unavaible__text unavaible__text_tab">Enter this page with PC or Notebook to use
+                    shitscanner</div>
+                  <div class="unavaible__text unavaible__text_mob">The Page you are looking for doesen’t exist or an
+                    other error occurred. Go back to choose a new direction.</div>
+                  <!-- /.unavaible__text -->
+                  <div class="unavaible__button">
+                    <a href="#" class="btn btn_main">Go to mainpage</a>
+                  </div><!-- /.unavaible__button -->
+                </div><!-- /.unavaible__main -->
+              </div><!-- /.unavaible__content -->
+            </div><!-- /.unavaible__wrapper flex items-center content-center justify-center -->
+          </div><!-- /.unavaible -->
+        </section>
+
+      </main>
+      <%= _.template(require('../includes/footer.html').default)(data) %>

@@ -1,0 +1,40 @@
+<% var data = {
+  title: "MAIN",
+  author: ""
+  }; %>
+<%= _.template(require('../includes/head.html').default)(data) %>
+<%= _.template(require('../includes/header.html').default)(data) %>
+<style>
+  ul {
+    list-style: decimal;
+  }
+  li {
+    margin-bottom: 15px;
+    list-style: decimal;
+  }
+  a {
+    color: #000 !important;
+    display: inline-block;
+  }
+ 
+  @media (min-width: 767px) {
+    ul {
+    margin: 30px;
+  
+  } 
+  }
+</style>
+<main>
+    <div class="container">
+     <ul>
+      <li><a href="kol_main.html" target="_blank" rel="noopener noreferrer" class=''>kol_main</a></li>
+      <li><a href="kol_watchlist.html" target="_blank" rel="noopener noreferrer" class=''>kol_watchlist</a></li>
+      <li><a href="kol_newprojects.html" target="_blank" rel="noopener noreferrer" class=''>kol_newprojects</a></li>
+      <li><a href="kol_3kols.html" target="_blank" rel="noopener noreferrer" class=''>kol_3kols</a></li>
+      <li><a href="kol_notfound.html" target="_blank" rel="noopener noreferrer" class=''>kol_notfound</a></li>
+      
+     </ul>
+    </div><!-- /.container -->
+</main>
+
+<%= _.template(require('../includes/footer.html').default)(data) %>

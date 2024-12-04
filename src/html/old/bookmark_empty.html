@@ -1,0 +1,39 @@
+<% var data = {
+  title: "MAIN",
+  author: ""
+  }; %>
+<%= _.template(require('../includes/head.html').default)(data) %>
+<%= _.template(require('../includes/header.html').default)(data) %>
+<main>
+  <div class="topcontent topcontent_left">
+    <div class="container">
+      <div class="pagetitle pagetitle_left">
+        <div class="pagetitle__title text-left">Bookmarks</div>
+      </div> 
+      <div class="pagecontent">
+        <div class="pagecontent__text">
+          <p>Recommendations that you saved.</p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+
+    <div class="maincontent">
+      <div class="container">
+        <div class="emptyblock">
+          <div class="emptyblock__wrapper flex column items-center">
+            <div class="emptyblock__image">
+              <div class="emptyblock__img"><img src="img/empty_folder.svg" alt=""></div>
+            </div>
+            <div class="emptyblock__text">
+              No active recommendations in this category
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+<%= _.template(require('../includes/footer.html').default)(data) %>

@@ -1,0 +1,708 @@
+<% var data={ title: "MAIN" , author: "" }; %>
+  <%= _.template(require('../includes/head.html').default)(data) %>
+    <%= _.template(require('../includes/header.html').default)(data) %>
+      <main>
+        <div class="breadcrumbs">
+          <div class="container">
+            <div class="breadcrumbs__items">
+              <ul>
+                <li>
+                  <a href="/">
+                    <span>
+                      <img src="img/Home.svg" alt="">
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span>Victor Ivanov</span>
+                  </a>
+                </li>
+                <li>
+                  <span>The Ugly Duck</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <section class='desktopcontent'>
+
+          <div class="topcontent topcontent_left">
+            <div class="container">
+              <div class="pagetitle pagetitle_left">
+                <div class="pagetitle__title text-left">Wallet Analyzer</div>
+              </div>
+              <div class="pagecontent">
+                <div class="pagecontent__text">
+                  <p>Leaderboard for top alpha callers on our website</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="maincontent">
+            <div class="container">
+              <div class="tabsnav ">
+                <div class="tabsnav__links flex content-between items-center tabsnav__links_wallets">
+                  <ul class="flex">
+                    <li>
+                      <a class="change_leaderboard_tab" data-name="popular_tokens" href="#">Profitability Calculator</a>
+                    </li>
+                    <li class="active">
+                      <a class="change_leaderboard_tab" data-name="popular_presales" href="#">Smart Wallets</a>
+                    </li>
+                    <li>
+                      <a class="change_leaderboard_tab" data-name="top_calls" href="#">Favorite</a>
+                    </li>
+
+                  </ul>
+                  <div class="itemsnav itemsnav_table flex items-center content-between mt-0 itemsnav_disabled ">
+                    <div class="itemsnav__input inputplaceholder_mintokenstraded oversize">
+                      <div class="inputplaceholder">
+                        <div class="inputplaceholder__placeholder">
+                          <span><img src="img/Lock.svg" alt=""></span>
+                          <span class="">Minimum Tokens
+                            Traded:
+                        </div>
+                        <input disabled name="minimum_shills_cnt" type="text" class="inputplaceholder__input"
+                          value="500">
+
+                        <span class="oversize__tooltip">Текст расказывающий о том что это возможно только с покупкой
+                          платной версии. Можно сразу ссюда добавить кнопку с переходом на оплату</span>
+                      </div>
+
+
+                    </div>
+
+                    <div class="itemsnav__right">
+
+                      <div class="linkset">
+                        <div class="linkset__items statistics_ranges" style="display: flex;">
+                          <div class="linkset__item linkset__item_title oversize">
+                            <span><img src="img/Lock.svg" alt=""></span>
+                            <span class='linkset__title'>Period:</span>
+
+                            <span class="oversize__tooltip">Текст расказывающий о том что это возможно только с покупкой
+                              платной версии. Можно сразу ссюда добавить кнопку с переходом на оплату</span>
+                          </div>
+                          <div class="linkset__item"><a data-value="24 hours" href="#" class="linkset__link active">24
+                              hours</a></div>
+                          <div class="linkset__item"><a data-value="7 days" href="#" class="linkset__link ">7
+                              days</a></div>
+                          <div class="linkset__item"><a data-value="14 days" href="#" class="linkset__link">14 days</a>
+                          </div>
+                          <div class="linkset__item"><a data-value="21 days" href="#" class="linkset__link">21 days</a>
+                          </div>
+                          <div class="linkset__item"><a data-value="30 days" href="#" class="linkset__link">30 days</a>
+                          </div>
+
+
+                        </div>
+                        <div class="linkset__items statistics_ranges_old" style="display: none;">
+                          <div class="linkset__item"><a data-value="all" href="#" class="linkset__link active">All</a>
+                          </div>
+                          <div class="linkset__item"><a data-value="1h" href="#" class="linkset__link">1h</a></div>
+                          <div class="linkset__item"><a data-value="6h" href="#" class="linkset__link">6h</a></div>
+                          <div class="linkset__item"><a data-value="12h" href="#" class="linkset__link">12h</a></div>
+                          <div class="linkset__item"><a data-value="24h" href="#" class="linkset__link">24h</a></div>
+                          <div class="linkset__item"><a data-value="7d" href="#" class="linkset__link">7d</a></div>
+                          <div class="linkset__item"><a data-value="30d" href="#" class="linkset__link">30d</a></div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="tableblock tableblock_tab tableblock_tab_full">
+                <div class="tableblock__wrapper">
+                  <div class="tableblock__table">
+                    <div class="tableblock__scroll">
+                      <div class="tableblock__header">
+                        <div class="tableblock__row">
+
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center     tableblock__col_favorite">
+                            <span class="tableblock__title"></span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_roi flex items-center   tableblock__col_wallet">
+                            <span class="tableblock__title">Wallet</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_bullish flex items-center   tableblock__col_date">
+                            <span class="tableblock__title">Date added</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_shiller flex items-center   tableblock__col_profitability">
+                            <span class="tableblock__title">Profitabillity</span>
+
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center    tableblock__col_tokenstraded">
+                            <span class="tableblock__title">Tokens Traded</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center    tableblock__col_profitpercent">
+                            <span class="tableblock__title">Profit %</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center    tableblock__col_profiteth">
+                            <span class="tableblock__title">Profit ETH</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center    tableblock__col_profitusd">
+                            <span class="tableblock__title">Profit USD</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center    tableblock__col_walleticon">
+
+                          </div>
+
+
+                        </div>
+                      </div>
+                      <div class="tableblock__body">
+                        <div class="tableblock__row">
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_favorite">
+                            <a href='#' class="tableblock__img">
+                              <img class='wallet_like' src="img/wallet_like.svg" alt="">
+                              <img class='wallet_like_active' src="img/wallet_like_active.svg" alt="">
+                            </a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_wallet">
+                            <a href='#' class="tableblock__link">0x202bB2FaB1e35D940FdE99b214Ba49DAfbCef62A</a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_roi flex items-center tableblock__col_default tableblock__col_firstbuy">
+                            <span class="tableblock__date">Oct 5, 22:12:47</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_shiller flex items-center  tableblock__col_profitability">
+                            <span class="tableblock__title">70%</span>
+
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center  tableblock__col_tokenstraded">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitpercent">
+                            <span class="tableblock__title tableblock__value tableblock__value_green">2400%</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profiteth">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitusd">
+                            <span class="tableblock__title">$1,400</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_walleticon">
+                            <a href="#" class="tableblock__img">
+                              <img src="img/walleticon.svg" alt="">
+                            </a>
+                          </div>
+
+
+                        </div><!-- /.tableblock__row -->
+                        <div class="tableblock__row">
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_favorite">
+                            <a href='#' class="tableblock__img active">
+                              <img class='wallet_like' src="img/wallet_like.svg" alt="">
+                              <img class='wallet_like_active' src="img/wallet_like_active.svg" alt="">
+                            </a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_wallet">
+                            <a href='#' class="tableblock__link">0x202bB2FaB1e35D940FdE99b214Ba49DAfbCef62A</a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_roi flex items-center tableblock__col_default tableblock__col_firstbuy">
+                            <span class="tableblock__date">Oct 5, 22:12:47</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_shiller flex items-center  tableblock__col_profitability">
+                            <span class="tableblock__title">70%</span>
+
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center  tableblock__col_tokenstraded">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitpercent">
+                            <span class="tableblock__title tableblock__value tableblock__value_green">2400%</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profiteth">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitusd">
+                            <span class="tableblock__title">$1,400</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_walleticon">
+                            <a href="#" class="tableblock__img">
+                              <img src="img/walleticon.svg" alt="">
+                            </a>
+                          </div>
+
+
+                        </div><!-- /.tableblock__row -->
+                        <div class="tableblock__row">
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_favorite">
+                            <a href='#' class="tableblock__img">
+                              <img class='wallet_like' src="img/wallet_like.svg" alt="">
+                              <img class='wallet_like_active' src="img/wallet_like_active.svg" alt="">
+                            </a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_wallet">
+                            <a href='#' class="tableblock__link">0x202bB2FaB1e35D940FdE99b214Ba49DAfbCef62A</a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_roi flex items-center tableblock__col_default tableblock__col_firstbuy">
+                            <span class="tableblock__date">Oct 5, 22:12:47</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_shiller flex items-center  tableblock__col_profitability">
+                            <span class="tableblock__title">70%</span>
+
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center  tableblock__col_tokenstraded">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitpercent">
+                            <span class="tableblock__title tableblock__value tableblock__value_green">2400%</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profiteth">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitusd">
+                            <span class="tableblock__title">$1,400</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_walleticon">
+                            <a href="#" class="tableblock__img">
+                              <img src="img/walleticon.svg" alt="">
+                            </a>
+                          </div>
+
+
+                        </div><!-- /.tableblock__row -->
+                        <div class="tableblock__row">
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_favorite">
+                            <a href='#' class="tableblock__img">
+                              <img class='wallet_like' src="img/wallet_like.svg" alt="">
+                              <img class='wallet_like_active' src="img/wallet_like_active.svg" alt="">
+                            </a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_wallet">
+                            <a href='#' class="tableblock__link">0x202bB2FaB1e35D940FdE99b214Ba49DAfbCef62A</a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_roi flex items-center tableblock__col_default tableblock__col_firstbuy">
+                            <span class="tableblock__date">Oct 5, 22:12:47</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_shiller flex items-center  tableblock__col_profitability">
+                            <span class="tableblock__title">70%</span>
+
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center  tableblock__col_tokenstraded">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitpercent">
+                            <span class="tableblock__title tableblock__value tableblock__value_green">2400%</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profiteth">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitusd">
+                            <span class="tableblock__title">$1,400</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_walleticon">
+                            <a href="#" class="tableblock__img">
+                              <img src="img/walleticon.svg" alt="">
+                            </a>
+                          </div>
+
+
+                        </div><!-- /.tableblock__row -->
+                        <div class="tableblock__row">
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_favorite">
+                            <a href='#' class="tableblock__img">
+                              <img class='wallet_like' src="img/wallet_like.svg" alt="">
+                              <img class='wallet_like_active' src="img/wallet_like_active.svg" alt="">
+                            </a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_wallet">
+                            <a href='#' class="tableblock__link">0x202bB2FaB1e35D940FdE99b214Ba49DAfbCef62A</a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_roi flex items-center tableblock__col_default tableblock__col_firstbuy">
+                            <span class="tableblock__date">Oct 5, 22:12:47</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_shiller flex items-center  tableblock__col_profitability">
+                            <span class="tableblock__title">70%</span>
+
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center  tableblock__col_tokenstraded">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitpercent">
+                            <span class="tableblock__title tableblock__value tableblock__value_green">2400%</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profiteth">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitusd">
+                            <span class="tableblock__title">$1,400</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_walleticon">
+                            <a href="#" class="tableblock__img">
+                              <img src="img/walleticon.svg" alt="">
+                            </a>
+                          </div>
+
+
+                        </div><!-- /.tableblock__row -->
+                        <div class="tableblock__row">
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_favorite">
+                            <a href='#' class="tableblock__img">
+                              <img class='wallet_like' src="img/wallet_like.svg" alt="">
+                              <img class='wallet_like_active' src="img/wallet_like_active.svg" alt="">
+                            </a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_wallet">
+                            <a href='#' class="tableblock__link">0x202bB2FaB1e35D940FdE99b214Ba49DAfbCef62A</a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_roi flex items-center tableblock__col_default tableblock__col_firstbuy">
+                            <span class="tableblock__date">Oct 5, 22:12:47</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_shiller flex items-center  tableblock__col_profitability">
+                            <span class="tableblock__title">70%</span>
+
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center  tableblock__col_tokenstraded">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitpercent">
+                            <span class="tableblock__title tableblock__value tableblock__value_green">2400%</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profiteth">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitusd">
+                            <span class="tableblock__title">$1,400</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_walleticon">
+                            <a href="#" class="tableblock__img">
+                              <img src="img/walleticon.svg" alt="">
+                            </a>
+                          </div>
+
+
+                        </div><!-- /.tableblock__row -->
+                        <div class="tableblock__row">
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_favorite">
+                            <a href='#' class="tableblock__img">
+                              <img class='wallet_like' src="img/wallet_like.svg" alt="">
+                              <img class='wallet_like_active' src="img/wallet_like_active.svg" alt="">
+                            </a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_wallet">
+                            <a href='#' class="tableblock__link">0x202bB2FaB1e35D940FdE99b214Ba49DAfbCef62A</a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_roi flex items-center tableblock__col_default tableblock__col_firstbuy">
+                            <span class="tableblock__date">Oct 5, 22:12:47</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_shiller flex items-center  tableblock__col_profitability">
+                            <span class="tableblock__title">70%</span>
+
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center  tableblock__col_tokenstraded">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitpercent">
+                            <span class="tableblock__title tableblock__value tableblock__value_green">2400%</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profiteth">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitusd">
+                            <span class="tableblock__title">$1,400</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_walleticon">
+                            <a href="#" class="tableblock__img">
+                              <img src="img/walleticon.svg" alt="">
+                            </a>
+                          </div>
+
+
+                        </div><!-- /.tableblock__row -->
+                        <div class="tableblock__row">
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_favorite">
+                            <a href='#' class="tableblock__img">
+                              <img class='wallet_like' src="img/wallet_like.svg" alt="">
+                              <img class='wallet_like_active' src="img/wallet_like_active.svg" alt="">
+                            </a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_wallet">
+                            <a href='#' class="tableblock__link">0x202bB2FaB1e35D940FdE99b214Ba49DAfbCef62A</a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_roi flex items-center tableblock__col_default tableblock__col_firstbuy">
+                            <span class="tableblock__date">Oct 5, 22:12:47</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_shiller flex items-center  tableblock__col_profitability">
+                            <span class="tableblock__title">70%</span>
+
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center  tableblock__col_tokenstraded">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitpercent">
+                            <span class="tableblock__title tableblock__value tableblock__value_green">2400%</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profiteth">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitusd">
+                            <span class="tableblock__title">$1,400</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_walleticon">
+                            <a href="#" class="tableblock__img">
+                              <img src="img/walleticon.svg" alt="">
+                            </a>
+                          </div>
+
+
+                        </div><!-- /.tableblock__row -->
+                        <div class="tableblock__row">
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_favorite">
+                            <a href='#' class="tableblock__img">
+                              <img class='wallet_like' src="img/wallet_like.svg" alt="">
+                              <img class='wallet_like_active' src="img/wallet_like_active.svg" alt="">
+                            </a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_wallet">
+                            <a href='#' class="tableblock__link">0x202bB2FaB1e35D940FdE99b214Ba49DAfbCef62A</a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_roi flex items-center tableblock__col_default tableblock__col_firstbuy">
+                            <span class="tableblock__date">Oct 5, 22:12:47</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_shiller flex items-center  tableblock__col_profitability">
+                            <span class="tableblock__title">70%</span>
+
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center  tableblock__col_tokenstraded">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitpercent">
+                            <span class="tableblock__title tableblock__value tableblock__value_green">2400%</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profiteth">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitusd">
+                            <span class="tableblock__title">$1,400</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_walleticon">
+                            <a href="#" class="tableblock__img">
+                              <img src="img/walleticon.svg" alt="">
+                            </a>
+                          </div>
+
+
+                        </div><!-- /.tableblock__row -->
+                        <div class="tableblock__row">
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_favorite">
+                            <a href='#' class="tableblock__img">
+                              <img class='wallet_like' src="img/wallet_like.svg" alt="">
+                              <img class='wallet_like_active' src="img/wallet_like_active.svg" alt="">
+                            </a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock_name flex items-center items-center tableblock__col_default tableblock__col_wallet">
+                            <a href='#' class="tableblock__link">0x202bB2FaB1e35D940FdE99b214Ba49DAfbCef62A</a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_roi flex items-center tableblock__col_default tableblock__col_firstbuy">
+                            <span class="tableblock__date">Oct 5, 22:12:47</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_shiller flex items-center  tableblock__col_profitability">
+                            <span class="tableblock__title">70%</span>
+
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center  tableblock__col_tokenstraded">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitpercent">
+                            <span class="tableblock__title tableblock__value tableblock__value_green">2400%</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profiteth">
+                            <span class="tableblock__title">24</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_profitusd">
+                            <span class="tableblock__title">$1,400</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center tableblock__col_default tableblock__col_walleticon">
+                            <a href="#" class="tableblock__img">
+                              <img src="img/walleticon.svg" alt="">
+                            </a>
+                          </div>
+
+
+                        </div><!-- /.tableblock__row -->
+
+                      </div>
+                    </div>
+
+                    <div class="tableblock__footer">
+                      <div class="tableblock__nav">
+                        <div class="tablenav flex items-center content-between">
+                          <div class="tablenav__left" style="display: block;">
+                            <!-- <div class="tablenav__show">
+                              <div class="showby flex items-center" data-toggleclick="showby"
+                                data-toggleactive="showby">
+                                <div class="showby__caption">Show:</div>
+                                <div class="showby__value">
+                                  <span>12</span>
+                                  <img src="img/dropdown_black.svg" alt="">
+                                </div>
+                                <div class="showby__dropdown dropdownblock" data-toggle="showby">
+                                  <div class=" dropdownblock__wrapper">
+                                    <div class="fdropdown__items per_page"><a href="#"
+                                        class="fdropdown__item tableblock__value">50</a><a href="#"
+                                        class="fdropdown__item tableblock__value">100</a></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div> -->
+                          </div>
+                          <div class="tablenav__right">
+                            <div class="tablenav__pagination">
+                              <div class="paginationblock">
+                                <div class="pagination">
+
+                                  <ul>
+                                    <li class="active"><a href="">1</a></li>
+                                    <li><a href="">2</a></li>
+                                    <li><a href="">3</a></li>
+                                    <li><span>...</span></li>
+                                    <li><a href="">162</a></li>
+                                  </ul>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+        </section>
+        <section class="mobilecontent">
+          <div class="unavaible">
+            <div class="unavaible__wrapper flex items-center content-center justify-center">
+              <div class="unavaible__content">
+                <div class="unavaible__image"><img src="img/Wavy_Tech-12_Single-10.svg" alt=""></div>
+                <!-- /.unavaible__image -->
+                <div class="unavaible__main">
+                  <div class="unavaible__title unavaible__title_tab">This tool not availvale on your device</div>
+                  <!-- /.unavaible__title -->
+                  <div class="unavaible__title unavaible__title_mob">Page not found</div>
+                  <!-- /.unavaible__title -->
+                  <div class="unavaible__text unavaible__text_tab">Enter this page with PC or Notebook to use
+                    shitscanner</div>
+                  <div class="unavaible__text unavaible__text_mob">The Page you are looking for doesen’t exist or an
+                    other error occurred. Go back to choose a new direction.</div>
+                  <!-- /.unavaible__text -->
+                  <div class="unavaible__button">
+                    <a href="#" class="btn btn_main">Go to mainpage</a>
+                  </div><!-- /.unavaible__button -->
+                </div><!-- /.unavaible__main -->
+              </div><!-- /.unavaible__content -->
+            </div><!-- /.unavaible__wrapper flex items-center content-center justify-center -->
+          </div><!-- /.unavaible -->
+        </section>
+      </main>
+      <%= _.template(require('../includes/footer.html').default)(data) %>

@@ -1,0 +1,108 @@
+@import './params.scss';
+@import './mixins.scss';
+
+button {
+	cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+.relative {
+  position: relative;
+}
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.items-center{
+  align-items: center;
+}
+.items-bottom {
+  align-items: flex-end;
+}
+
+.fd-columns {
+  flex-direction: column;
+}
+
+.content-center{
+  justify-content: center;
+}
+
+.content-between {
+  justify-content: space-between;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.color-white, .text-white {
+  color: #fff;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.w-half {
+  width: 50%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+.items-start {
+  align-items: flex-start;
+}
+.column {
+  flex-direction: column;
+}
+.mt-30 {
+  margin-top: get-vw-large(30px) !important;
+}
+.w-full {
+  width: 100% !important;
+}
+.inline-flex {
+  display: inline-flex !important;
+}
+
+@media (max-width: 1023px) {
+  .mobile-full {
+    width: 100% !important;
+  }
+}
+
+@include medium-screen {
+  .mt-30 {
+    margin-top: get-vw-medium(30px) !important;
+  }
+}
+
+@include small-screen {
+  .mt-30 {
+    margin-top: get-vw-small(30px) !important;
+  }
+}

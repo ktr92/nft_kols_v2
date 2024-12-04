@@ -1,0 +1,51 @@
+<% var data = {
+  title: "MAIN",
+  author: ""
+  }; %>
+<%= _.template(require('../includes/head.html').default)(data) %>
+<%= _.template(require('../includes/header.html').default)(data) %>
+<main>
+
+  <div class="breadcrumbs">
+    <div class="container">
+      <div class="breadcrumbs__items">
+        <ul>
+          <li>
+            <a href="/">
+              <span>
+                <img src="img/Home.svg" alt="">
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span>Victor Ivanov</span>
+            </a>
+          </li>
+          <li>
+            <span>The Ugly Duck</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="custompage">
+    <div class="maincontent">
+      <div class="container">
+        <div class="noresults custompage__container">
+          <div class="noresults__wrapper custompage__wrapper flex column items-center content-center">
+            <div class="noresults__image">
+              <div class="noresults__img"><img src="img/no_results.svg" alt=""></div>
+            </div>
+            <div class="noresults__title">No results found</div>
+            <div class="noresults__text">We couldn’t find what you searched for. Try searching again.</div>
+            <div class="noresults__button"><a href="" class="btn btn_main">Go to mainpage</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+<%= _.template(require('../includes/footer.html').default)(data) %>

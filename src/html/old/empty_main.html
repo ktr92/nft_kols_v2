@@ -1,0 +1,346 @@
+<% var data = {
+  title: "MAIN",
+  author: ""
+  }; %>
+<%= _.template(require('../includes/head.html').default)(data) %>
+<%= _.template(require('../includes/header.html').default)(data) %>
+<main>
+  <div class="topcontent">
+    <div class="container">
+      <div class="pagetitle">
+        <div class="pagetitle__title">If it’s only about money we are hopeless.</div>
+        <div class="pagetitle__subtitle">If it’s about people we are hopefull.</div>
+      </div> 
+      <div class="pagesearch"  data-togglewrapper="suggestions">
+        <div class="pagesearch__form">
+          <form action="">
+            <div class="pagesearch__input">
+              <div class="searchinput">
+                <input type="text" placeholder="Search" oninput="showSuggestions(this)">
+                <button type="submit" class="btn btn_main">Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="suggestions" data-toggle="suggestions">
+          <div class="suggestions__wrapper">
+            <div class="suggestions__blocks"> 
+              <div class="suggestions__block">
+                <div class="suggestions__title">Cryptocurrencies</div>
+                <div class="suggestions__items">
+                  <a href="#" class="suggestions__item">
+                    <div class="suggestions__icon">
+                      <div class="suggestions__img"><img src="img/Forefront.png" alt=""></div>
+                    </div>
+                    <div class="suggestions__name">Forefront (FF)</div>
+                  </a>
+                  <a href="#" class="suggestions__item">
+                    <div class="suggestions__icon">
+                      <div class="suggestions__img"><img src="img/FFA.png" alt=""></div>
+                    </div>
+                    <div class="suggestions__name">FFA.Games (FFA)</div>
+                  </a>
+                  <a href="#" class="suggestions__item">
+                    <div class="suggestions__icon">
+                      <div class="suggestions__img"><img src="img/FiFaSport.png" alt=""></div>
+                    </div>
+                    <div class="suggestions__name">FiFaSport (FFS)</div>
+                  </a>
+                  <a href="#" class="suggestions__item">
+                    <div class="suggestions__icon">
+                      <div class="suggestions__img"><img src="img/FairyForest.png" alt=""></div>
+                    </div>
+                    <div class="suggestions__name">Fairy Forest (FFN)</div>
+                  </a>
+                </div>
+              </div><!-- /.suggestions__block -->
+
+              <div class="suggestions__block">
+                <div class="suggestions__title">NFT</div>
+                <div class="suggestions__items">
+                  <a href="#" class="suggestions__item">
+                    <div class="suggestions__icon">
+                      <div class="suggestions__img"><img src="img/Forefront2.png" alt=""></div>
+                    </div>
+                    <div class="suggestions__name">Forefront (FF)</div>
+                  </a>
+                  <a href="#" class="suggestions__item">
+                    <div class="suggestions__icon">
+                      <div class="suggestions__img"><img src="img/FFA.png" alt=""></div>
+                    </div>
+                    <div class="suggestions__name">FFA.Games (FFA)</div>
+                  </a>
+                  <a href="#" class="suggestions__item">
+                    <div class="suggestions__icon">
+                      <div class="suggestions__img"><img src="img/FiFaSport.png" alt=""></div>
+                    </div>
+                    <div class="suggestions__name">FiFaSport (FFS)</div>
+                  </a>
+                  <a href="#" class="suggestions__item">
+                    <div class="suggestions__icon">
+                      <div class="suggestions__img"><img src="img/FairyForest.png" alt=""></div>
+                    </div>
+                    <div class="suggestions__name">Fairy Forest (FFN)</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="filterblock">
+        <div class="filterblock__items flex content-center">
+          <div class="filterblock__item">
+            <div class="fdropdown">
+              <div class="fdropdown__button" data-toggleclick="fdropdown__menu1">
+                <span>Category</span>
+                <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.13793 0.716563C8.01584 0.594479 7.81814 0.594479 7.69605 0.716563L5.00022 3.4124L2.3046 0.716563C2.18251 0.594479 1.9848 0.594479 1.86272 0.716563L0.508555 2.07073C0.386471 2.19281 0.386471 2.39052 0.508555 2.5126L4.77939 6.78344C4.84022 6.84469 4.92022 6.8751 5.00022 6.8751C5.08022 6.8751 5.16022 6.84469 5.22126 6.78365L9.49209 2.51281C9.61418 2.39073 9.61418 2.19302 9.49209 2.07094L8.13793 0.716563Z" fill="#212531"/>
+                  </svg>
+                  
+              </div>
+              <div class="fdropdown__menu dropdownblock" data-toggle="fdropdown__menu1">
+                <div class="fdropdown__wrapper dropdownblock__wrapper">
+                  <div class="fdropdown__items">
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter1-1" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter1-1">
+                            <span class="dcheckbox__text">Var. 1</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter1-2" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter1-2">
+                            <span class="dcheckbox__text">Var. 2</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter1-3" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter1-3">
+                            <span class="dcheckbox__text">Var. 3</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter1-4" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter1-4">
+                            <span class="dcheckbox__text">Var. 4</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter1-5" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter1-5">
+                            <span class="dcheckbox__text">Var. 5</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter1-6" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter1-6">
+                            <span class="dcheckbox__text">Var. 6</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="filterblock__item">
+            <div class="fdropdown">
+              <div class="fdropdown__button" data-toggleclick="fdropdown__menu2">
+                <span>Sentimenet</span>
+                <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.13793 0.716563C8.01584 0.594479 7.81814 0.594479 7.69605 0.716563L5.00022 3.4124L2.3046 0.716563C2.18251 0.594479 1.9848 0.594479 1.86272 0.716563L0.508555 2.07073C0.386471 2.19281 0.386471 2.39052 0.508555 2.5126L4.77939 6.78344C4.84022 6.84469 4.92022 6.8751 5.00022 6.8751C5.08022 6.8751 5.16022 6.84469 5.22126 6.78365L9.49209 2.51281C9.61418 2.39073 9.61418 2.19302 9.49209 2.07094L8.13793 0.716563Z" fill="#212531"/>
+                  </svg>
+                  
+              </div>
+              <div class="fdropdown__menu dropdownblock" data-toggle="fdropdown__menu2">
+                <div class="fdropdown__wrapper dropdownblock__wrapper">
+                  <div class="fdropdown__items">
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter2-1" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter2-1">
+                            <span class="dcheckbox__text">Sentimenet. 1</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter2-2" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter2-2">
+                            <span class="dcheckbox__text">Sentimenet. 2</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter2-3" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter2-3">
+                            <span class="dcheckbox__text">Sentimenet. 3</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter2-4" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter2-4">
+                            <span class="dcheckbox__text">Sentimenet. 4</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter2-5" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter2-5">
+                            <span class="dcheckbox__text">Sentimenet. 5</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter2-6" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter2-6">
+                            <span class="dcheckbox__text">Sentimenet. 6</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="filterblock__item">
+            <div class="fdropdown">
+              <div class="fdropdown__button" data-toggleclick="fdropdown__menu3">
+                <span>Blockchain</span>
+                <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.13793 0.716563C8.01584 0.594479 7.81814 0.594479 7.69605 0.716563L5.00022 3.4124L2.3046 0.716563C2.18251 0.594479 1.9848 0.594479 1.86272 0.716563L0.508555 2.07073C0.386471 2.19281 0.386471 2.39052 0.508555 2.5126L4.77939 6.78344C4.84022 6.84469 4.92022 6.8751 5.00022 6.8751C5.08022 6.8751 5.16022 6.84469 5.22126 6.78365L9.49209 2.51281C9.61418 2.39073 9.61418 2.19302 9.49209 2.07094L8.13793 0.716563Z" fill="#212531"/>
+                  </svg>
+                  
+              </div>
+              <div class="fdropdown__menu dropdownblock" data-toggle="fdropdown__menu3">
+                <div class="fdropdown__wrapper dropdownblock__wrapper">
+                  <div class="fdropdown__items">
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter3-1" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter3-1">
+                            <span class="dcheckbox__text">Blockchain. 1</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter3-2" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter3-2">
+                            <span class="dcheckbox__text">Blockchain. 2</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter3-3" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter3-3">
+                            <span class="dcheckbox__text">Blockchain. 3</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter3-4" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter3-4">
+                            <span class="dcheckbox__text">Blockchain. 4</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter3-5" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter3-5">
+                            <span class="dcheckbox__text">Blockchain. 5</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter3-6" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter3-6">
+                            <span class="dcheckbox__text">Blockchain. 6</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+
+    <div class="maincontent">
+      <div class="container">
+        <div class="emptyblock">
+          <div class="emptyblock__wrapper flex column items-center">
+            <div class="emptyblock__image">
+              <div class="emptyblock__img"><img src="img/empty_folder.svg" alt=""></div>
+            </div>
+            <div class="emptyblock__text">
+              No active recommendations in this category
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+</main>
+<%= _.template(require('../includes/footer.html').default)(data) %>

@@ -1,0 +1,107 @@
+<% var data={ title: "MAIN" , author: "" }; %>
+  <%= _.template(require('../includes/head.html').default)(data) %>
+    <%= _.template(require('../includes/header_v2.html').default)(data) %>
+      <main>
+        <div class="breadcrumbs">
+          <div class="container">
+            <div class="breadcrumbs__items">
+              <ul>
+                <li>
+                  <a href="/">
+                    <span>
+                      <img src="img/Home.svg" alt="">
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span>Victor Ivanov</span>
+                  </a>
+                </li>
+                <li>
+                  <span>The Ugly Duck</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <a href="#popup_auth_mentions" data-toggle='modal' class="btn btn_main"> Log In </a>
+
+        </div><!-- /.container -->
+
+        <br><br>
+
+        <div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_auth_mentions'>
+          <div class="modal-dialog" role="document">
+            <form action="">
+              <div class="modal-content">
+                <div class="modal-title">Sign In</div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                    <img src="img/closebutton.svg" alt="">
+                  </span>
+                </button>
+                <div class="modal-body">
+                  <div class="formblock">
+                    <div class="formblock__main">
+                      <div class="formblock__item">
+                        <div class="formblock__title">Email <span class="red">*</span>
+                        </div>
+                        <div class="formblock__input">
+                          <input type="text" value="" >
+                        </div>
+                      </div>
+                      <div class="formblock__item">
+                        <div class="formblock__title">Password <span class="red">*</span>
+                        </div>
+                        <div class="formblock__input">
+                          <div class="inputpassword">
+                            <input type="password">
+                            <img src="img/Invisible.svg" alt="" data-toggle="password" class="password_invisible">
+                            <img src="img/Eye2.svg" alt="" data-toggle="password" class="password_visible">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.formblock__main -->
+                
+                  <div class="modal-submit modal-submit_v2">
+                    <div class="buttonsrow">
+                      <div class="buttonsrow__item buttonsrow__item_full">
+                        <button type='submit' class='btn btn_main'>Log In</button>
+                      </div>
+                    </div>
+                    <!-- /.buttonsrow -->
+                  </div>
+                  <div class="textlogin flex content-center items-center textlogin_v2">
+                    <div class="textlogin__text">Don't have an account yet?</div>
+                    <div class="textlogin__link">
+                      <a href="">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11 22C4.93458 22 0 17.0654 0 11C0 4.93462 4.93458 0 11 0C17.0655 0 22 4.93458 22 11C22 17.0655 17.0654 22 11 22Z" fill="#36E956"/>
+                          <path d="M11 0V22C17.0654 22 22 17.0654 22 11C22 4.93454 17.0654 0 11 0Z" fill="#30C14A"/>
+                          <path d="M11 19.4219C6.35619 19.4219 2.57812 15.6438 2.57812 11C2.57812 6.35613 6.35619 2.57811 11 2.57811C15.6439 2.57811 19.422 6.35617 19.422 11C19.422 15.6439 15.6438 19.4219 11 19.4219Z" fill="#30CA4C"/>
+                          <path d="M11 2.57811V19.4219C15.6438 19.4219 19.4219 15.6438 19.4219 11C19.4219 6.35613 15.6438 2.57811 11 2.57811Z" fill="#2DA342"/>
+                          <path d="M14.1474 14.2859H7.83983C7.55155 14.2859 7.29829 14.0944 7.2197 13.817L6.0288 9.6132C5.96542 9.38942 6.02752 9.14887 6.19127 8.9837C6.35503 8.81857 6.59505 8.75442 6.81935 8.81591L8.76886 9.35036L10.4903 7.1252C10.6124 6.96741 10.8006 6.87503 11.0001 6.87503C11.1995 6.87503 11.3878 6.96741 11.5099 7.1252L13.2313 9.35036L15.1807 8.81591C15.4054 8.75433 15.6457 8.8187 15.8094 8.98434C15.9732 9.14995 16.0349 9.39105 15.9708 9.61496L14.767 13.8188C14.6878 14.0953 14.435 14.2859 14.1474 14.2859Z" fill="white"/>
+                          <path d="M15.8094 8.98437C15.6456 8.81877 15.4052 8.75436 15.1806 8.81594L13.2312 9.35039L11.5098 7.12523C11.3877 6.96745 11.1995 6.87506 11 6.87506V14.2859H14.1474C14.435 14.2859 14.6878 14.0953 14.767 13.8187L15.9707 9.61495C16.0348 9.39108 15.9731 9.14998 15.8094 8.98437Z" fill="#E2E2E2"/>
+                          </svg>
+                          
+                        <span>Purchase Pro</span>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- /.textlogin -->
+                </div>
+                <!-- /.formblock -->
+              </div>
+          </div>
+          </form>
+        </div>
+
+
+        
+      </main>
+      <%= _.template(require('../includes/footer.html').default)(data) %>

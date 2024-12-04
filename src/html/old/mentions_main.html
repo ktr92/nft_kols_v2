@@ -1,0 +1,611 @@
+<% var data={ title: "MAIN" , author: "" }; %>
+  <%= _.template(require('../includes/head.html').default)(data) %>
+    <%= _.template(require('../includes/header_v2.html').default)(data) %>
+      <main>
+        
+
+
+
+          <div class="maincontent maincontent_v2">
+            <div class="container"> 
+              <div class="tabsnav onlyDesktop">
+                <div class="tabsnav__links flex content-between items-center tabsnav__links_wallets">
+                  <div class="itemsnav itemsnav_table flex items-center content-between mt-0 ">
+                    <div class="itemsnav__right">
+                      <div class="pagesearch pagesearch_v2" data-togglewrapper="suggestions">
+                        <div class="pagesearch__form">
+                          <form action="">
+                            <div class="pagesearch__input">
+                              <div class="searchinput">
+                                <input type="text" placeholder="Search by ticker" oninput=""
+                                  value='Aifisbb'>
+                                <!-- <a href="#" data-toggleclick="headersearch" class="headersearch__close">
+                                  <img src="img/closesearch.svg" alt="">
+                                </a> -->
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center content-between itemsnav_v2">
+                    <ul class="flex tabsbuttons ">
+                      <li>
+                        <a class="change_leaderboard_tab" data-name="popular_tokens" href="#">New</a>
+                      </li>
+                      <li>
+                        <a class="change_leaderboard_tab" data-name="popular_presales" href="#">Curated</a>
+                      </li>
+                      <li class="active">
+                        <a class="change_leaderboard_tab " data-name="top_calls" href="#">Everyone</a>
+                      </li>
+  
+                    </ul>
+
+
+                    <div class="flex items-center">
+                    
+                      <div class="linkset linkset_v2">
+                        <div class="linkset__items statistics_ranges" style="display: flex;">
+                         
+                          <div class="linkset__item"><a data-value="15m" href="#" class="linkset__link ">15m</a></div>
+                          <div class="linkset__item"><a data-value="30m" href="#" class="linkset__link ">30m</a></div>
+                          <div class="linkset__item"><a data-value="1h" href="#" class="linkset__link ">1h</a></div>
+                          <div class="linkset__item"><a data-value="3h" href="#" class="linkset__link ">3h</a></div>
+                          <div class="linkset__item"><a data-value="6h" href="#" class="linkset__link ">6h</a></div>
+                          <div class="linkset__item"><a data-value="12h" href="#" class="linkset__link ">12h</a></div>
+                          <div class="linkset__item"><a data-value="24h" href="#" class="linkset__link active">24h</a></div>
+                          <div class="linkset__item"><a data-value="3d" href="#" class="linkset__link ">3d</a></div>
+                          <div class="linkset__item"><a data-value="7d" href="#" class="linkset__link ">7d</a></div>
+                        </div>
+                       
+                      </div>
+                      <div class="pagesearch__slide onlyTablet">
+                        <li class="mainmenu__search ">
+                          <a href="#" data-toggleclick="headersearch" class="active"><img src="img/Search.svg" alt=""></a>
+                        </li>
+                        <div class="headersearch" data-toggle="headersearch" data-togglewrapper="suggestions">
+                          <form action="">
+                            <div class="headersearch__wrapper">
+                              <div class="headersearch__bg">
+                                <input type="text" placeholder="Search by ticker">
+                                <a href="#" data-toggleclick="headersearch" class="headersearch__close">
+                                  <img src="img/closesearch.svg" alt="">
+                                </a>
+                              </div><!-- /.headersearch__bg -->
+
+                                <button type="submit" class="headersearch__button">
+                                  <img src="img/Search.svg" alt="">
+                                </button>
+                            </div>
+                            
+                        </form>
+                        </div>
+                      </div><!-- /.pagesearch__slide -->
+                    </div><!-- /.flex -->
+
+                     
+
+                  </div><!-- /.flex -->
+
+                 
+                  
+                </div>
+              </div>
+
+              <div class="mentionspage">
+                <div class="mentionspage__items">
+                  <div class="mentionspage__item">
+                    <div class="mentionsblock">
+                      <div class="mentionsblock__wrapper">
+                        <div class="mentionsblock__aside">
+                          <div class="mentionsaside">
+                            <div class="mentionsaside__title">
+                              <a href="#" class="mentionsaside__name">$BCH</a><!-- /.mentionsaside__name -->
+                              <div class="mentionsaside__stickers">
+                                <div class="mentionsaside__sticker mentionsaside__sticker_new">NEW</div><!-- /.mentionsaside__sticker mentionsaside__sticker_new -->
+                              </div><!-- /.mentionsaside__stickers -->
+                            </div><!-- /.mentionsaside__title -->
+                            <div class="mentionsaside__params">
+                              <div class="mentionsaside__param">1h mentions: 5</div><!-- /.mentionsaside__param -->
+                              <div class="mentionsaside__param">24h mentions: 14</div><!-- /.mentionsaside__param -->
+                            </div><!-- /.mentionsaside__params -->
+                          </div><!-- /.mentionsaside -->
+                        </div><!-- /.mentionsblock__aside -->
+                        <div class="mentionsblock__main">
+                          <div class="mentionsmain">
+                            <div class="mentionsmain__wrapper" data-wrapper='mentions'>
+                              <div class="mentionsmain__items">
+                                <div class="mentionsmain__item">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@Goingbr0ke</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">33k incoming $BTC -:NAH JUST THE 200 MA https://t.co/lEE72esRMb</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                                <div class="mentionsmain__item">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@ben_mcclymans</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">IS THIS REALLY A DIP ? We are seeing raised concerns about the price action of $BTC but it's a beautiful consolidation in a triangle pattern right now. Break $70k and we move higher Hold this $65k 💪 https://t.co/RntJdtZGbj https://t.co/hETCIDl9Cx (@oct_trades)</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                                <div class="mentionsmain__item">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@2xnmore</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">RT @2xnmore: These are predictions for the following Top #altcoins for the #bullrun. $BTC $170,000 $ETH $13,000 $TAO $5,600 $SOL $1,000 $…</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                                <div class="mentionsmain__item mentionsmain__item_off">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@2xnmore</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">said the exact same thing a couple days ago !!! 100k for $btc and $100 for $route is when people turn bullish https://t.co/aE5QRI10de</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                                <div class="mentionsmain__item mentionsmain__item_off">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@Goingbr0ke</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">33k incoming $BTC -:NAH JUST THE 200 MA https://t.co/lEE72esRMb</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                                <div class="mentionsmain__item mentionsmain__item_tobehidden mentionsmain__item_hidden">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@Goingbr0ke</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">33k incoming $BTC -:NAH JUST THE 200 MA https://t.co/lEE72esRMb</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                                <div class="mentionsmain__item mentionsmain__item_tobehidden mentionsmain__item_hidden">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@Goingbr0ke</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">33k incoming $BTC -:NAH JUST THE 200 MA https://t.co/lEE72esRMb</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                              </div><!-- /.mentionsmain__items -->
+                              <div class="mentionsmain__button">
+                             
+                                   <!-- ??? в планшетной и мобильной версии, по клику убирается класс mentionsmain__item_hidden, скрытые выводятся ??? - скрипт внизу этого шаблона -->
+                               
+                                <a href="#" data-showmore='mentions'>
+                                  <span class='mentions_showmore'>Show more</span>
+                                  <span  class='mentions_showmoreIcon'>
+                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M6.51037 1.57313C6.4127 1.47546 6.25453 1.47546 6.15687 1.57313L4.0002 3.72979L1.8437 1.57313C1.74603 1.47546 1.58787 1.47546 1.4902 1.57313L0.406868 2.65646C0.309202 2.75413 0.309202 2.91229 0.406868 3.00996L3.82353 6.42663C3.8722 6.47563 3.9362 6.49996 4.0002 6.49996C4.0642 6.49996 4.1282 6.47563 4.17703 6.4268L7.5937 3.01013C7.69137 2.91246 7.69137 2.75429 7.5937 2.65663L6.51037 1.57313Z" fill="#30CA4C"/>
+                                      </svg>
+                                  </span>
+                             
+                                    
+                                </a>
+                             
+                              </div><!-- /.mentionsmain__button -->
+                            </div><!-- /.mentionsmain__wrapper -->
+                          </div><!-- /.mentionsmain -->
+                        </div><!-- /.mentionsblock__main -->
+                      </div><!-- /.mentionsblock__wrapper -->
+                    </div><!-- /.mentionsblock -->
+                  </div><!-- /.mentionspage__item -->
+
+                  <div class="mentionspage__item">
+                    <div class="mentionsblock">
+                      <div class="mentionsblock__wrapper">
+                        <div class="mentionsblock__aside">
+                          <div class="mentionsaside">
+                            <div class="mentionsaside__title">
+                              <a href="#" class="mentionsaside__name">$BCH</a><!-- /.mentionsaside__name -->
+                              <div class="mentionsaside__stickers">
+                                <div class="mentionsaside__sticker mentionsaside__sticker_new">NEW</div><!-- /.mentionsaside__sticker mentionsaside__sticker_new -->
+                              </div><!-- /.mentionsaside__stickers -->
+                            </div><!-- /.mentionsaside__title -->
+                            <div class="mentionsaside__params">
+                              <div class="mentionsaside__param">1h mentions: 5</div><!-- /.mentionsaside__param -->
+                              <div class="mentionsaside__param">24h mentions: 14</div><!-- /.mentionsaside__param -->
+                            </div><!-- /.mentionsaside__params -->
+                          </div><!-- /.mentionsaside -->
+                        </div><!-- /.mentionsblock__aside -->
+                        <div class="mentionsblock__main">
+                          <div class="mentionsmain">
+                            <div class="mentionsmain__wrapper" data-wrapper='mentions'>
+                              <div class="mentionsmain__items">
+                                <div class="mentionsmain__item">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@Goingbr0ke</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">33k incoming $BTC -:NAH JUST THE 200 MA https://t.co/lEE72esRMb</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                                <div class="mentionsmain__item">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@ben_mcclymans</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">IS THIS REALLY A DIP ? We are seeing raised concerns about the price action of $BTC but it's a beautiful consolidation in a triangle pattern right now. Break $70k and we move higher Hold this $65k 💪 https://t.co/RntJdtZGbj https://t.co/hETCIDl9Cx (@oct_trades)</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                                <div class="mentionsmain__item">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@2xnmore</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">RT @2xnmore: These are predictions for the following Top #altcoins for the #bullrun. $BTC $170,000 $ETH $13,000 $TAO $5,600 $SOL $1,000 $…</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                                <div class="mentionsmain__item mentionsmain__item_off">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@2xnmore</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">said the exact same thing a couple days ago !!! 100k for $btc and $100 for $route is when people turn bullish https://t.co/aE5QRI10de</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                                <div class="mentionsmain__item mentionsmain__item_off">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@Goingbr0ke</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">33k incoming $BTC -:NAH JUST THE 200 MA https://t.co/lEE72esRMb</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                                <div class="mentionsmain__item mentionsmain__item_tobehidden mentionsmain__item_hidden">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@Goingbr0ke</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">33k incoming $BTC -:NAH JUST THE 200 MA https://t.co/lEE72esRMb</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                                <div class="mentionsmain__item mentionsmain__item_tobehidden mentionsmain__item_hidden">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@Goingbr0ke</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">33k incoming $BTC -:NAH JUST THE 200 MA https://t.co/lEE72esRMb</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                              </div><!-- /.mentionsmain__items -->
+                              <div class="mentionsmain__button">
+                             
+                                <!-- ??? в планшетной и мобильной версии, по клику убирается класс mentionsmain__item_hidden, скрытые выводятся ??? - скрипт внизу этого шаблона -->
+                            
+                             <a href="#" data-showmore='mentions'>
+                               <span class='mentions_showmore'>Show more</span>
+                               <span  class='mentions_showmoreIcon'>
+                                 <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                   <path d="M6.51037 1.57313C6.4127 1.47546 6.25453 1.47546 6.15687 1.57313L4.0002 3.72979L1.8437 1.57313C1.74603 1.47546 1.58787 1.47546 1.4902 1.57313L0.406868 2.65646C0.309202 2.75413 0.309202 2.91229 0.406868 3.00996L3.82353 6.42663C3.8722 6.47563 3.9362 6.49996 4.0002 6.49996C4.0642 6.49996 4.1282 6.47563 4.17703 6.4268L7.5937 3.01013C7.69137 2.91246 7.69137 2.75429 7.5937 2.65663L6.51037 1.57313Z" fill="#30CA4C"/>
+                                   </svg>
+                               </span>
+                          
+                                 
+                             </a>
+                          
+                           </div><!-- /.mentionsmain__button -->
+                            </div><!-- /.mentionsmain__wrapper -->
+                          </div><!-- /.mentionsmain -->
+                        </div><!-- /.mentionsblock__main -->
+                      </div><!-- /.mentionsblock__wrapper -->
+                    </div><!-- /.mentionsblock -->
+                  </div><!-- /.mentionspage__item -->
+                  <div class="mentionspage__item">
+                    <div class="mentionsblock">
+                      <div class="mentionsblock__wrapper">
+                        <div class="mentionsblock__aside">
+                          <div class="mentionsaside">
+                            <div class="mentionsaside__title">
+                              <a href="#" class="mentionsaside__name">$BCH</a><!-- /.mentionsaside__name -->
+                              <div class="mentionsaside__stickers">
+                                <div class="mentionsaside__sticker mentionsaside__sticker_new">NEW</div><!-- /.mentionsaside__sticker mentionsaside__sticker_new -->
+                              </div><!-- /.mentionsaside__stickers -->
+                            </div><!-- /.mentionsaside__title -->
+                            <div class="mentionsaside__params">
+                              <div class="mentionsaside__param">1h mentions: 5</div><!-- /.mentionsaside__param -->
+                              <div class="mentionsaside__param">24h mentions: 14</div><!-- /.mentionsaside__param -->
+                            </div><!-- /.mentionsaside__params -->
+                          </div><!-- /.mentionsaside -->
+                        </div><!-- /.mentionsblock__aside -->
+                        <div class="mentionsblock__main">
+                          <div class="mentionsmain">
+                            <div class="mentionsmain__wrapper" data-wrapper='mentions'>
+                              <div class="mentionsmain__items">
+                                <div class="mentionsmain__item">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@Goingbr0ke</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">33k incoming $BTC -:NAH JUST THE 200 MA https://t.co/lEE72esRMb</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                                <div class="mentionsmain__item">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@ben_mcclymans</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">IS THIS REALLY A DIP ? We are seeing raised concerns about the price action of $BTC but it's a beautiful consolidation in a triangle pattern right now. Break $70k and we move higher Hold this $65k 💪 https://t.co/RntJdtZGbj https://t.co/hETCIDl9Cx (@oct_trades)</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                                <div class="mentionsmain__item">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@2xnmore</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">RT @2xnmore: These are predictions for the following Top #altcoins for the #bullrun. $BTC $170,000 $ETH $13,000 $TAO $5,600 $SOL $1,000 $…</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                                <div class="mentionsmain__item mentionsmain__item_off">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@2xnmore</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">said the exact same thing a couple days ago !!! 100k for $btc and $100 for $route is when people turn bullish https://t.co/aE5QRI10de</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                                <div class="mentionsmain__item mentionsmain__item_off">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@Goingbr0ke</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">33k incoming $BTC -:NAH JUST THE 200 MA https://t.co/lEE72esRMb</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                                <div class="mentionsmain__item mentionsmain__item_tobehidden mentionsmain__item_hidden">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@Goingbr0ke</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">33k incoming $BTC -:NAH JUST THE 200 MA https://t.co/lEE72esRMb</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                                <div class="mentionsmain__item mentionsmain__item_tobehidden mentionsmain__item_hidden">
+                                  <div class="mentionscard">
+                                    <div class="mentionscard__wrapper">
+                                      <div class="mentionscard__aside">
+                                        <div class="mentionscard__name">
+                                          <a href="#">@Goingbr0ke</a>
+                                        </div><!-- /.mentionscard__name -->
+                                         <div class="mentionscard__info">5 mins ago</div><!-- /.mentionscard__info -->
+                                        </div><!-- /.mentionscard__aside -->
+                                      <div class="mentionscard__main">
+                                        <div class="mentionscard__content">33k incoming $BTC -:NAH JUST THE 200 MA https://t.co/lEE72esRMb</div><!-- /.mentionscard__content -->
+                                      </div><!-- /.mentionscard__main -->
+                                    </div><!-- /.mentionscard__wrapper -->
+                                  </div><!-- /.mentionscard -->
+                                </div><!-- /.mentionsmain__item -->
+                              </div><!-- /.mentionsmain__items -->
+                              <div class="mentionsmain__button">
+                             
+                                <!-- ??? в планшетной и мобильной версии, по клику убирается класс mentionsmain__item_hidden, скрытые выводятся ??? - скрипт внизу этого шаблона -->
+                            
+                             <a href="#" data-showmore='mentions'>
+                               <span class='mentions_showmore'>Show more</span>
+                               <span  class='mentions_showmoreIcon'>
+                                 <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                   <path d="M6.51037 1.57313C6.4127 1.47546 6.25453 1.47546 6.15687 1.57313L4.0002 3.72979L1.8437 1.57313C1.74603 1.47546 1.58787 1.47546 1.4902 1.57313L0.406868 2.65646C0.309202 2.75413 0.309202 2.91229 0.406868 3.00996L3.82353 6.42663C3.8722 6.47563 3.9362 6.49996 4.0002 6.49996C4.0642 6.49996 4.1282 6.47563 4.17703 6.4268L7.5937 3.01013C7.69137 2.91246 7.69137 2.75429 7.5937 2.65663L6.51037 1.57313Z" fill="#30CA4C"/>
+                                   </svg>
+                               </span>
+                          
+                                 
+                             </a>
+                          
+                           </div><!-- /.mentionsmain__button -->
+                            </div><!-- /.mentionsmain__wrapper -->
+                          </div><!-- /.mentionsmain -->
+                        </div><!-- /.mentionsblock__main -->
+                      </div><!-- /.mentionsblock__wrapper -->
+                    </div><!-- /.mentionsblock -->
+                  </div><!-- /.mentionspage__item -->
+                </div><!-- /.mentionspage__items -->
+
+                <div class="mentionspage__nav">
+                  <div class="paginationblock">
+                    <div class="pagination">
+                      <a href="#" class="pagination__arrLeft disabled">
+                        <img src="img/pagiRight.svg" alt="">
+                      </a>
+                      <ul>
+                        <li class="active"><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><span>...</span></li>
+                        <li><a href="">162</a></li>
+                      </ul>
+                      <a href="#" class="pagination__arrRight pagination__arrLeft">
+                        <img src="img/pagiRight.svg" alt="">
+                      </a>
+                    </div>
+                  </div>
+                </div><!-- /.mentionspage__nav -->
+              </div><!-- /.mentionspage -->
+
+              
+            </div>
+          </div>
+        
+
+      </main>
+
+      <script>
+        $('[data-showmore="mentions"]').on('click', e => {
+          e.preventDefault()
+          const $wrapper =  $(e.target).closest('[data-wrapper="mentions"]')
+          const $button = $wrapper.find('[data-showmore="mentions"]')
+
+          if (!$button.hasClass('active')) {
+            $wrapper
+            .find('.mentionsmain__item_tobehidden')
+            .removeClass('mentionsmain__item_hidden')
+
+            $button.find('.mentions_showmore').text('Show less')                                  
+            $button.find('.mentions_showmoreIcon').addClass('rotate') 
+
+            $button.addClass('active')
+
+          } else {
+            $wrapper
+            .find('.mentionsmain__item_tobehidden')
+            .addClass('mentionsmain__item_hidden')
+
+            $button.find('.mentions_showmore').text('Show more')                                  
+            $button.find('.mentions_showmoreIcon').removeClass('rotate') 
+
+            $button.removeClass('active')
+
+          }
+
+                                   
+          })
+       </script>
+
+      <%= _.template(require('../includes/footer.html').default)(data) %>

@@ -1,0 +1,219 @@
+@import 'params.scss';
+
+@function get-vw-xxlarge($font){
+ /*  $vw-viewport-large: 2500;
+	$vw-context: $vw-viewport-large * 0.01 * 1px;
+	@return $font / $vw-context * 1vw; */
+	@return $font;
+  }
+@function get-vw-large($font){
+/* 	$vw-viewport-large: 1920;
+	$vw-context: $vw-viewport-large * 0.01 * 1px;
+	@return $font / $vw-context * 1vw; */
+	@return $font;
+  }
+  
+  
+  @function get-vw-medium($font){
+	/* $vw-viewport-medium: 834;
+	$vw-context: $vw-viewport-medium * 0.01 * 1px;
+	@return $font / $vw-context * 1vw; */
+	@return $font;
+  }
+  
+  
+  @function get-vw-small($font){
+	/* $vw-viewport-small: 320;
+	$vw-context: $vw-viewport-small * 0.01 * 1px;
+	@return $font / $vw-context * 1vw; */
+	@return $font;
+  }
+  
+  @function get-vw-xxsmall($font){
+	/* $vw-viewport-small: 375;
+	$vw-context: $vw-viewport-small * 0.01 * 1px;
+	@return $font / $vw-context * 1vw; */
+	@return $font;
+  }
+
+  
+  $imagecard_scale: 895/500;
+
+  @function get-vw-modal($font){
+    $vw-viewport-modal: 1920 * $imagecard_scale;
+    $vw-context: $vw-viewport-modal * 0.01 * 1px;
+    @return $font / $vw-context * 1vw;
+    @return $font;
+  }
+
+  @function get-vw-modal_medium($font){
+    $vw-viewport-modal: 834 * $imagecard_scale;
+    $vw-context: $vw-viewport-modal * 0.01 * 1px;
+    @return $font / $vw-context * 1vw;
+    @return $font;
+  }
+  $imagecard_scale_small: 895/252;
+
+  @function get-vw-modal_small($font){
+    $vw-viewport-modal: 320 * $imagecard_scale_small;
+    $vw-context: $vw-viewport-modal * 0.01 * 1px;
+    @return $font / $vw-context * 1vw;
+    @return $font;
+  }
+
+
+  $imagecard_largest_scale: 831/831;
+
+  @function get-vw-modal_largest($font){
+    $vw-viewport-modal: 1920 * $imagecard_largest_scale;
+    $vw-context: $vw-viewport-modal * 0.01 * 1px;
+    @return $font / $vw-context * 1vw;
+    @return $font;
+  }
+
+
+  $imagecard_largest_scale_medium: 831/690;
+  @function get-vw-modal_medium_largest($font){
+    $vw-viewport-modal: 834 * $imagecard_largest_scale_medium;
+    $vw-context: $vw-viewport-modal * 0.01 * 1px;
+    @return $font / $vw-context * 1vw;
+    @return $font;
+  }
+  $imagecard_largest_scale_small: 895/252;
+
+  @function get-vw-modal_small_largest($font){
+    $vw-viewport-modal: 320 * $imagecard_largest_scale_small;
+    $vw-context: $vw-viewport-modal * 0.01 * 1px;
+    @return $font / $vw-context * 1vw;
+    @return $font;
+  }
+
+@mixin container {
+  width: 100%;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 0 6.25vw;
+  max-width: 1920px;
+}
+
+@mixin clear {
+  padding: 0;
+  margin: 0;
+  
+  list-style: none;
+}
+
+@mixin clear-list {
+  @include clear;
+  list-style: none;
+}
+
+
+@mixin xlarge-screen() {
+  @media only screen and (max-width: 1679px) {
+    @content;
+  }
+}
+
+@mixin medium-screen() {
+  @media only screen and (max-width: 1090px) {
+    @content;
+  }
+}
+
+
+@mixin small-screen() {
+  @media only screen and (max-width: 811px) {
+    @content;
+  }
+}
+@mixin xxsmall-screen() {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin dropdown($icon: '../img/ChevronDown.svg'){
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right:  get-vw-large(14px);
+  &:after {
+    content: url($icon);
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: get-vw-large(6px);
+    position: absolute;
+    right: 0;
+    width:  get-vw-large(8px);
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+
+@mixin imagecenter ($padding: 24.62%, $fill: width) {
+  display: block;
+  height: 0;
+  padding-top: $padding;
+  position: relative;
+  overflow: hidden;
+
+   
+
+  img:not([role='presentation']) {
+    position: absolute;
+    
+    left: -9999px;
+    right: -9999px;
+    top: -9999px;
+    bottom: -9999px;
+    margin: auto;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    overflow: hidden;
+    /* @if $fill == width {
+      width: 100% !important;
+      max-height: initial !important;
+      height: initial !important;
+    }
+    @else {
+      height: 100% !important;
+      max-width: initial !important;
+      width: initial !important;
+    } */
+  }  
+}
+
+@mixin imageblock ($fill: width) {
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  img:not([role='presentation']) {
+    position: absolute;
+    
+    left: -9999px;
+    right: -9999px;
+    top: -9999px;
+    bottom: -9999px;
+    margin: auto;
+
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    overflow: hidden;
+
+    /* @if $fill == width {
+      width: 100% !important;
+      max-height: initial !important;
+      height: initial !important;
+    }
+    @else {
+      height: 100% !important;
+      max-width: initial !important;
+      width: initial !important;
+    } */
+  }  
+}

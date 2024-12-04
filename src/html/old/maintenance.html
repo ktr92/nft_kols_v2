@@ -1,0 +1,44 @@
+<% var data = {
+  title: "COMING SOON",
+  author: ""
+  }; %>
+<%= _.template(require('../includes/head.html').default)(data) %>
+<main>
+  <div class="landlayout landlayout_type2">
+    <div class="container">
+      <div class="landlayout__wrapper flex content-between items-center ">
+        <div class="landlayout__main flex fd-columns content-between">
+            <div class="landlayout__header">
+              <div class="logo" id="landlayout-logo"><a href="#"><img src="img/Leak.me_1.svg" alt=""></a></div>
+            </div>
+            <div class="landlayout__image landlayout__image_tablet onlyMobile">
+              <div class="landlayout__img"><img src="img/maintenance.svg" alt=""></div>
+            </div>
+            <div class="landlayout__content">
+              <div class="titleblock">
+                <div class="titleblock__title"> 
+                  <div class="titleblock__default">We are under </div>
+                  <div class="titleblock__green">Maintenance</div>
+                </div>
+                <div class="titleblock__description">We are improving our website.</div>
+              </div>
+            </div>
+            <div class="landlayout__footer">
+              <div class="socials">
+                <div class="socials__items">
+                  <div class="socials__item"><a href="//twitter.com/leakmeee" target="_blank"><img src="img/Twitter.svg" alt=""></a></div>
+                <div class="socials__item"><a href="//discord.gg/FzXFJyMjH" target="_blank"><img src="img/Discord.svg" alt=""></a></div>
+                <div class="socials__item"><a href="mailto:support@leak.me" target="_blank"><img src="img/Mail.svg" alt=""></a></div>
+                </div>
+              </div>
+            </div>
+           
+        </div>
+        <div class="landlayout__image onlyDesktop hideTablet">
+          <div class="landlayout__img"><img src="img/maintenance.svg" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</main>
+<script src="js/index.js"></script>

@@ -1,0 +1,1726 @@
+<% var data = {
+  title: "MAIN",
+  author: ""
+  }; %>
+<%= _.template(require('../includes/head.html').default)(data) %>
+<%= _.template(require('../includes/header.html').default)(data) %>
+<main>
+  <div class="topcontent">
+    <div class="container">
+      <div class="pagetitle">
+        <div class="pagetitle__title">If it’s only about money we are hopeless.</div>
+        <div class="pagetitle__subtitle">If it’s about people we are hopefull.</div>
+      </div> 
+      <div class="pagesearch"  data-togglewrapper="suggestions">
+        <div class="pagesearch__form">
+          <form action=""> 
+            <div class="pagesearch__input">
+              <div class="searchinput">
+                <input type="text" placeholder="Search" oninput="showSuggestions(this)">
+                <button type="submit" class="btn btn_main">Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="suggestions" data-toggle="suggestions">
+          <div class="suggestions__wrapper">
+            <div class="suggestions__blocks"> 
+              <div class="suggestions__block">
+                <div class="suggestions__title">Cryptocurrencies</div>
+                <div class="suggestions__items">
+                  <a href="#" class="suggestions__item">
+                    <div class="suggestions__icon">
+                      <div class="suggestions__img"><img src="img/Forefront.png" alt=""></div>
+                    </div>
+                    <div class="suggestions__name">Forefront (FF)</div>
+                  </a>
+                  <a href="#" class="suggestions__item">
+                    <div class="suggestions__icon">
+                      <div class="suggestions__img"><img src="img/FFA.png" alt=""></div>
+                    </div>
+                    <div class="suggestions__name">FFA.Games (FFA)</div>
+                  </a>
+                  <a href="#" class="suggestions__item">
+                    <div class="suggestions__icon">
+                      <div class="suggestions__img"><img src="img/FiFaSport.png" alt=""></div>
+                    </div>
+                    <div class="suggestions__name">FiFaSport (FFS)</div>
+                  </a>
+                  <a href="#" class="suggestions__item">
+                    <div class="suggestions__icon">
+                      <div class="suggestions__img"><img src="img/FairyForest.png" alt=""></div>
+                    </div>
+                    <div class="suggestions__name">Fairy Forest (FFN)</div>
+                  </a>
+                </div>
+              </div><!-- /.suggestions__block -->
+
+              <div class="suggestions__block">
+                <div class="suggestions__title">NFT</div>
+                <div class="suggestions__items">
+                  <a href="#" class="suggestions__item">
+                    <div class="suggestions__icon">
+                      <div class="suggestions__img"><img src="img/Forefront2.png" alt=""></div>
+                    </div>
+                    <div class="suggestions__name">Forefront (FF)</div>
+                  </a>
+                  <a href="#" class="suggestions__item">
+                    <div class="suggestions__icon">
+                      <div class="suggestions__img"><img src="img/FFA.png" alt=""></div>
+                    </div>
+                    <div class="suggestions__name">FFA.Games (FFA)</div>
+                  </a>
+                  <a href="#" class="suggestions__item">
+                    <div class="suggestions__icon">
+                      <div class="suggestions__img"><img src="img/FiFaSport.png" alt=""></div>
+                    </div>
+                    <div class="suggestions__name">FiFaSport (FFS)</div>
+                  </a>
+                  <a href="#" class="suggestions__item">
+                    <div class="suggestions__icon">
+                      <div class="suggestions__img"><img src="img/FairyForest.png" alt=""></div>
+                    </div>
+                    <div class="suggestions__name">Fairy Forest (FFN)</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="filterblock">
+        <div class="filterblock__items flex content-center">
+          <div class="filterblock__item">
+            <div class="fdropdown">
+              <div class="fdropdown__button" data-toggleclick="fdropdown__menu1">
+                <span>Category</span>
+                <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.13793 0.716563C8.01584 0.594479 7.81814 0.594479 7.69605 0.716563L5.00022 3.4124L2.3046 0.716563C2.18251 0.594479 1.9848 0.594479 1.86272 0.716563L0.508555 2.07073C0.386471 2.19281 0.386471 2.39052 0.508555 2.5126L4.77939 6.78344C4.84022 6.84469 4.92022 6.8751 5.00022 6.8751C5.08022 6.8751 5.16022 6.84469 5.22126 6.78365L9.49209 2.51281C9.61418 2.39073 9.61418 2.19302 9.49209 2.07094L8.13793 0.716563Z" fill="#212531"/>
+                  </svg>
+                  
+              </div>
+              <div class="fdropdown__menu dropdownblock" data-toggle="fdropdown__menu1">
+                <div class="fdropdown__wrapper dropdownblock__wrapper">
+                  <div class="fdropdown__items">
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter1-1" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter1-1">
+                            <span class="dcheckbox__text">Var. 1</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter1-2" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter1-2">
+                            <span class="dcheckbox__text">Var. 2</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter1-3" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter1-3">
+                            <span class="dcheckbox__text">Var. 3</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter1-4" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter1-4">
+                            <span class="dcheckbox__text">Var. 4</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter1-5" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter1-5">
+                            <span class="dcheckbox__text">Var. 5</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter1-6" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter1-6">
+                            <span class="dcheckbox__text">Var. 6</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="filterblock__item">
+            <div class="fdropdown">
+              <div class="fdropdown__button" data-toggleclick="fdropdown__menu2">
+                <span>Sentimenet</span>
+                <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.13793 0.716563C8.01584 0.594479 7.81814 0.594479 7.69605 0.716563L5.00022 3.4124L2.3046 0.716563C2.18251 0.594479 1.9848 0.594479 1.86272 0.716563L0.508555 2.07073C0.386471 2.19281 0.386471 2.39052 0.508555 2.5126L4.77939 6.78344C4.84022 6.84469 4.92022 6.8751 5.00022 6.8751C5.08022 6.8751 5.16022 6.84469 5.22126 6.78365L9.49209 2.51281C9.61418 2.39073 9.61418 2.19302 9.49209 2.07094L8.13793 0.716563Z" fill="#212531"/>
+                  </svg>
+                  
+              </div>
+              <div class="fdropdown__menu dropdownblock" data-toggle="fdropdown__menu2">
+                <div class="fdropdown__wrapper dropdownblock__wrapper">
+                  <div class="fdropdown__items">
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter2-1" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter2-1">
+                            <span class="dcheckbox__text">Sentimenet. 1</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter2-2" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter2-2">
+                            <span class="dcheckbox__text">Sentimenet. 2</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter2-3" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter2-3">
+                            <span class="dcheckbox__text">Sentimenet. 3</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter2-4" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter2-4">
+                            <span class="dcheckbox__text">Sentimenet. 4</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter2-5" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter2-5">
+                            <span class="dcheckbox__text">Sentimenet. 5</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter2-6" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter2-6">
+                            <span class="dcheckbox__text">Sentimenet. 6</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="filterblock__item">
+            <div class="fdropdown">
+              <div class="fdropdown__button" data-toggleclick="fdropdown__menu3">
+                <span>Blockchain</span>
+                <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.13793 0.716563C8.01584 0.594479 7.81814 0.594479 7.69605 0.716563L5.00022 3.4124L2.3046 0.716563C2.18251 0.594479 1.9848 0.594479 1.86272 0.716563L0.508555 2.07073C0.386471 2.19281 0.386471 2.39052 0.508555 2.5126L4.77939 6.78344C4.84022 6.84469 4.92022 6.8751 5.00022 6.8751C5.08022 6.8751 5.16022 6.84469 5.22126 6.78365L9.49209 2.51281C9.61418 2.39073 9.61418 2.19302 9.49209 2.07094L8.13793 0.716563Z" fill="#212531"/>
+                  </svg>
+                  
+              </div>
+              <div class="fdropdown__menu dropdownblock" data-toggle="fdropdown__menu3">
+                <div class="fdropdown__wrapper dropdownblock__wrapper">
+                  <div class="fdropdown__items">
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter3-1" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter3-1">
+                            <span class="dcheckbox__text">Blockchain. 1</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter3-2" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter3-2">
+                            <span class="dcheckbox__text">Blockchain. 2</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter3-3" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter3-3">
+                            <span class="dcheckbox__text">Blockchain. 3</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter3-4" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter3-4">
+                            <span class="dcheckbox__text">Blockchain. 4</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter3-5" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter3-5">
+                            <span class="dcheckbox__text">Blockchain. 5</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                    <div class="fdropdown__item">
+                      <div class="dcheckbox">
+                        <label for="filter3-6" class="dcheckbox__label">
+                          <span>
+                            <input type="checkbox" id="filter3-6">
+                            <span class="dcheckbox__text">Blockchain. 6</span>
+                          </span>
+                        </label>                                  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+
+      <div class="maincontent">
+        <div class="container">
+  
+        <div class="itemsblock">
+          <div class="itemsblock__items flex">
+            <div class="itemsblock__item" data-toggleitem="item">
+              <div class="card">
+                <div class="card__wrapper">
+                  <div class="card__header flex content-between items-center">
+                    <div class="card__profile cardprofile flex items-center">
+                      <div class="cardprofile__image">
+                        <div class="cardprofile__img"><img src="img/man.png" alt=""></div>
+                      </div>
+                      <div class="cardprofile__info">
+                        <div class="cardprofile__name">Victor Ivanov</div>
+                        <div class="cardprofile__stats flex items-center">
+                          <div class="cardstat hideTablet">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">7 400 followers</div>
+                          </div>
+                          <div class="cardstat hideTablet">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">518 Shills</div>
+                          </div>
+                          <div class="cardstat cardstat_green">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">87% Profitable</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__follow">
+                      <a href="#" class="btn">Follow</a>
+                    </div>
+                  </div>
+                  <div class="card__main">
+                    <div class="card__item">
+                      <div class="carditem flex items-center">
+                        <div class="carditem__image">
+                          <div class="carditem__img">
+                            <img src="img/card.png" alt="">
+                          </div>
+                          <div class="carditem__sticker">
+                            <div class="sticker sticker_purple">NFT</div>
+                          </div>
+                        </div>
+                        <div class="carditem__main">
+                          <div class="carditem__header flex content-between items-center">
+                            <div class="carditem__title flex items-center">
+                              <span class="carditem__name">The Ugly Duck</span>
+                              <div class="carditem__icon">
+                                <img src="img/ChartArrowRise.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="carditem__stat carditem__stat_green">+79.2%</div>
+                          </div>
+                          <div class="carditem__params flex items-center hideTablet">
+                            <div class="carditem__param">
+                              <div class="carditem__paramname">5 SOL</div>
+                              <div class="carditem__paramtext">Entry price</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname">10 SOL</div>
+                              <div class="carditem__paramtext">Current Price</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname green">5</div>
+                              <div class="carditem__paramtext">Bullish</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname red">20</div>
+                              <div class="carditem__paramtext">Bearish</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carditem__params flex items-center onlyTablet">
+                        <div class="carditem__param">
+                          <div class="carditem__paramname">5 SOL</div>
+                          <div class="carditem__paramtext">Entry price</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname">10 SOL</div>
+                          <div class="carditem__paramtext">Current Price</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname green">5</div>
+                          <div class="carditem__paramtext">Bullish</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname red">20</div>
+                          <div class="carditem__paramtext">Bearish</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__footer">
+                    <div class="cardcontent">
+                      <div class="cardcontent__params flex items-center">
+                        <div class="cardcontent__param">29.12.2020</div>
+                        <div class="cardcontent__param">Duration: 29 days</div>
+                      </div>
+                      <div class="cardcontent__text">Vivamus sodales tortor et felis blandit tincidunt. Nullam sit amet elementum nisi. Fusce vitae libero elit. Ut leo</div>
+                      <div class="cardcontent__buttons flex items-center content-between">
+                        <div class="cardcontent__rate flex items-center">
+                          <div class="cardcontent__button cardcontent__like">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__caption">5</div>
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M5.95833 20.9167H4.58333C3.57087 20.9167 2.75 20.0958 2.75 19.0833V11.2917C2.75 10.2792 3.57087 9.45833 4.58333 9.45833H7.79167V19.0833C7.79167 20.0958 6.97079 20.9167 5.95833 20.9167ZM18.6372 10.6358C18.1995 10.1733 17.595 9.91804 16.934 9.91666H13.5208C13.5208 9.91666 14.0204 7.91054 14.1923 7.23771C14.4517 6.21975 14.504 5.36312 14.3555 4.54179C14.2785 4.11508 14.1414 3.56279 13.7638 3.07375C13.4956 2.72633 13.1601 2.50037 12.766 2.40137C12.1793 2.25516 11.8273 2.44262 11.6165 3.03066C11.599 3.07833 10.862 5.67341 10.862 5.67341C10.8043 5.87829 10.7488 6.04146 10.664 6.173C10.1195 7.02183 9.46138 7.84729 8.70788 8.68879V19.7607C10.752 20.3447 13.8256 20.8795 14.0351 20.8992C14.1543 20.9112 14.2725 20.9167 14.3898 20.9167C16.0435 20.9167 17.4978 19.8025 17.9236 18.1584C18.3077 16.6743 19.0992 13.125 19.0992 13.125C19.1625 12.8908 19.2344 12.6254 19.25 12.3357C19.2844 11.6936 19.0667 11.0905 18.6372 10.6358Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="cardcontent__button cardcontent__like cardcontent__like_dislike">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__caption">5</div>
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.0417 2.58334H17.4167C18.4291 2.58334 19.25 3.40421 19.25 4.41667V12.2083C19.25 13.2208 18.4291 14.0417 17.4167 14.0417H14.2083V4.41667C14.2083 3.40421 15.0292 2.58334 16.0417 2.58334ZM3.36279 12.8642C3.8005 13.3267 4.40504 13.582 5.06596 13.5833H8.47917C8.47917 13.5833 7.97958 15.5895 7.80771 16.2623C7.54829 17.2803 7.49604 18.1369 7.64454 18.9582C7.72154 19.3849 7.85858 19.9372 8.23625 20.4263C8.50437 20.7737 8.83987 20.9996 9.23404 21.0986C9.82071 21.2448 10.1727 21.0574 10.3835 20.4693C10.401 20.4217 11.138 17.8266 11.138 17.8266C11.1957 17.6217 11.2512 17.4585 11.336 17.327C11.8805 16.4782 12.5386 15.6527 13.2921 14.8112V3.73925C11.248 3.15534 8.17437 2.62046 7.96492 2.60075C7.84575 2.58883 7.7275 2.58334 7.61017 2.58334C5.9565 2.58334 4.50221 3.69755 4.07642 5.34159C3.69233 6.82567 2.90079 10.375 2.90079 10.375C2.83754 10.6092 2.76558 10.8746 2.75 11.1643C2.71562 11.8064 2.93333 12.4095 3.36279 12.8642Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="cardcontent__actions flex items-center">
+                          <div class="cardcontent__button">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.7288 20.4582C16.5872 20.4582 16.4465 20.4146 16.3273 20.3285L10.9997 16.4927L5.67201 20.3285C5.46209 20.4793 5.18617 20.5003 4.95655 20.3825C4.72738 20.2652 4.58301 20.0287 4.58301 19.7707V6.02067C4.58301 4.378 5.91951 3.0415 7.56217 3.0415H14.4372C16.0798 3.0415 17.4163 4.378 17.4163 6.02067V19.7707C17.4163 20.0287 17.272 20.2652 17.0423 20.3825C16.9433 20.433 16.8361 20.4582 16.7288 20.4582Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                              <div class="cardaction__caption">Save</div>
+                            </a>
+                          </div>
+                          <div class="cardcontent__button">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.7295 3.0415C16.2719 3.04208 15.8205 3.14808 15.4104 3.35128C15.0004 3.55448 14.6427 3.84942 14.365 4.21321C14.0874 4.57701 13.8972 4.99988 13.8094 5.44901C13.7216 5.89815 13.7385 6.36148 13.8586 6.80306L13.8058 6.82902L7.67204 9.89502L7.61922 9.92098C7.34108 9.56331 6.98502 9.2738 6.57813 9.07446C6.17124 8.87513 5.72425 8.77123 5.27116 8.77067C4.48103 8.77067 3.72327 9.08455 3.16457 9.64325C2.60587 10.202 2.29199 10.9597 2.29199 11.7498C2.29199 12.54 2.60587 13.2977 3.16457 13.8564C3.72327 14.4151 4.48103 14.729 5.27116 14.729C5.72455 14.7287 6.1719 14.6249 6.57912 14.4256C6.98634 14.2263 7.34268 13.9366 7.62101 13.5787L7.67204 13.6047L13.8058 16.6707L13.856 16.6957C13.7355 17.1376 13.7186 17.6012 13.8065 18.0507C13.8944 18.5002 14.0847 18.9233 14.3627 19.2873C14.6407 19.6512 14.9988 19.9462 15.4093 20.1493C15.8198 20.3523 16.2715 20.458 16.7295 20.4582C17.5196 20.4582 18.2774 20.1443 18.8361 19.5856C19.3948 19.0269 19.7087 18.2691 19.7087 17.479C19.7087 16.6889 19.3948 15.9311 18.8361 15.3724C18.2774 14.8137 17.5196 14.4998 16.7295 14.4998C16.3119 14.5004 15.8991 14.5888 15.5179 14.7592C15.1367 14.9296 14.7955 15.1783 14.5166 15.489L14.4199 15.4407L8.28703 12.3747L8.19124 12.3272C8.26615 11.9462 8.26584 11.5542 8.19035 11.1733L8.28703 11.125L14.4199 8.059L14.5139 8.01156C14.7932 8.32249 15.1348 8.57117 15.5166 8.74143C15.8983 8.9117 16.3115 8.99974 16.7295 8.99984C17.5196 8.99984 18.2774 8.68596 18.8361 8.12726C19.3948 7.56856 19.7087 6.81079 19.7087 6.02067C19.7087 5.23055 19.3948 4.47278 18.8361 3.91408C18.2774 3.35538 17.5196 3.0415 16.7295 3.0415Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                </div>
+                              </div>
+                              <div class="cardaction__caption">Share</div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!--/ .card -->
+            </div> <!--/ .itemsblock__item -->
+            
+            
+            <div class="itemsblock__item" data-toggleitem="item">
+              <div class="card">
+                <div class="card__wrapper">
+                  <div class="card__header flex content-between items-center">
+                    <div class="card__profile cardprofile flex items-center">
+                      <div class="cardprofile__image">
+                        <div class="cardprofile__img"><img src="img/man.png" alt=""></div>
+                      </div>
+                      <div class="cardprofile__info">
+                        <div class="cardprofile__name">Victor Ivanov</div>
+                        <div class="cardprofile__stats flex items-center">
+                          <div class="cardstat hideTablet">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">7 400 followers</div>
+                          </div>
+                          <div class="cardstat hideTablet">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">518 Shills</div>
+                          </div>
+                          <div class="cardstat cardstat_yellow">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text ">48% Profitable</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__follow">
+                      <a href="#" class="btn btn_active">Following</a>
+                    </div>
+                  </div>
+                  <div class="card__main">
+                    <div class="card__item">
+                      <div class="carditem flex items-center">
+                        <div class="carditem__image">
+                          <div class="carditem__img">
+                            <img src="img/card.png" alt="">
+                          </div>
+                          <div class="carditem__sticker">
+                            <div class="sticker sticker_green">Token</div>
+                          </div>
+                        </div>
+                        <div class="carditem__main">
+                          <div class="carditem__header flex content-between items-center">
+                            <div class="carditem__title flex items-center">
+                              <span class="carditem__name">The Ugly Duck</span>
+                              <div class="carditem__icon">
+                                <img src="img/ChartArrowRise.svg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                      
+                      
+                    </div>
+                  </div>
+                  <div class="card__footer">
+                    <div class="cardcontent">
+                      <div class="cardcontent__params flex items-center">
+                        <div class="cardcontent__param">29.12.2020</div>
+                        <div class="cardcontent__param">
+                          <div class="cardcontent__tags flex items-center">
+                            <div class="tag tag_green">Update</div>
+                            <div class="tag tag_default">Closed</div>
+                            <div class="tag tag_greenish">NEW</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cardcontent__text">Vivamus sodales tortor et felis blandit tincidunt. Nullam sit amet elementum nisi. Fusce vitae libero elit. Ut leo</div>
+                      <div class="cardcontent__buttons flex items-center content-between">
+                        <div class="cardcontent__rate flex items-center">
+                          <div class="cardcontent__button cardcontent__like">
+                            <a href="#" class="cardaction active">
+                              <div class="cardaction__caption">5</div>
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M5.95833 20.9167H4.58333C3.57087 20.9167 2.75 20.0958 2.75 19.0833V11.2917C2.75 10.2792 3.57087 9.45833 4.58333 9.45833H7.79167V19.0833C7.79167 20.0958 6.97079 20.9167 5.95833 20.9167ZM18.6372 10.6358C18.1995 10.1733 17.595 9.91804 16.934 9.91666H13.5208C13.5208 9.91666 14.0204 7.91054 14.1923 7.23771C14.4517 6.21975 14.504 5.36312 14.3555 4.54179C14.2785 4.11508 14.1414 3.56279 13.7638 3.07375C13.4956 2.72633 13.1601 2.50037 12.766 2.40137C12.1793 2.25516 11.8273 2.44262 11.6165 3.03066C11.599 3.07833 10.862 5.67341 10.862 5.67341C10.8043 5.87829 10.7488 6.04146 10.664 6.173C10.1195 7.02183 9.46138 7.84729 8.70788 8.68879V19.7607C10.752 20.3447 13.8256 20.8795 14.0351 20.8992C14.1543 20.9112 14.2725 20.9167 14.3898 20.9167C16.0435 20.9167 17.4978 19.8025 17.9236 18.1584C18.3077 16.6743 19.0992 13.125 19.0992 13.125C19.1625 12.8908 19.2344 12.6254 19.25 12.3357C19.2844 11.6936 19.0667 11.0905 18.6372 10.6358Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="cardcontent__button cardcontent__like cardcontent__like_dislike">
+                            <a href="#" class="cardaction active">
+                              <div class="cardaction__caption">5</div>
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.0417 2.58334H17.4167C18.4291 2.58334 19.25 3.40421 19.25 4.41667V12.2083C19.25 13.2208 18.4291 14.0417 17.4167 14.0417H14.2083V4.41667C14.2083 3.40421 15.0292 2.58334 16.0417 2.58334ZM3.36279 12.8642C3.8005 13.3267 4.40504 13.582 5.06596 13.5833H8.47917C8.47917 13.5833 7.97958 15.5895 7.80771 16.2623C7.54829 17.2803 7.49604 18.1369 7.64454 18.9582C7.72154 19.3849 7.85858 19.9372 8.23625 20.4263C8.50437 20.7737 8.83987 20.9996 9.23404 21.0986C9.82071 21.2448 10.1727 21.0574 10.3835 20.4693C10.401 20.4217 11.138 17.8266 11.138 17.8266C11.1957 17.6217 11.2512 17.4585 11.336 17.327C11.8805 16.4782 12.5386 15.6527 13.2921 14.8112V3.73925C11.248 3.15534 8.17437 2.62046 7.96492 2.60075C7.84575 2.58883 7.7275 2.58334 7.61017 2.58334C5.9565 2.58334 4.50221 3.69755 4.07642 5.34159C3.69233 6.82567 2.90079 10.375 2.90079 10.375C2.83754 10.6092 2.76558 10.8746 2.75 11.1643C2.71562 11.8064 2.93333 12.4095 3.36279 12.8642Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="cardcontent__actions flex items-center">
+                          <div class="cardcontent__button">
+                            <a href="#" class="cardaction active">
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.7288 20.4582C16.5872 20.4582 16.4465 20.4146 16.3273 20.3285L10.9997 16.4927L5.67201 20.3285C5.46209 20.4793 5.18617 20.5003 4.95655 20.3825C4.72738 20.2652 4.58301 20.0287 4.58301 19.7707V6.02067C4.58301 4.378 5.91951 3.0415 7.56217 3.0415H14.4372C16.0798 3.0415 17.4163 4.378 17.4163 6.02067V19.7707C17.4163 20.0287 17.272 20.2652 17.0423 20.3825C16.9433 20.433 16.8361 20.4582 16.7288 20.4582Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                              <div class="cardaction__caption">Save</div>
+                            </a>
+                          </div>
+                          <div class="cardcontent__button">
+                            <a href="#" class="cardaction active">
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.7295 3.0415C16.2719 3.04208 15.8205 3.14808 15.4104 3.35128C15.0004 3.55448 14.6427 3.84942 14.365 4.21321C14.0874 4.57701 13.8972 4.99988 13.8094 5.44901C13.7216 5.89815 13.7385 6.36148 13.8586 6.80306L13.8058 6.82902L7.67204 9.89502L7.61922 9.92098C7.34108 9.56331 6.98502 9.2738 6.57813 9.07446C6.17124 8.87513 5.72425 8.77123 5.27116 8.77067C4.48103 8.77067 3.72327 9.08455 3.16457 9.64325C2.60587 10.202 2.29199 10.9597 2.29199 11.7498C2.29199 12.54 2.60587 13.2977 3.16457 13.8564C3.72327 14.4151 4.48103 14.729 5.27116 14.729C5.72455 14.7287 6.1719 14.6249 6.57912 14.4256C6.98634 14.2263 7.34268 13.9366 7.62101 13.5787L7.67204 13.6047L13.8058 16.6707L13.856 16.6957C13.7355 17.1376 13.7186 17.6012 13.8065 18.0507C13.8944 18.5002 14.0847 18.9233 14.3627 19.2873C14.6407 19.6512 14.9988 19.9462 15.4093 20.1493C15.8198 20.3523 16.2715 20.458 16.7295 20.4582C17.5196 20.4582 18.2774 20.1443 18.8361 19.5856C19.3948 19.0269 19.7087 18.2691 19.7087 17.479C19.7087 16.6889 19.3948 15.9311 18.8361 15.3724C18.2774 14.8137 17.5196 14.4998 16.7295 14.4998C16.3119 14.5004 15.8991 14.5888 15.5179 14.7592C15.1367 14.9296 14.7955 15.1783 14.5166 15.489L14.4199 15.4407L8.28703 12.3747L8.19124 12.3272C8.26615 11.9462 8.26584 11.5542 8.19035 11.1733L8.28703 11.125L14.4199 8.059L14.5139 8.01156C14.7932 8.32249 15.1348 8.57117 15.5166 8.74143C15.8983 8.9117 16.3115 8.99974 16.7295 8.99984C17.5196 8.99984 18.2774 8.68596 18.8361 8.12726C19.3948 7.56856 19.7087 6.81079 19.7087 6.02067C19.7087 5.23055 19.3948 4.47278 18.8361 3.91408C18.2774 3.35538 17.5196 3.0415 16.7295 3.0415Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                </div>
+                              </div>
+                              <div class="cardaction__caption">Share</div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="itemsblock__item" data-toggleitem="item">
+              <div class="card">
+                <div class="card__wrapper">
+                  <div class="card__header flex content-between items-center">
+                    <div class="card__profile cardprofile flex items-center">
+                      <div class="cardprofile__image">
+                        <div class="cardprofile__img"><img src="img/man.png" alt=""></div>
+                      </div>
+                      <div class="cardprofile__info">
+                        <div class="cardprofile__name">Victor Ivanov</div>
+                        <div class="cardprofile__stats flex items-center">
+                          <div class="cardstat hideTablet">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">7 400 followers</div>
+                          </div>
+                          <div class="cardstat hideTablet">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">518 Shills</div>
+                          </div>
+                          <div class="cardstat cardstat_orange">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text ">35% Profitable</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__follow">
+                      <a href="#" class="btn">Follow</a>
+                    </div>
+                  </div>
+                  <div class="card__main">
+                    <div class="card__item">
+                      <div class="carditem flex items-center">
+                        <div class="carditem__image">
+                          <div class="carditem__img">
+                            <img src="img/card.png" alt="">
+                          </div>
+                          <div class="carditem__sticker">
+                            <div class="sticker sticker_purple">NFT</div>
+                          </div>
+                        </div>
+                        <div class="carditem__main">
+                          <div class="carditem__header flex content-between items-center">
+                            <div class="carditem__title flex items-center">
+                              <span class="carditem__name">The Ugly Duck</span>
+                              <div class="carditem__icon">
+                                <img src="img/ChartArrowRise.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="carditem__stat carditem__stat_green">+79.2%</div>
+                          </div>
+                          <div class="carditem__params flex items-center hideTablet">
+                            <div class="carditem__param">
+                              <div class="carditem__paramname">5 SOL</div>
+                              <div class="carditem__paramtext">Entry price</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname">10 SOL</div>
+                              <div class="carditem__paramtext">Current Price</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname green">5</div>
+                              <div class="carditem__paramtext">Bullish</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname red">20</div>
+                              <div class="carditem__paramtext">Bearish</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carditem__params flex items-center onlyTablet">
+                        <div class="carditem__param">
+                          <div class="carditem__paramname">5 SOL</div>
+                          <div class="carditem__paramtext">Entry price</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname">10 SOL</div>
+                          <div class="carditem__paramtext">Current Price</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname green">5</div>
+                          <div class="carditem__paramtext">Bullish</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname red">20</div>
+                          <div class="carditem__paramtext">Bearish</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__footer">
+                    <div class="cardcontent">
+                      <div class="cardcontent__params flex items-center">
+                        <div class="cardcontent__param">29.12.2020</div>
+                        <div class="cardcontent__param">
+                          <div class="cardcontent__tags flex items-center">
+                            <div class="tag tag_default">Closed</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cardcontent__text">Vivamus sodales tortor et felis blandit tincidunt. Nullam sit amet elementum nisi. Fusce vitae libero elit. Ut leo</div>
+                      <div class="cardcontent__buttons flex items-center content-between">
+                        <div class="cardcontent__rate flex items-center">
+                          <div class="cardcontent__button cardcontent__like">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__caption">5</div>
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M5.95833 20.9167H4.58333C3.57087 20.9167 2.75 20.0958 2.75 19.0833V11.2917C2.75 10.2792 3.57087 9.45833 4.58333 9.45833H7.79167V19.0833C7.79167 20.0958 6.97079 20.9167 5.95833 20.9167ZM18.6372 10.6358C18.1995 10.1733 17.595 9.91804 16.934 9.91666H13.5208C13.5208 9.91666 14.0204 7.91054 14.1923 7.23771C14.4517 6.21975 14.504 5.36312 14.3555 4.54179C14.2785 4.11508 14.1414 3.56279 13.7638 3.07375C13.4956 2.72633 13.1601 2.50037 12.766 2.40137C12.1793 2.25516 11.8273 2.44262 11.6165 3.03066C11.599 3.07833 10.862 5.67341 10.862 5.67341C10.8043 5.87829 10.7488 6.04146 10.664 6.173C10.1195 7.02183 9.46138 7.84729 8.70788 8.68879V19.7607C10.752 20.3447 13.8256 20.8795 14.0351 20.8992C14.1543 20.9112 14.2725 20.9167 14.3898 20.9167C16.0435 20.9167 17.4978 19.8025 17.9236 18.1584C18.3077 16.6743 19.0992 13.125 19.0992 13.125C19.1625 12.8908 19.2344 12.6254 19.25 12.3357C19.2844 11.6936 19.0667 11.0905 18.6372 10.6358Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="cardcontent__button cardcontent__like cardcontent__like_dislike">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__caption">5</div>
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.0417 2.58334H17.4167C18.4291 2.58334 19.25 3.40421 19.25 4.41667V12.2083C19.25 13.2208 18.4291 14.0417 17.4167 14.0417H14.2083V4.41667C14.2083 3.40421 15.0292 2.58334 16.0417 2.58334ZM3.36279 12.8642C3.8005 13.3267 4.40504 13.582 5.06596 13.5833H8.47917C8.47917 13.5833 7.97958 15.5895 7.80771 16.2623C7.54829 17.2803 7.49604 18.1369 7.64454 18.9582C7.72154 19.3849 7.85858 19.9372 8.23625 20.4263C8.50437 20.7737 8.83987 20.9996 9.23404 21.0986C9.82071 21.2448 10.1727 21.0574 10.3835 20.4693C10.401 20.4217 11.138 17.8266 11.138 17.8266C11.1957 17.6217 11.2512 17.4585 11.336 17.327C11.8805 16.4782 12.5386 15.6527 13.2921 14.8112V3.73925C11.248 3.15534 8.17437 2.62046 7.96492 2.60075C7.84575 2.58883 7.7275 2.58334 7.61017 2.58334C5.9565 2.58334 4.50221 3.69755 4.07642 5.34159C3.69233 6.82567 2.90079 10.375 2.90079 10.375C2.83754 10.6092 2.76558 10.8746 2.75 11.1643C2.71562 11.8064 2.93333 12.4095 3.36279 12.8642Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="cardcontent__actions flex items-center">
+                          <div class="cardcontent__button">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.7288 20.4582C16.5872 20.4582 16.4465 20.4146 16.3273 20.3285L10.9997 16.4927L5.67201 20.3285C5.46209 20.4793 5.18617 20.5003 4.95655 20.3825C4.72738 20.2652 4.58301 20.0287 4.58301 19.7707V6.02067C4.58301 4.378 5.91951 3.0415 7.56217 3.0415H14.4372C16.0798 3.0415 17.4163 4.378 17.4163 6.02067V19.7707C17.4163 20.0287 17.272 20.2652 17.0423 20.3825C16.9433 20.433 16.8361 20.4582 16.7288 20.4582Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                              <div class="cardaction__caption">Save</div>
+                            </a>
+                          </div>
+                          <div class="cardcontent__button">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.7295 3.0415C16.2719 3.04208 15.8205 3.14808 15.4104 3.35128C15.0004 3.55448 14.6427 3.84942 14.365 4.21321C14.0874 4.57701 13.8972 4.99988 13.8094 5.44901C13.7216 5.89815 13.7385 6.36148 13.8586 6.80306L13.8058 6.82902L7.67204 9.89502L7.61922 9.92098C7.34108 9.56331 6.98502 9.2738 6.57813 9.07446C6.17124 8.87513 5.72425 8.77123 5.27116 8.77067C4.48103 8.77067 3.72327 9.08455 3.16457 9.64325C2.60587 10.202 2.29199 10.9597 2.29199 11.7498C2.29199 12.54 2.60587 13.2977 3.16457 13.8564C3.72327 14.4151 4.48103 14.729 5.27116 14.729C5.72455 14.7287 6.1719 14.6249 6.57912 14.4256C6.98634 14.2263 7.34268 13.9366 7.62101 13.5787L7.67204 13.6047L13.8058 16.6707L13.856 16.6957C13.7355 17.1376 13.7186 17.6012 13.8065 18.0507C13.8944 18.5002 14.0847 18.9233 14.3627 19.2873C14.6407 19.6512 14.9988 19.9462 15.4093 20.1493C15.8198 20.3523 16.2715 20.458 16.7295 20.4582C17.5196 20.4582 18.2774 20.1443 18.8361 19.5856C19.3948 19.0269 19.7087 18.2691 19.7087 17.479C19.7087 16.6889 19.3948 15.9311 18.8361 15.3724C18.2774 14.8137 17.5196 14.4998 16.7295 14.4998C16.3119 14.5004 15.8991 14.5888 15.5179 14.7592C15.1367 14.9296 14.7955 15.1783 14.5166 15.489L14.4199 15.4407L8.28703 12.3747L8.19124 12.3272C8.26615 11.9462 8.26584 11.5542 8.19035 11.1733L8.28703 11.125L14.4199 8.059L14.5139 8.01156C14.7932 8.32249 15.1348 8.57117 15.5166 8.74143C15.8983 8.9117 16.3115 8.99974 16.7295 8.99984C17.5196 8.99984 18.2774 8.68596 18.8361 8.12726C19.3948 7.56856 19.7087 6.81079 19.7087 6.02067C19.7087 5.23055 19.3948 4.47278 18.8361 3.91408C18.2774 3.35538 17.5196 3.0415 16.7295 3.0415Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                </div>
+                              </div>
+                              <div class="cardaction__caption">Share</div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="itemsblock__item" data-toggleitem="item">
+              <div class="card">
+                <div class="card__wrapper">
+                  <div class="card__header flex content-between items-center">
+                    <div class="card__profile cardprofile flex items-center">
+                      <div class="cardprofile__image">
+                        <div class="cardprofile__img"><img src="img/man.png" alt=""></div>
+                      </div>
+                      <div class="cardprofile__info">
+                        <div class="cardprofile__name">Victor Ivanov</div>
+                        <div class="cardprofile__stats flex items-center">
+                          <div class="cardstat hideTablet">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">7 400 followers</div>
+                          </div>
+                          <div class="cardstat hideTablet">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">518 Shills</div>
+                          </div>
+                          <div class="cardstat cardstat_red">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">15% Profitable</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__follow">
+                      <a href="#" class="btn">Follow</a>
+                    </div>
+                  </div>
+                  <div class="card__main">
+                    <div class="card__item">
+                      <div class="carditem flex items-center">
+                        <div class="carditem__image">
+                          <div class="carditem__img">
+                            <img src="img/card.png" alt="">
+                          </div>
+                          <div class="carditem__sticker">
+                            <div class="sticker sticker_mint">Mint</div>
+                          </div>
+                        </div>
+                        <div class="carditem__main">
+                          <div class="carditem__header flex content-between items-center">
+                            <div class="carditem__title flex items-center">
+                              <span class="carditem__name">The Ugly Duck</span>
+                              <div class="carditem__icon">
+                                <img src="img/ChartArrowRise.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="carditem__stat carditem__stat_green">+79.2%</div>
+                          </div>
+                          <div class="carditem__params flex items-center hideTablet">
+                            <div class="carditem__param">
+                              <div class="carditem__paramname">5 SOL</div>
+                              <div class="carditem__paramtext">Entry price</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname">10 SOL</div>
+                              <div class="carditem__paramtext">Current Price</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname green">5</div>
+                              <div class="carditem__paramtext">Bullish</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname red">20</div>
+                              <div class="carditem__paramtext">Bearish</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carditem__params flex items-center onlyTablet">
+                        <div class="carditem__param">
+                          <div class="carditem__paramname">5 SOL</div>
+                          <div class="carditem__paramtext">Entry price</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname">10 SOL</div>
+                          <div class="carditem__paramtext">Current Price</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname green">5</div>
+                          <div class="carditem__paramtext">Bullish</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname red">20</div>
+                          <div class="carditem__paramtext">Bearish</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__footer">
+                    <div class="cardcontent">
+                      <div class="cardcontent__params flex items-center">
+                        <div class="cardcontent__param">29.12.2020</div>
+                        <div class="cardcontent__param">
+                          <div class="cardcontent__tags flex items-center">
+                            <div class="tag tag_green">Update</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cardcontent__text">Vivamus sodales tortor et felis blandit tincidunt. Nullam sit amet elementum nisi. Fusce vitae libero elit. Ut leo</div>
+                      <div class="cardcontent__buttons flex items-center content-between">
+                        <div class="cardcontent__rate flex items-center">
+                          <div class="cardcontent__button cardcontent__like">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__caption">5</div>
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M5.95833 20.9167H4.58333C3.57087 20.9167 2.75 20.0958 2.75 19.0833V11.2917C2.75 10.2792 3.57087 9.45833 4.58333 9.45833H7.79167V19.0833C7.79167 20.0958 6.97079 20.9167 5.95833 20.9167ZM18.6372 10.6358C18.1995 10.1733 17.595 9.91804 16.934 9.91666H13.5208C13.5208 9.91666 14.0204 7.91054 14.1923 7.23771C14.4517 6.21975 14.504 5.36312 14.3555 4.54179C14.2785 4.11508 14.1414 3.56279 13.7638 3.07375C13.4956 2.72633 13.1601 2.50037 12.766 2.40137C12.1793 2.25516 11.8273 2.44262 11.6165 3.03066C11.599 3.07833 10.862 5.67341 10.862 5.67341C10.8043 5.87829 10.7488 6.04146 10.664 6.173C10.1195 7.02183 9.46138 7.84729 8.70788 8.68879V19.7607C10.752 20.3447 13.8256 20.8795 14.0351 20.8992C14.1543 20.9112 14.2725 20.9167 14.3898 20.9167C16.0435 20.9167 17.4978 19.8025 17.9236 18.1584C18.3077 16.6743 19.0992 13.125 19.0992 13.125C19.1625 12.8908 19.2344 12.6254 19.25 12.3357C19.2844 11.6936 19.0667 11.0905 18.6372 10.6358Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="cardcontent__button cardcontent__like cardcontent__like_dislike">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__caption">5</div>
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.0417 2.58334H17.4167C18.4291 2.58334 19.25 3.40421 19.25 4.41667V12.2083C19.25 13.2208 18.4291 14.0417 17.4167 14.0417H14.2083V4.41667C14.2083 3.40421 15.0292 2.58334 16.0417 2.58334ZM3.36279 12.8642C3.8005 13.3267 4.40504 13.582 5.06596 13.5833H8.47917C8.47917 13.5833 7.97958 15.5895 7.80771 16.2623C7.54829 17.2803 7.49604 18.1369 7.64454 18.9582C7.72154 19.3849 7.85858 19.9372 8.23625 20.4263C8.50437 20.7737 8.83987 20.9996 9.23404 21.0986C9.82071 21.2448 10.1727 21.0574 10.3835 20.4693C10.401 20.4217 11.138 17.8266 11.138 17.8266C11.1957 17.6217 11.2512 17.4585 11.336 17.327C11.8805 16.4782 12.5386 15.6527 13.2921 14.8112V3.73925C11.248 3.15534 8.17437 2.62046 7.96492 2.60075C7.84575 2.58883 7.7275 2.58334 7.61017 2.58334C5.9565 2.58334 4.50221 3.69755 4.07642 5.34159C3.69233 6.82567 2.90079 10.375 2.90079 10.375C2.83754 10.6092 2.76558 10.8746 2.75 11.1643C2.71562 11.8064 2.93333 12.4095 3.36279 12.8642Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="cardcontent__actions flex items-center">
+                          <div class="cardcontent__button">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.7288 20.4582C16.5872 20.4582 16.4465 20.4146 16.3273 20.3285L10.9997 16.4927L5.67201 20.3285C5.46209 20.4793 5.18617 20.5003 4.95655 20.3825C4.72738 20.2652 4.58301 20.0287 4.58301 19.7707V6.02067C4.58301 4.378 5.91951 3.0415 7.56217 3.0415H14.4372C16.0798 3.0415 17.4163 4.378 17.4163 6.02067V19.7707C17.4163 20.0287 17.272 20.2652 17.0423 20.3825C16.9433 20.433 16.8361 20.4582 16.7288 20.4582Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                              <div class="cardaction__caption">Save</div>
+                            </a>
+                          </div>
+                          <div class="cardcontent__button">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.7295 3.0415C16.2719 3.04208 15.8205 3.14808 15.4104 3.35128C15.0004 3.55448 14.6427 3.84942 14.365 4.21321C14.0874 4.57701 13.8972 4.99988 13.8094 5.44901C13.7216 5.89815 13.7385 6.36148 13.8586 6.80306L13.8058 6.82902L7.67204 9.89502L7.61922 9.92098C7.34108 9.56331 6.98502 9.2738 6.57813 9.07446C6.17124 8.87513 5.72425 8.77123 5.27116 8.77067C4.48103 8.77067 3.72327 9.08455 3.16457 9.64325C2.60587 10.202 2.29199 10.9597 2.29199 11.7498C2.29199 12.54 2.60587 13.2977 3.16457 13.8564C3.72327 14.4151 4.48103 14.729 5.27116 14.729C5.72455 14.7287 6.1719 14.6249 6.57912 14.4256C6.98634 14.2263 7.34268 13.9366 7.62101 13.5787L7.67204 13.6047L13.8058 16.6707L13.856 16.6957C13.7355 17.1376 13.7186 17.6012 13.8065 18.0507C13.8944 18.5002 14.0847 18.9233 14.3627 19.2873C14.6407 19.6512 14.9988 19.9462 15.4093 20.1493C15.8198 20.3523 16.2715 20.458 16.7295 20.4582C17.5196 20.4582 18.2774 20.1443 18.8361 19.5856C19.3948 19.0269 19.7087 18.2691 19.7087 17.479C19.7087 16.6889 19.3948 15.9311 18.8361 15.3724C18.2774 14.8137 17.5196 14.4998 16.7295 14.4998C16.3119 14.5004 15.8991 14.5888 15.5179 14.7592C15.1367 14.9296 14.7955 15.1783 14.5166 15.489L14.4199 15.4407L8.28703 12.3747L8.19124 12.3272C8.26615 11.9462 8.26584 11.5542 8.19035 11.1733L8.28703 11.125L14.4199 8.059L14.5139 8.01156C14.7932 8.32249 15.1348 8.57117 15.5166 8.74143C15.8983 8.9117 16.3115 8.99974 16.7295 8.99984C17.5196 8.99984 18.2774 8.68596 18.8361 8.12726C19.3948 7.56856 19.7087 6.81079 19.7087 6.02067C19.7087 5.23055 19.3948 4.47278 18.8361 3.91408C18.2774 3.35538 17.5196 3.0415 16.7295 3.0415Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                </div>
+                              </div>
+                              <div class="cardaction__caption">Share</div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="itemsblock__item" data-toggleitem="item">
+              <div class="card">
+                <div class="card__wrapper">
+                  <div class="card__header flex content-between items-center">
+                    <div class="card__profile cardprofile flex items-center">
+                      <div class="cardprofile__image">
+                        <div class="cardprofile__img"><img src="img/man.png" alt=""></div>
+                      </div>
+                      <div class="cardprofile__info">
+                        <div class="cardprofile__name">Victor Ivanov</div>
+                        <div class="cardprofile__stats flex items-center">
+                          <div class="cardstat hideTablet">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">7 400 followers</div>
+                          </div>
+                          <div class="cardstat hideTablet">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">518 Shills</div>
+                          </div>
+                          <div class="cardstat cardstat_green">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">87% Profitable</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__follow">
+                      <a href="#" class="btn">Follow</a>
+                    </div>
+                  </div>
+                  <div class="card__main">
+                    <div class="card__item">
+                      <div class="carditem flex items-center">
+                        <div class="carditem__image">
+                          <div class="carditem__img">
+                            <img src="img/card.png" alt="">
+                          </div>
+                          <div class="carditem__sticker">
+                            <div class="sticker sticker_black">Airdrop</div>
+                          </div>
+                        </div>
+                        <div class="carditem__main">
+                          <div class="carditem__header flex content-between items-center">
+                            <div class="carditem__title flex items-center">
+                              <span class="carditem__name">The Ugly Duck</span>
+                              <div class="carditem__icon">
+                                <img src="img/ChartArrowRise.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="carditem__stat carditem__stat_green">+79.2%</div>
+                          </div>
+                          <div class="carditem__params flex items-center hideTablet">
+                            <div class="carditem__param">
+                              <div class="carditem__paramname">5 SOL</div>
+                              <div class="carditem__paramtext">Entry price</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname">10 SOL</div>
+                              <div class="carditem__paramtext">Current Price</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname green">5</div>
+                              <div class="carditem__paramtext">Bullish</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname red">20</div>
+                              <div class="carditem__paramtext">Bearish</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carditem__params flex items-center onlyTablet">
+                        <div class="carditem__param">
+                          <div class="carditem__paramname">5 SOL</div>
+                          <div class="carditem__paramtext">Entry price</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname">10 SOL</div>
+                          <div class="carditem__paramtext">Current Price</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname green">5</div>
+                          <div class="carditem__paramtext">Bullish</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname red">20</div>
+                          <div class="carditem__paramtext">Bearish</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__footer">
+                    <div class="cardcontent">
+                      <div class="cardcontent__params flex items-center">
+                        <div class="cardcontent__param">29.12.2020</div>
+                        <div class="cardcontent__param">
+                          <div class="cardcontent__tags flex items-center">
+                            <div class="tag tag_greenish">NEW</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cardcontent__text">Vivamus sodales tortor et felis blandit tincidunt. Nullam sit amet elementum nisi. Fusce vitae libero elit. Ut leo</div>
+                      <div class="cardcontent__buttons flex items-center content-between">
+                        <div class="cardcontent__rate flex items-center">
+                          <div class="cardcontent__button cardcontent__like">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__caption">5</div>
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M5.95833 20.9167H4.58333C3.57087 20.9167 2.75 20.0958 2.75 19.0833V11.2917C2.75 10.2792 3.57087 9.45833 4.58333 9.45833H7.79167V19.0833C7.79167 20.0958 6.97079 20.9167 5.95833 20.9167ZM18.6372 10.6358C18.1995 10.1733 17.595 9.91804 16.934 9.91666H13.5208C13.5208 9.91666 14.0204 7.91054 14.1923 7.23771C14.4517 6.21975 14.504 5.36312 14.3555 4.54179C14.2785 4.11508 14.1414 3.56279 13.7638 3.07375C13.4956 2.72633 13.1601 2.50037 12.766 2.40137C12.1793 2.25516 11.8273 2.44262 11.6165 3.03066C11.599 3.07833 10.862 5.67341 10.862 5.67341C10.8043 5.87829 10.7488 6.04146 10.664 6.173C10.1195 7.02183 9.46138 7.84729 8.70788 8.68879V19.7607C10.752 20.3447 13.8256 20.8795 14.0351 20.8992C14.1543 20.9112 14.2725 20.9167 14.3898 20.9167C16.0435 20.9167 17.4978 19.8025 17.9236 18.1584C18.3077 16.6743 19.0992 13.125 19.0992 13.125C19.1625 12.8908 19.2344 12.6254 19.25 12.3357C19.2844 11.6936 19.0667 11.0905 18.6372 10.6358Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="cardcontent__button cardcontent__like cardcontent__like_dislike">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__caption">5</div>
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.0417 2.58334H17.4167C18.4291 2.58334 19.25 3.40421 19.25 4.41667V12.2083C19.25 13.2208 18.4291 14.0417 17.4167 14.0417H14.2083V4.41667C14.2083 3.40421 15.0292 2.58334 16.0417 2.58334ZM3.36279 12.8642C3.8005 13.3267 4.40504 13.582 5.06596 13.5833H8.47917C8.47917 13.5833 7.97958 15.5895 7.80771 16.2623C7.54829 17.2803 7.49604 18.1369 7.64454 18.9582C7.72154 19.3849 7.85858 19.9372 8.23625 20.4263C8.50437 20.7737 8.83987 20.9996 9.23404 21.0986C9.82071 21.2448 10.1727 21.0574 10.3835 20.4693C10.401 20.4217 11.138 17.8266 11.138 17.8266C11.1957 17.6217 11.2512 17.4585 11.336 17.327C11.8805 16.4782 12.5386 15.6527 13.2921 14.8112V3.73925C11.248 3.15534 8.17437 2.62046 7.96492 2.60075C7.84575 2.58883 7.7275 2.58334 7.61017 2.58334C5.9565 2.58334 4.50221 3.69755 4.07642 5.34159C3.69233 6.82567 2.90079 10.375 2.90079 10.375C2.83754 10.6092 2.76558 10.8746 2.75 11.1643C2.71562 11.8064 2.93333 12.4095 3.36279 12.8642Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="cardcontent__actions flex items-center">
+                          <div class="cardcontent__button">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.7288 20.4582C16.5872 20.4582 16.4465 20.4146 16.3273 20.3285L10.9997 16.4927L5.67201 20.3285C5.46209 20.4793 5.18617 20.5003 4.95655 20.3825C4.72738 20.2652 4.58301 20.0287 4.58301 19.7707V6.02067C4.58301 4.378 5.91951 3.0415 7.56217 3.0415H14.4372C16.0798 3.0415 17.4163 4.378 17.4163 6.02067V19.7707C17.4163 20.0287 17.272 20.2652 17.0423 20.3825C16.9433 20.433 16.8361 20.4582 16.7288 20.4582Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                              <div class="cardaction__caption">Save</div>
+                            </a>
+                          </div>
+                          <div class="cardcontent__button">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.7295 3.0415C16.2719 3.04208 15.8205 3.14808 15.4104 3.35128C15.0004 3.55448 14.6427 3.84942 14.365 4.21321C14.0874 4.57701 13.8972 4.99988 13.8094 5.44901C13.7216 5.89815 13.7385 6.36148 13.8586 6.80306L13.8058 6.82902L7.67204 9.89502L7.61922 9.92098C7.34108 9.56331 6.98502 9.2738 6.57813 9.07446C6.17124 8.87513 5.72425 8.77123 5.27116 8.77067C4.48103 8.77067 3.72327 9.08455 3.16457 9.64325C2.60587 10.202 2.29199 10.9597 2.29199 11.7498C2.29199 12.54 2.60587 13.2977 3.16457 13.8564C3.72327 14.4151 4.48103 14.729 5.27116 14.729C5.72455 14.7287 6.1719 14.6249 6.57912 14.4256C6.98634 14.2263 7.34268 13.9366 7.62101 13.5787L7.67204 13.6047L13.8058 16.6707L13.856 16.6957C13.7355 17.1376 13.7186 17.6012 13.8065 18.0507C13.8944 18.5002 14.0847 18.9233 14.3627 19.2873C14.6407 19.6512 14.9988 19.9462 15.4093 20.1493C15.8198 20.3523 16.2715 20.458 16.7295 20.4582C17.5196 20.4582 18.2774 20.1443 18.8361 19.5856C19.3948 19.0269 19.7087 18.2691 19.7087 17.479C19.7087 16.6889 19.3948 15.9311 18.8361 15.3724C18.2774 14.8137 17.5196 14.4998 16.7295 14.4998C16.3119 14.5004 15.8991 14.5888 15.5179 14.7592C15.1367 14.9296 14.7955 15.1783 14.5166 15.489L14.4199 15.4407L8.28703 12.3747L8.19124 12.3272C8.26615 11.9462 8.26584 11.5542 8.19035 11.1733L8.28703 11.125L14.4199 8.059L14.5139 8.01156C14.7932 8.32249 15.1348 8.57117 15.5166 8.74143C15.8983 8.9117 16.3115 8.99974 16.7295 8.99984C17.5196 8.99984 18.2774 8.68596 18.8361 8.12726C19.3948 7.56856 19.7087 6.81079 19.7087 6.02067C19.7087 5.23055 19.3948 4.47278 18.8361 3.91408C18.2774 3.35538 17.5196 3.0415 16.7295 3.0415Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                </div>
+                              </div>
+                              <div class="cardaction__caption">Share</div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="itemsblock__item" data-toggleitem="item">
+              <div class="card">
+                <div class="card__wrapper">
+                  <div class="card__header flex content-between items-center">
+                    <div class="card__profile cardprofile flex items-center">
+                      <div class="cardprofile__image">
+                        <div class="cardprofile__img"><img src="img/man.png" alt=""></div>
+                      </div>
+                      <div class="cardprofile__info">
+                        <div class="cardprofile__name">Victor Ivanov</div>
+                        <div class="cardprofile__stats flex items-center">
+                          <div class="cardstat hideTablet">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">7 400 followers</div>
+                          </div>
+                          <div class="cardstat hideTablet">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">518 Shills</div>
+                          </div>
+                          <div class="cardstat cardstat_green">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">87% Profitable</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__follow">
+                      <a href="#" class="btn">Follow</a>
+                    </div>
+                  </div>
+                  <div class="card__main">
+                    <div class="card__item">
+                      <div class="carditem flex items-center">
+                        <div class="carditem__image">
+                          <div class="carditem__img">
+                            <img src="img/card.png" alt="">
+                          </div>
+                          <div class="carditem__sticker">
+                            <div class="sticker sticker_blue">Whitelist</div>
+                          </div>
+                        </div>
+                        <div class="carditem__main">
+                          <div class="carditem__header flex content-between items-center">
+                            <div class="carditem__title flex items-center">
+                              <span class="carditem__name">The Ugly Duck</span>
+                              <div class="carditem__icon">
+                                <img src="img/ChartArrowRise.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="carditem__stat carditem__stat_green">+79.2%</div>
+                          </div>
+                          <div class="carditem__params flex items-center hideTablet">
+                            <div class="carditem__param">
+                              <div class="carditem__paramname">5 SOL</div>
+                              <div class="carditem__paramtext">Entry price</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname">10 SOL</div>
+                              <div class="carditem__paramtext">Current Price</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname green">5</div>
+                              <div class="carditem__paramtext">Bullish</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname red">20</div>
+                              <div class="carditem__paramtext">Bearish</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carditem__params flex items-center onlyTablet">
+                        <div class="carditem__param">
+                          <div class="carditem__paramname">5 SOL</div>
+                          <div class="carditem__paramtext">Entry price</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname">10 SOL</div>
+                          <div class="carditem__paramtext">Current Price</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname green">5</div>
+                          <div class="carditem__paramtext">Bullish</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname red">20</div>
+                          <div class="carditem__paramtext">Bearish</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__footer">
+                    <div class="cardcontent">
+                      <div class="cardcontent__params flex items-center">
+                        <div class="cardcontent__param">29.12.2020</div>
+                        <div class="cardcontent__param">
+                          <div class="cardcontent__tags flex items-center">
+                            <div class="tag tag_green">Update</div>
+                            <div class="tag tag_default">Closed</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cardcontent__text">Vivamus sodales tortor et felis blandit tincidunt. Nullam sit amet elementum nisi. Fusce vitae libero elit. Ut leo</div>
+                      <div class="cardcontent__buttons flex items-center content-between">
+                        <div class="cardcontent__rate flex items-center">
+                          <div class="cardcontent__button cardcontent__like">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__caption">5</div>
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M5.95833 20.9167H4.58333C3.57087 20.9167 2.75 20.0958 2.75 19.0833V11.2917C2.75 10.2792 3.57087 9.45833 4.58333 9.45833H7.79167V19.0833C7.79167 20.0958 6.97079 20.9167 5.95833 20.9167ZM18.6372 10.6358C18.1995 10.1733 17.595 9.91804 16.934 9.91666H13.5208C13.5208 9.91666 14.0204 7.91054 14.1923 7.23771C14.4517 6.21975 14.504 5.36312 14.3555 4.54179C14.2785 4.11508 14.1414 3.56279 13.7638 3.07375C13.4956 2.72633 13.1601 2.50037 12.766 2.40137C12.1793 2.25516 11.8273 2.44262 11.6165 3.03066C11.599 3.07833 10.862 5.67341 10.862 5.67341C10.8043 5.87829 10.7488 6.04146 10.664 6.173C10.1195 7.02183 9.46138 7.84729 8.70788 8.68879V19.7607C10.752 20.3447 13.8256 20.8795 14.0351 20.8992C14.1543 20.9112 14.2725 20.9167 14.3898 20.9167C16.0435 20.9167 17.4978 19.8025 17.9236 18.1584C18.3077 16.6743 19.0992 13.125 19.0992 13.125C19.1625 12.8908 19.2344 12.6254 19.25 12.3357C19.2844 11.6936 19.0667 11.0905 18.6372 10.6358Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="cardcontent__button cardcontent__like cardcontent__like_dislike">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__caption">5</div>
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.0417 2.58334H17.4167C18.4291 2.58334 19.25 3.40421 19.25 4.41667V12.2083C19.25 13.2208 18.4291 14.0417 17.4167 14.0417H14.2083V4.41667C14.2083 3.40421 15.0292 2.58334 16.0417 2.58334ZM3.36279 12.8642C3.8005 13.3267 4.40504 13.582 5.06596 13.5833H8.47917C8.47917 13.5833 7.97958 15.5895 7.80771 16.2623C7.54829 17.2803 7.49604 18.1369 7.64454 18.9582C7.72154 19.3849 7.85858 19.9372 8.23625 20.4263C8.50437 20.7737 8.83987 20.9996 9.23404 21.0986C9.82071 21.2448 10.1727 21.0574 10.3835 20.4693C10.401 20.4217 11.138 17.8266 11.138 17.8266C11.1957 17.6217 11.2512 17.4585 11.336 17.327C11.8805 16.4782 12.5386 15.6527 13.2921 14.8112V3.73925C11.248 3.15534 8.17437 2.62046 7.96492 2.60075C7.84575 2.58883 7.7275 2.58334 7.61017 2.58334C5.9565 2.58334 4.50221 3.69755 4.07642 5.34159C3.69233 6.82567 2.90079 10.375 2.90079 10.375C2.83754 10.6092 2.76558 10.8746 2.75 11.1643C2.71562 11.8064 2.93333 12.4095 3.36279 12.8642Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="cardcontent__actions flex items-center">
+                          <div class="cardcontent__button">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.7288 20.4582C16.5872 20.4582 16.4465 20.4146 16.3273 20.3285L10.9997 16.4927L5.67201 20.3285C5.46209 20.4793 5.18617 20.5003 4.95655 20.3825C4.72738 20.2652 4.58301 20.0287 4.58301 19.7707V6.02067C4.58301 4.378 5.91951 3.0415 7.56217 3.0415H14.4372C16.0798 3.0415 17.4163 4.378 17.4163 6.02067V19.7707C17.4163 20.0287 17.272 20.2652 17.0423 20.3825C16.9433 20.433 16.8361 20.4582 16.7288 20.4582Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                              <div class="cardaction__caption">Save</div>
+                            </a>
+                          </div>
+                          <div class="cardcontent__button">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.7295 3.0415C16.2719 3.04208 15.8205 3.14808 15.4104 3.35128C15.0004 3.55448 14.6427 3.84942 14.365 4.21321C14.0874 4.57701 13.8972 4.99988 13.8094 5.44901C13.7216 5.89815 13.7385 6.36148 13.8586 6.80306L13.8058 6.82902L7.67204 9.89502L7.61922 9.92098C7.34108 9.56331 6.98502 9.2738 6.57813 9.07446C6.17124 8.87513 5.72425 8.77123 5.27116 8.77067C4.48103 8.77067 3.72327 9.08455 3.16457 9.64325C2.60587 10.202 2.29199 10.9597 2.29199 11.7498C2.29199 12.54 2.60587 13.2977 3.16457 13.8564C3.72327 14.4151 4.48103 14.729 5.27116 14.729C5.72455 14.7287 6.1719 14.6249 6.57912 14.4256C6.98634 14.2263 7.34268 13.9366 7.62101 13.5787L7.67204 13.6047L13.8058 16.6707L13.856 16.6957C13.7355 17.1376 13.7186 17.6012 13.8065 18.0507C13.8944 18.5002 14.0847 18.9233 14.3627 19.2873C14.6407 19.6512 14.9988 19.9462 15.4093 20.1493C15.8198 20.3523 16.2715 20.458 16.7295 20.4582C17.5196 20.4582 18.2774 20.1443 18.8361 19.5856C19.3948 19.0269 19.7087 18.2691 19.7087 17.479C19.7087 16.6889 19.3948 15.9311 18.8361 15.3724C18.2774 14.8137 17.5196 14.4998 16.7295 14.4998C16.3119 14.5004 15.8991 14.5888 15.5179 14.7592C15.1367 14.9296 14.7955 15.1783 14.5166 15.489L14.4199 15.4407L8.28703 12.3747L8.19124 12.3272C8.26615 11.9462 8.26584 11.5542 8.19035 11.1733L8.28703 11.125L14.4199 8.059L14.5139 8.01156C14.7932 8.32249 15.1348 8.57117 15.5166 8.74143C15.8983 8.9117 16.3115 8.99974 16.7295 8.99984C17.5196 8.99984 18.2774 8.68596 18.8361 8.12726C19.3948 7.56856 19.7087 6.81079 19.7087 6.02067C19.7087 5.23055 19.3948 4.47278 18.8361 3.91408C18.2774 3.35538 17.5196 3.0415 16.7295 3.0415Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                </div>
+                              </div>
+                              <div class="cardaction__caption">Share</div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="itemsblock__item" data-toggleitem="item">
+              <div class="card">
+                <div class="card__wrapper">
+                  <div class="card__header flex content-between items-center">
+                    <div class="card__profile cardprofile flex items-center">
+                      <div class="cardprofile__image">
+                        <div class="cardprofile__img"><img src="img/man.png" alt=""></div>
+                      </div>
+                      <div class="cardprofile__info">
+                        <div class="cardprofile__name">Victor Ivanov</div>
+                        <div class="cardprofile__stats flex items-center">
+                          <div class="cardstat hideTablet">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">7 400 followers</div>
+                          </div>
+                          <div class="cardstat hideTablet">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">518 Shills</div>
+                          </div>
+                          <div class="cardstat cardstat_green">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">87% Profitable</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__follow">
+                      <a href="#" class="btn">Follow</a>
+                    </div>
+                  </div>
+                  <div class="card__main">
+                    <div class="card__item">
+                      <div class="carditem flex items-center">
+                        <div class="carditem__image">
+                          <div class="carditem__img">
+                            <img src="img/card.png" alt="">
+                          </div>
+                          <div class="carditem__sticker">
+                            <div class="sticker sticker_red">Node</div>
+                          </div>
+                        </div>
+                        <div class="carditem__main">
+                          <div class="carditem__header flex content-between items-center">
+                            <div class="carditem__title flex items-center">
+                              <span class="carditem__name">The Ugly Duck</span>
+                              <div class="carditem__icon">
+                                <img src="img/ChartArrowRise.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="carditem__stat carditem__stat_green">+79.2%</div>
+                          </div>
+                          <div class="carditem__params flex items-center hideTablet">
+                            <div class="carditem__param">
+                              <div class="carditem__paramname">5 SOL</div>
+                              <div class="carditem__paramtext">Entry price</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname">10 SOL</div>
+                              <div class="carditem__paramtext">Current Price</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname green">5</div>
+                              <div class="carditem__paramtext">Bullish</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname red">20</div>
+                              <div class="carditem__paramtext">Bearish</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carditem__params flex items-center onlyTablet">
+                        <div class="carditem__param">
+                          <div class="carditem__paramname">5 SOL</div>
+                          <div class="carditem__paramtext">Entry price</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname">10 SOL</div>
+                          <div class="carditem__paramtext">Current Price</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname green">5</div>
+                          <div class="carditem__paramtext">Bullish</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname red">20</div>
+                          <div class="carditem__paramtext">Bearish</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__footer">
+                    <div class="cardcontent">
+                      <div class="cardcontent__params flex items-center">
+                        <div class="cardcontent__param">29.12.2020</div>
+                        <div class="cardcontent__param">
+                          <div class="cardcontent__tags flex items-center">
+                            <div class="tag tag_default">Closed</div>
+                            <div class="tag tag_greenish">NEW</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cardcontent__text">Vivamus sodales tortor et felis blandit tincidunt. Nullam sit amet elementum nisi. Fusce vitae libero elit. Ut leo</div>
+                      <div class="cardcontent__buttons flex items-center content-between">
+                        <div class="cardcontent__rate flex items-center">
+                          <div class="cardcontent__button cardcontent__like">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__caption">5</div>
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M5.95833 20.9167H4.58333C3.57087 20.9167 2.75 20.0958 2.75 19.0833V11.2917C2.75 10.2792 3.57087 9.45833 4.58333 9.45833H7.79167V19.0833C7.79167 20.0958 6.97079 20.9167 5.95833 20.9167ZM18.6372 10.6358C18.1995 10.1733 17.595 9.91804 16.934 9.91666H13.5208C13.5208 9.91666 14.0204 7.91054 14.1923 7.23771C14.4517 6.21975 14.504 5.36312 14.3555 4.54179C14.2785 4.11508 14.1414 3.56279 13.7638 3.07375C13.4956 2.72633 13.1601 2.50037 12.766 2.40137C12.1793 2.25516 11.8273 2.44262 11.6165 3.03066C11.599 3.07833 10.862 5.67341 10.862 5.67341C10.8043 5.87829 10.7488 6.04146 10.664 6.173C10.1195 7.02183 9.46138 7.84729 8.70788 8.68879V19.7607C10.752 20.3447 13.8256 20.8795 14.0351 20.8992C14.1543 20.9112 14.2725 20.9167 14.3898 20.9167C16.0435 20.9167 17.4978 19.8025 17.9236 18.1584C18.3077 16.6743 19.0992 13.125 19.0992 13.125C19.1625 12.8908 19.2344 12.6254 19.25 12.3357C19.2844 11.6936 19.0667 11.0905 18.6372 10.6358Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="cardcontent__button cardcontent__like cardcontent__like_dislike">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__caption">5</div>
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.0417 2.58334H17.4167C18.4291 2.58334 19.25 3.40421 19.25 4.41667V12.2083C19.25 13.2208 18.4291 14.0417 17.4167 14.0417H14.2083V4.41667C14.2083 3.40421 15.0292 2.58334 16.0417 2.58334ZM3.36279 12.8642C3.8005 13.3267 4.40504 13.582 5.06596 13.5833H8.47917C8.47917 13.5833 7.97958 15.5895 7.80771 16.2623C7.54829 17.2803 7.49604 18.1369 7.64454 18.9582C7.72154 19.3849 7.85858 19.9372 8.23625 20.4263C8.50437 20.7737 8.83987 20.9996 9.23404 21.0986C9.82071 21.2448 10.1727 21.0574 10.3835 20.4693C10.401 20.4217 11.138 17.8266 11.138 17.8266C11.1957 17.6217 11.2512 17.4585 11.336 17.327C11.8805 16.4782 12.5386 15.6527 13.2921 14.8112V3.73925C11.248 3.15534 8.17437 2.62046 7.96492 2.60075C7.84575 2.58883 7.7275 2.58334 7.61017 2.58334C5.9565 2.58334 4.50221 3.69755 4.07642 5.34159C3.69233 6.82567 2.90079 10.375 2.90079 10.375C2.83754 10.6092 2.76558 10.8746 2.75 11.1643C2.71562 11.8064 2.93333 12.4095 3.36279 12.8642Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="cardcontent__actions flex items-center">
+                          <div class="cardcontent__button">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.7288 20.4582C16.5872 20.4582 16.4465 20.4146 16.3273 20.3285L10.9997 16.4927L5.67201 20.3285C5.46209 20.4793 5.18617 20.5003 4.95655 20.3825C4.72738 20.2652 4.58301 20.0287 4.58301 19.7707V6.02067C4.58301 4.378 5.91951 3.0415 7.56217 3.0415H14.4372C16.0798 3.0415 17.4163 4.378 17.4163 6.02067V19.7707C17.4163 20.0287 17.272 20.2652 17.0423 20.3825C16.9433 20.433 16.8361 20.4582 16.7288 20.4582Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                              <div class="cardaction__caption">Save</div>
+                            </a>
+                          </div>
+                          <div class="cardcontent__button">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.7295 3.0415C16.2719 3.04208 15.8205 3.14808 15.4104 3.35128C15.0004 3.55448 14.6427 3.84942 14.365 4.21321C14.0874 4.57701 13.8972 4.99988 13.8094 5.44901C13.7216 5.89815 13.7385 6.36148 13.8586 6.80306L13.8058 6.82902L7.67204 9.89502L7.61922 9.92098C7.34108 9.56331 6.98502 9.2738 6.57813 9.07446C6.17124 8.87513 5.72425 8.77123 5.27116 8.77067C4.48103 8.77067 3.72327 9.08455 3.16457 9.64325C2.60587 10.202 2.29199 10.9597 2.29199 11.7498C2.29199 12.54 2.60587 13.2977 3.16457 13.8564C3.72327 14.4151 4.48103 14.729 5.27116 14.729C5.72455 14.7287 6.1719 14.6249 6.57912 14.4256C6.98634 14.2263 7.34268 13.9366 7.62101 13.5787L7.67204 13.6047L13.8058 16.6707L13.856 16.6957C13.7355 17.1376 13.7186 17.6012 13.8065 18.0507C13.8944 18.5002 14.0847 18.9233 14.3627 19.2873C14.6407 19.6512 14.9988 19.9462 15.4093 20.1493C15.8198 20.3523 16.2715 20.458 16.7295 20.4582C17.5196 20.4582 18.2774 20.1443 18.8361 19.5856C19.3948 19.0269 19.7087 18.2691 19.7087 17.479C19.7087 16.6889 19.3948 15.9311 18.8361 15.3724C18.2774 14.8137 17.5196 14.4998 16.7295 14.4998C16.3119 14.5004 15.8991 14.5888 15.5179 14.7592C15.1367 14.9296 14.7955 15.1783 14.5166 15.489L14.4199 15.4407L8.28703 12.3747L8.19124 12.3272C8.26615 11.9462 8.26584 11.5542 8.19035 11.1733L8.28703 11.125L14.4199 8.059L14.5139 8.01156C14.7932 8.32249 15.1348 8.57117 15.5166 8.74143C15.8983 8.9117 16.3115 8.99974 16.7295 8.99984C17.5196 8.99984 18.2774 8.68596 18.8361 8.12726C19.3948 7.56856 19.7087 6.81079 19.7087 6.02067C19.7087 5.23055 19.3948 4.47278 18.8361 3.91408C18.2774 3.35538 17.5196 3.0415 16.7295 3.0415Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                </div>
+                              </div>
+                              <div class="cardaction__caption">Share</div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="itemsblock__item" data-toggleitem="item">
+              <div class="card">
+                <div class="card__wrapper">
+                  <div class="card__header flex content-between items-center">
+                    <div class="card__profile cardprofile flex items-center">
+                      <div class="cardprofile__image">
+                        <div class="cardprofile__img"><img src="img/man.png" alt=""></div>
+                      </div>
+                      <div class="cardprofile__info">
+                        <div class="cardprofile__name">Victor Ivanov</div>
+                        <div class="cardprofile__stats flex items-center">
+                          <div class="cardstat hideTablet">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">7 400 followers</div>
+                          </div>
+                          <div class="cardstat hideTablet">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">518 Shills</div>
+                          </div>
+                          <div class="cardstat cardstat_green">
+                            <div class="cardstat__icon"></div>
+                            <div class="cardstat__text">87% Profitable</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__follow">
+                      <a href="#" class="btn">Follow</a>
+                    </div>
+                  </div>
+                  <div class="card__main">
+                    <div class="card__item">
+                      <div class="carditem flex items-center">
+                        <div class="carditem__image">
+                          <div class="carditem__img">
+                            <img src="img/card.png" alt="">
+                          </div>
+                          <div class="carditem__sticker">
+                            <div class="sticker sticker_gray">Other</div>
+                          </div>
+                        </div>
+                        <div class="carditem__main">
+                          <div class="carditem__header flex content-between items-center">
+                            <div class="carditem__title flex items-center">
+                              <span class="carditem__name">The Ugly Duck</span>
+                              <div class="carditem__icon">
+                                <img src="img/ChartArrowRise.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="carditem__stat carditem__stat_green">+79.2%</div>
+                          </div>
+                          <div class="carditem__params flex items-center hideTablet">
+                            <div class="carditem__param">
+                              <div class="carditem__paramname">5 SOL</div>
+                              <div class="carditem__paramtext">Entry price</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname">10 SOL</div>
+                              <div class="carditem__paramtext">Current Price</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname green">5</div>
+                              <div class="carditem__paramtext">Bullish</div>
+                            </div>
+                            <div class="carditem__param">
+                              <div class="carditem__paramname red">20</div>
+                              <div class="carditem__paramtext">Bearish</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carditem__params flex items-center onlyTablet">
+                        <div class="carditem__param">
+                          <div class="carditem__paramname">5 SOL</div>
+                          <div class="carditem__paramtext">Entry price</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname">10 SOL</div>
+                          <div class="carditem__paramtext">Current Price</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname green">5</div>
+                          <div class="carditem__paramtext">Bullish</div>
+                        </div>
+                        <div class="carditem__param">
+                          <div class="carditem__paramname red">20</div>
+                          <div class="carditem__paramtext">Bearish</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__footer">
+                    <div class="cardcontent">
+                      <div class="cardcontent__params flex items-center">
+                        <div class="cardcontent__param">29.12.2020</div>
+                        <div class="cardcontent__param">
+                          <div class="cardcontent__tags flex items-center">
+                            <div class="tag tag_green">Update</div>
+                            <div class="tag tag_default">Closed</div>
+                            <div class="tag tag_greenish">NEW</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cardcontent__text">Vivamus sodales tortor et felis blandit tincidunt. Nullam sit amet elementum nisi. Fusce vitae libero elit. Ut leo</div>
+                      <div class="cardcontent__buttons flex items-center content-between">
+                        <div class="cardcontent__rate flex items-center">
+                          <div class="cardcontent__button cardcontent__like">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__caption">5</div>
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M5.95833 20.9167H4.58333C3.57087 20.9167 2.75 20.0958 2.75 19.0833V11.2917C2.75 10.2792 3.57087 9.45833 4.58333 9.45833H7.79167V19.0833C7.79167 20.0958 6.97079 20.9167 5.95833 20.9167ZM18.6372 10.6358C18.1995 10.1733 17.595 9.91804 16.934 9.91666H13.5208C13.5208 9.91666 14.0204 7.91054 14.1923 7.23771C14.4517 6.21975 14.504 5.36312 14.3555 4.54179C14.2785 4.11508 14.1414 3.56279 13.7638 3.07375C13.4956 2.72633 13.1601 2.50037 12.766 2.40137C12.1793 2.25516 11.8273 2.44262 11.6165 3.03066C11.599 3.07833 10.862 5.67341 10.862 5.67341C10.8043 5.87829 10.7488 6.04146 10.664 6.173C10.1195 7.02183 9.46138 7.84729 8.70788 8.68879V19.7607C10.752 20.3447 13.8256 20.8795 14.0351 20.8992C14.1543 20.9112 14.2725 20.9167 14.3898 20.9167C16.0435 20.9167 17.4978 19.8025 17.9236 18.1584C18.3077 16.6743 19.0992 13.125 19.0992 13.125C19.1625 12.8908 19.2344 12.6254 19.25 12.3357C19.2844 11.6936 19.0667 11.0905 18.6372 10.6358Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="cardcontent__button cardcontent__like cardcontent__like_dislike">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__caption">5</div>
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.0417 2.58334H17.4167C18.4291 2.58334 19.25 3.40421 19.25 4.41667V12.2083C19.25 13.2208 18.4291 14.0417 17.4167 14.0417H14.2083V4.41667C14.2083 3.40421 15.0292 2.58334 16.0417 2.58334ZM3.36279 12.8642C3.8005 13.3267 4.40504 13.582 5.06596 13.5833H8.47917C8.47917 13.5833 7.97958 15.5895 7.80771 16.2623C7.54829 17.2803 7.49604 18.1369 7.64454 18.9582C7.72154 19.3849 7.85858 19.9372 8.23625 20.4263C8.50437 20.7737 8.83987 20.9996 9.23404 21.0986C9.82071 21.2448 10.1727 21.0574 10.3835 20.4693C10.401 20.4217 11.138 17.8266 11.138 17.8266C11.1957 17.6217 11.2512 17.4585 11.336 17.327C11.8805 16.4782 12.5386 15.6527 13.2921 14.8112V3.73925C11.248 3.15534 8.17437 2.62046 7.96492 2.60075C7.84575 2.58883 7.7275 2.58334 7.61017 2.58334C5.9565 2.58334 4.50221 3.69755 4.07642 5.34159C3.69233 6.82567 2.90079 10.375 2.90079 10.375C2.83754 10.6092 2.76558 10.8746 2.75 11.1643C2.71562 11.8064 2.93333 12.4095 3.36279 12.8642Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="cardcontent__actions flex items-center">
+                          <div class="cardcontent__button">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.7288 20.4582C16.5872 20.4582 16.4465 20.4146 16.3273 20.3285L10.9997 16.4927L5.67201 20.3285C5.46209 20.4793 5.18617 20.5003 4.95655 20.3825C4.72738 20.2652 4.58301 20.0287 4.58301 19.7707V6.02067C4.58301 4.378 5.91951 3.0415 7.56217 3.0415H14.4372C16.0798 3.0415 17.4163 4.378 17.4163 6.02067V19.7707C17.4163 20.0287 17.272 20.2652 17.0423 20.3825C16.9433 20.433 16.8361 20.4582 16.7288 20.4582Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div>
+                              </div>
+                              <div class="cardaction__caption">Save</div>
+                            </a>
+                          </div>
+                          <div class="cardcontent__button">
+                            <a href="#" class="cardaction">
+                              <div class="cardaction__icon">
+                                <div class="cardaction__img">
+                                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                    <path d="M16.7295 3.0415C16.2719 3.04208 15.8205 3.14808 15.4104 3.35128C15.0004 3.55448 14.6427 3.84942 14.365 4.21321C14.0874 4.57701 13.8972 4.99988 13.8094 5.44901C13.7216 5.89815 13.7385 6.36148 13.8586 6.80306L13.8058 6.82902L7.67204 9.89502L7.61922 9.92098C7.34108 9.56331 6.98502 9.2738 6.57813 9.07446C6.17124 8.87513 5.72425 8.77123 5.27116 8.77067C4.48103 8.77067 3.72327 9.08455 3.16457 9.64325C2.60587 10.202 2.29199 10.9597 2.29199 11.7498C2.29199 12.54 2.60587 13.2977 3.16457 13.8564C3.72327 14.4151 4.48103 14.729 5.27116 14.729C5.72455 14.7287 6.1719 14.6249 6.57912 14.4256C6.98634 14.2263 7.34268 13.9366 7.62101 13.5787L7.67204 13.6047L13.8058 16.6707L13.856 16.6957C13.7355 17.1376 13.7186 17.6012 13.8065 18.0507C13.8944 18.5002 14.0847 18.9233 14.3627 19.2873C14.6407 19.6512 14.9988 19.9462 15.4093 20.1493C15.8198 20.3523 16.2715 20.458 16.7295 20.4582C17.5196 20.4582 18.2774 20.1443 18.8361 19.5856C19.3948 19.0269 19.7087 18.2691 19.7087 17.479C19.7087 16.6889 19.3948 15.9311 18.8361 15.3724C18.2774 14.8137 17.5196 14.4998 16.7295 14.4998C16.3119 14.5004 15.8991 14.5888 15.5179 14.7592C15.1367 14.9296 14.7955 15.1783 14.5166 15.489L14.4199 15.4407L8.28703 12.3747L8.19124 12.3272C8.26615 11.9462 8.26584 11.5542 8.19035 11.1733L8.28703 11.125L14.4199 8.059L14.5139 8.01156C14.7932 8.32249 15.1348 8.57117 15.5166 8.74143C15.8983 8.9117 16.3115 8.99974 16.7295 8.99984C17.5196 8.99984 18.2774 8.68596 18.8361 8.12726C19.3948 7.56856 19.7087 6.81079 19.7087 6.02067C19.7087 5.23055 19.3948 4.47278 18.8361 3.91408C18.2774 3.35538 17.5196 3.0415 16.7295 3.0415Z" fill="#212531"/>
+                                    </g>
+                                    </svg>
+                                </div>
+                              </div>
+                              <div class="cardaction__caption">Share</div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+  
+  
+          <div class="itemsblock__nav">
+            <div class="paginationblock">
+              <div class="pagination">
+                <a href="#" class="pagination__arrLeft disabled">
+                  <img src="img/pagiRight.svg" alt="">
+                </a>
+                <ul>
+                  <li class="active"><a href="">1</a></li>
+                  <li><a href="">2</a></li>
+                  <li><a href="">3</a></li>
+                  <li><span>...</span></li>
+                  <li><a href="">162</a></li>
+                </ul>
+                <a href="#" class="pagination__arrRight pagination__arrLeft">
+                  <img src="img/pagiRight.svg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="disclaimer disclaimer_dark">
+    <div class="disclaimer__wrapper">
+      <div class="disclaimer__title">Disclaimer</div>
+      <div class="disclaimer__content">
+        <div class="disclaimer__text">The information on this website is for general informational purposes only, you should not construe any such information or other material as legal, tax, investment, financial, or other advice. The website makes no representation or warranty, express or implied. Your use of the site is solely at your own risk. This site may contain links to third party content, which we do not warrant, endorse, or assume liability for.</div>
+        <div class="disclaimer__button">
+          <a href="#" class="btn btn_main">Accept</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+<%= _.template(require('../includes/footer.html').default)(data) %>

@@ -1,0 +1,41 @@
+<% var data={ title: "MAIN" , author: "" }; %>
+  <%= _.template(require('../includes/head.html').default)(data) %>
+    <%= _.template(require('../includes/header.html').default)(data) %>
+      <style>
+        ul {
+          list-style: decimal;
+        }
+
+        li {
+          margin-bottom: 15px;
+          list-style: decimal;
+        }
+
+        a {
+          color: #000 !important;
+          display: inline-block;
+        }
+
+        ul {
+          margin: 30px;
+        }
+      </style>
+      <main>
+        <div class="container">
+          <ul>
+            <li><a href="wallets_1.html" target="_blank" rel="noopener noreferrer" class=''>startpage</a></li>
+            <li><a href="wallets_1_notfound.html" target="_blank" rel="noopener noreferrer" class=''>not found</a></li>
+            <li><a href="wallets_1_table1.html" target="_blank" rel="noopener noreferrer" class=''>table 1</a></li>
+            <li><a href="wallets_1_table2.html" target="_blank" rel="noopener noreferrer" class=''>table 2</a></li>
+            <li><a href="wallets_1_table2_locked.html" target="_blank" rel="noopener noreferrer" class=''>table 2
+                locked</a></li>
+            <li><a href="wallets_1_table3.html" target="_blank" rel="noopener noreferrer" class=''>table 3</a></li>
+            <li><a href="wallets_1_table_popup.html" target="_blank" rel="noopener noreferrer" class=''>table popup</a>
+            </li>
+
+
+          </ul>
+        </div><!-- /.container -->
+      </main>
+
+      <%= _.template(require('../includes/footer.html').default)(data) %>

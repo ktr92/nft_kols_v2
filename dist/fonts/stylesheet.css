@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Klein';
+    src: url('Klein-Light.woff2') format('woff2'),
+        url('Klein-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Klein';
+    src: url('Klein-ExtraBold.woff2') format('woff2'),
+        url('Klein-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Klein';
+    src: url('Klein-Thin.woff2') format('woff2'),
+        url('Klein-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Klein';
+    src: url('Klein-Bold.woff2') format('woff2'),
+        url('Klein-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Klein';
+    src: url('Klein-Regular.woff2') format('woff2'),
+        url('Klein-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Klein Book';
+    src: url('Klein-Book.woff2') format('woff2'),
+        url('Klein-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Klein';
+    src: url('Klein-ExtraLight.woff2') format('woff2'),
+        url('Klein-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Klein';
+    src: url('Klein-Italic.woff2') format('woff2'),
+        url('Klein-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Klein';
+    src: url('Klein-Black.woff2') format('woff2'),
+        url('Klein-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Klein';
+    src: url('Klein-Medium.woff2') format('woff2'),
+        url('Klein-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

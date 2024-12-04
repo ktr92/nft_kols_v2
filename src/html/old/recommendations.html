@@ -1,0 +1,520 @@
+<% var data = {
+  title: "MAIN",
+  author: ""
+  }; %><%= _.template(require('../includes/head.html').default)(data) %><%= _.template(require('../includes/header.html').default)(data) %> <main>
+  <div class="breadcrumbs">
+    <div class="container">
+      <div class="breadcrumbs__items">
+        <ul>
+          <li>
+            <a href="/">
+              <span>
+                <img src="img/Home.svg" alt="">
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span>Victor Ivanov</span>
+            </a>
+          </li>
+          <li>
+            <span>The Ugly Duck</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="maincontent mt-30">
+    <div class="container">
+      <div class="assetblock">
+        <div class="assetblock__content">
+          <div class="assetblock__image">
+            <div class="carditem carditem_asset flex column items-center">
+              <div class="carditem__image">
+                <div class="carditem__img">
+                  <img src="img/card.png" alt="">
+                </div>
+                <div class="carditem__sticker">
+                  <div class="sticker sticker_purple">NFT</div>
+                </div>
+              </div>
+              <div class="carditem__main">
+                <div class="carditem__header">
+                  <div class="carditem__title flex items-center">
+                    <span class="carditem__name">The Ugly Duck</span>
+                    <div class="carditem__icon">
+                      <img src="img/ChartArrowRise.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carditem__links flex items-center wrap">
+                <div class="iconlink">
+                  <a href="#" class="iconlink__link">
+                    <span class="iconlink__content">
+                      <span class="iconlink__icon">
+                        <span class="iconlink__img imghover">
+                          <!-- здесь по 2 картинки - обычная и на ховер, т.к. в макетах есть растровые картинки, для которых невозможно менять цвет на ховере без подмены -->
+                          <img src="img/Globe.svg" alt="" class="unhover">
+                          <img src="img/Globe_white.svg" alt="" class="onhover">
+                        </span>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+                <div class="iconlink">
+                  <a href="#" class="iconlink__link">
+                    <span class="iconlink__content">
+                      <span class="iconlink__icon">
+                        <span class="iconlink__img imghover">
+                          <img src="img/Twitter2.svg" alt="" class="unhover">
+                          <img src="img/Twitter2_white.svg" alt="" class="onhover">
+                        </span>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+                <div class="iconlink">
+                  <a href="#" class="iconlink__link">
+                    <span class="iconlink__content">
+                      <span class="iconlink__icon">
+                        <span class="iconlink__img imghover">
+                          <img src="img/ne.svg" alt="" class="unhover">
+                          <img src="img/ne_white.svg" alt="" class="onhover">
+                        </span>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+                <!-- <div class="iconlink"><a href="#" class="iconlink__link"><span class="iconlink__content"><span class="iconlink__icon"><span class="iconlink__img imghover"><img src="img/sc.svg" alt="" class="unhover"><img src="img/sc_white.svg" alt="" class="onhover"></span></span></span></a></div><div class="iconlink"><a href="#" class="iconlink__link"><span class="iconlink__content"><span class="iconlink__icon"><span class="iconlink__img imghover"><img src="img/dyno.svg" alt="" class="unhover"><img src="img/dyno_white.svg" alt="" class="onhover"></span></span></span></a></div><div class="iconlink"><a href="#" class="iconlink__link"><span class="iconlink__content"><span class="iconlink__icon"><span class="iconlink__img imghover"><img src="img/dex.svg" alt="" class="unhover"><img src="img/dex_white.svg" alt="" class="onhover"></span></span></span></a></div><div class="iconlink"><a href="#" class="iconlink__link"><span class="iconlink__content"><span class="iconlink__icon"><span class="iconlink__img imghover"><img src="img/bird.svg" alt="" class="unhover"><img src="img/bird_white.svg" alt="" class="onhover"></span></span></span></a></div><div class="iconlink"><a href="#" class="iconlink__link"><span class="iconlink__content"><span class="iconlink__icon"><span class="iconlink__img imghover"><img src="img/LL.svg" alt="" class="unhover"><img src="img/LL_white.svg" alt="" class="onhover"></span></span></span></a></div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contentblock">
+        <div class="profileheader profileheader_left flex content-between items-center">
+          <div class="profileheader__left">
+            <div class="card__header flex content-between items-center">
+              <div class="card__profile cardprofile flex items-center">
+                <div class="cardprofile__image">
+                  <div class="cardprofile__img">
+                    <img src="img/man.png" alt="">
+                  </div>
+                </div>
+                <div class="cardprofile__info">
+                  <div class="cardprofile__name">Victor Ivanov</div>
+                  <div class="cardprofile__stats flex items-center">
+                    <div class="cardstat onlyDesktop">
+                      <div class="cardstat__text ">7 400 followers</div>
+                    </div>
+                    <div class="cardstat cardstat_green">
+                      <div class="cardstat__text">87% Profitable shills</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__follow flex items-center" data-togglewrapper="notifications">
+                <a href="#" class="btn active">Following</a>
+              </div>
+            </div>
+          </div>
+          <div class="profileheader__right">
+            <div class="profilestats__items">
+              <div class="profilestats__col items-center tfull">
+                <div class="profilestats__item flex ">
+                  <div class="profilestats__item">
+                    <div class="profilestats__value">5 SOL</div>
+                    <div class="profilestats__caption">Entry price</div>
+                  </div>
+                  <div class="profilestats__item">
+                    <div class="profilestats__value">10 SOL</div>
+                    <div class="profilestats__caption">Current Price</div>
+                  </div>
+                </div>
+                <div class="profilestats__item profilestats__item_green">
+                  <div class="profilestats__value">+79.2%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contentblock__body">
+          <div class="contentblock__header">
+            <div class="contentblock__title">
+              <h1>Bond portfolio with monthly payments</h1>
+            </div>
+            <div class="contentblock__params flex">
+              <div class="contentblock__param">29.12.2020</div>
+              <div class="contentblock__param">Duration: 29 days</div>
+            </div>
+          </div>
+          <div class="contentblock__content">
+            <div class="text">
+              <p>Aenean dapibus bibendum dolor nec vulputate. Cras commodo facilisis lacus id accumsan. Integer venenatis augue sit amet fringilla cursus. Nulla ullamcorper quis metus id feugiat. Quisque diam urna, fermentum in varius quis, laoreet quis augue. Nam semper fermentum velit. Ut volutpat dictum orci vitae rhoncus. Aenean eu ante egestas, blandit neque nec, euismod mauris. Ut molestie fermentum egestas. Cras sollicitudin consequat sodales. Maecenas tortor augue, volutpat et mi eget, auctor mattis enim. Integer a convallis odio. Ut luctus tincidunt est a lobortis. Sed neque lacus, sollicitudin ac facilisis commodo, egestas in libero.</p>
+              <p> Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla semper risus a orci malesuada aliquam. Nam faucibus finibus lacus, ac dapibus nisl. Ut sed nisi eget erat aliquam eleifend. Aliquam erat volutpat. Curabitur vel pellentesque velit, nec iaculis ligula. Vivamus dictum bibendum tristique. Aliquam quis ipsum finibus, ornare metus at, fringilla odio.</p>
+              <p>Nunc vel orci non sapien sagittis bibendum a quis justo. Donec consequat pellentesque lorem sed commodo. Ut quis dolor vitae ligula fermentum vulputate a sit amet dolor. Nullam pharetra metus nibh, nec lacinia turpis condimentum vel. Donec eget urna vitae risus fermentum tempor. Fusce facilisis est eu ante porta egestas. Morbi at nulla vitae nulla ullamcorper porta.</p>
+            </div>
+            <div class="picture">
+              <a href="img/table.png" data-lightbox="content_img">
+                <img src="img/table.png" alt="">
+              </a>
+            </div>
+            <div class="text">
+              <p>Aenean dapibus bibendum dolor nec vulputate. Cras commodo facilisis lacus id accumsan. Integer venenatis augue sit amet fringilla cursus. Nulla ullamcorper quis metus id feugiat. Quisque diam urna, fermentum in varius quis, laoreet quis augue. Nam semper fermentum velit. Ut volutpat dictum orci vitae rhoncus. Aenean eu ante egestas, blandit neque nec, euismod mauris. Ut molestie fermentum egestas. Cras sollicitudin consequat sodales. Maecenas tortor augue, volutpat et mi eget, auctor mattis enim. Integer a convallis odio. Ut luctus tincidunt est a lobortis. Sed neque lacus, sollicitudin ac facilisis commodo, egestas in libero.</p>
+              <p> Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla semper risus a orci malesuada aliquam. Nam faucibus finibus lacus, ac dapibus nisl. Ut sed nisi eget erat aliquam eleifend. Aliquam erat volutpat. Curabitur vel pellentesque velit, nec iaculis ligula. Vivamus dictum bibendum tristique. Aliquam quis ipsum finibus, ornare metus at, fringilla odio.</p>
+              <p>Nunc vel orci non sapien sagittis bibendum a quis justo. Donec consequat pellentesque lorem sed commodo. Ut quis dolor vitae ligula fermentum vulputate a sit amet dolor. Nullam pharetra metus nibh, nec lacinia turpis condimentum vel. Donec eget urna vitae risus fermentum tempor. Fusce facilisis est eu ante porta egestas. Morbi at nulla vitae nulla ullamcorper porta.</p>
+            </div>
+            <div class="contentblock__updated updatedtext">
+              <div class="updatedtext__info">Updated 20.20.2020</div>
+              <div class="updatedtext__content">
+                <p>Aenean dapibus bibendum dolor nec vulputate. Cras commodo facilisis lacus id accumsan. Integer venenatis augue sit amet fringilla cursus. Nulla ullamcorper quis metus id feugiat. Quisque diam urna, fermentum in varius quis, laoreet quis augue. Nam semper fermentum velit. Ut volutpat dictum orci vitae rhoncus. Aenean eu ante egestas, blandit neque nec, euismod mauris. Ut molestie fermentum egestas. Cras sollicitudin consequat sodales. Maecenas tortor augue, volutpat et mi eget, auctor mattis enim. Integer a convallis odio. Ut luctus tincidunt est a lobortis. Sed neque lacus, sollicitudin ac facilisis commodo, egestas in libero.</p>
+                <p> Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla semper risus a orci malesuada aliquam. Nam faucibus finibus lacus, ac dapibus nisl. Ut sed nisi eget erat aliquam eleifend. Aliquam erat volutpat. Curabitur vel pellentesque velit, nec iaculis ligula. Vivamus dictum bibendum tristique. Aliquam quis ipsum finibus, ornare metus at, fringilla odio.</p>
+                <p>Nunc vel orci non sapien sagittis bibendum a quis justo. Donec consequat pellentesque lorem sed commodo. Ut quis dolor vitae ligula fermentum vulputate a sit amet dolor. Nullam pharetra metus nibh, nec lacinia turpis condimentum vel. Donec eget urna vitae risus fermentum tempor. Fusce facilisis est eu ante porta egestas. Morbi at nulla vitae nulla ullamcorper porta.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contentblock__footer flex items-center content-between">
+          <div class="cardcontent__buttons flex items-center content-start">
+            <div class="cardcontent__rate flex items-center">
+              <div class="cardcontent__button cardcontent__like">
+                <a href="#" class="cardaction active">
+                  <div class="cardaction__caption">5</div>
+                  <div class="cardaction__icon">
+                    <div class="cardaction__img">
+                      <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.2">
+                          <path d="M5.95833 20.9167H4.58333C3.57087 20.9167 2.75 20.0958 2.75 19.0833V11.2917C2.75 10.2792 3.57087 9.45833 4.58333 9.45833H7.79167V19.0833C7.79167 20.0958 6.97079 20.9167 5.95833 20.9167ZM18.6372 10.6358C18.1995 10.1733 17.595 9.91804 16.934 9.91666H13.5208C13.5208 9.91666 14.0204 7.91054 14.1923 7.23771C14.4517 6.21975 14.504 5.36312 14.3555 4.54179C14.2785 4.11508 14.1414 3.56279 13.7638 3.07375C13.4956 2.72633 13.1601 2.50037 12.766 2.40137C12.1793 2.25516 11.8273 2.44262 11.6165 3.03066C11.599 3.07833 10.862 5.67341 10.862 5.67341C10.8043 5.87829 10.7488 6.04146 10.664 6.173C10.1195 7.02183 9.46138 7.84729 8.70788 8.68879V19.7607C10.752 20.3447 13.8256 20.8795 14.0351 20.8992C14.1543 20.9112 14.2725 20.9167 14.3898 20.9167C16.0435 20.9167 17.4978 19.8025 17.9236 18.1584C18.3077 16.6743 19.0992 13.125 19.0992 13.125C19.1625 12.8908 19.2344 12.6254 19.25 12.3357C19.2844 11.6936 19.0667 11.0905 18.6372 10.6358Z" fill="#212531"></path>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="cardcontent__button cardcontent__like cardcontent__like_dislike">
+                <a href="#" class="cardaction">
+                  <div class="cardaction__caption">5</div>
+                  <div class="cardaction__icon">
+                    <div class="cardaction__img">
+                      <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.2">
+                          <path d="M16.0417 2.58334H17.4167C18.4291 2.58334 19.25 3.40421 19.25 4.41667V12.2083C19.25 13.2208 18.4291 14.0417 17.4167 14.0417H14.2083V4.41667C14.2083 3.40421 15.0292 2.58334 16.0417 2.58334ZM3.36279 12.8642C3.8005 13.3267 4.40504 13.582 5.06596 13.5833H8.47917C8.47917 13.5833 7.97958 15.5895 7.80771 16.2623C7.54829 17.2803 7.49604 18.1369 7.64454 18.9582C7.72154 19.3849 7.85858 19.9372 8.23625 20.4263C8.50437 20.7737 8.83987 20.9996 9.23404 21.0986C9.82071 21.2448 10.1727 21.0574 10.3835 20.4693C10.401 20.4217 11.138 17.8266 11.138 17.8266C11.1957 17.6217 11.2512 17.4585 11.336 17.327C11.8805 16.4782 12.5386 15.6527 13.2921 14.8112V3.73925C11.248 3.15534 8.17437 2.62046 7.96492 2.60075C7.84575 2.58883 7.7275 2.58334 7.61017 2.58334C5.9565 2.58334 4.50221 3.69755 4.07642 5.34159C3.69233 6.82567 2.90079 10.375 2.90079 10.375C2.83754 10.6092 2.76558 10.8746 2.75 11.1643C2.71562 11.8064 2.93333 12.4095 3.36279 12.8642Z" fill="#212531"></path>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="cardcontent__actions flex items-center content-between">
+              <div class="cardcontent__button">
+                <a href="#" class="cardaction">
+                  <div class="cardaction__icon">
+                    <div class="cardaction__img">
+                      <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.2">
+                          <path d="M16.7288 20.4582C16.5872 20.4582 16.4465 20.4146 16.3273 20.3285L10.9997 16.4927L5.67201 20.3285C5.46209 20.4793 5.18617 20.5003 4.95655 20.3825C4.72738 20.2652 4.58301 20.0287 4.58301 19.7707V6.02067C4.58301 4.378 5.91951 3.0415 7.56217 3.0415H14.4372C16.0798 3.0415 17.4163 4.378 17.4163 6.02067V19.7707C17.4163 20.0287 17.272 20.2652 17.0423 20.3825C16.9433 20.433 16.8361 20.4582 16.7288 20.4582Z" fill="#212531"></path>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cardaction__caption">Save</div>
+                </a>
+              </div>
+
+           
+              <div class="cardcontent__button">
+                <a href="#" class="cardaction">
+                  <div class="cardaction__icon">
+                    <div class="cardaction__img">
+                      <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.2">
+                          <path d="M16.7295 3.0415C16.2719 3.04208 15.8205 3.14808 15.4104 3.35128C15.0004 3.55448 14.6427 3.84942 14.365 4.21321C14.0874 4.57701 13.8972 4.99988 13.8094 5.44901C13.7216 5.89815 13.7385 6.36148 13.8586 6.80306L13.8058 6.82902L7.67204 9.89502L7.61922 9.92098C7.34108 9.56331 6.98502 9.2738 6.57813 9.07446C6.17124 8.87513 5.72425 8.77123 5.27116 8.77067C4.48103 8.77067 3.72327 9.08455 3.16457 9.64325C2.60587 10.202 2.29199 10.9597 2.29199 11.7498C2.29199 12.54 2.60587 13.2977 3.16457 13.8564C3.72327 14.4151 4.48103 14.729 5.27116 14.729C5.72455 14.7287 6.1719 14.6249 6.57912 14.4256C6.98634 14.2263 7.34268 13.9366 7.62101 13.5787L7.67204 13.6047L13.8058 16.6707L13.856 16.6957C13.7355 17.1376 13.7186 17.6012 13.8065 18.0507C13.8944 18.5002 14.0847 18.9233 14.3627 19.2873C14.6407 19.6512 14.9988 19.9462 15.4093 20.1493C15.8198 20.3523 16.2715 20.458 16.7295 20.4582C17.5196 20.4582 18.2774 20.1443 18.8361 19.5856C19.3948 19.0269 19.7087 18.2691 19.7087 17.479C19.7087 16.6889 19.3948 15.9311 18.8361 15.3724C18.2774 14.8137 17.5196 14.4998 16.7295 14.4998C16.3119 14.5004 15.8991 14.5888 15.5179 14.7592C15.1367 14.9296 14.7955 15.1783 14.5166 15.489L14.4199 15.4407L8.28703 12.3747L8.19124 12.3272C8.26615 11.9462 8.26584 11.5542 8.19035 11.1733L8.28703 11.125L14.4199 8.059L14.5139 8.01156C14.7932 8.32249 15.1348 8.57117 15.5166 8.74143C15.8983 8.9117 16.3115 8.99974 16.7295 8.99984C17.5196 8.99984 18.2774 8.68596 18.8361 8.12726C19.3948 7.56856 19.7087 6.81079 19.7087 6.02067C19.7087 5.23055 19.3948 4.47278 18.8361 3.91408C18.2774 3.35538 17.5196 3.0415 16.7295 3.0415Z" fill="#212531"></path>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cardaction__caption">Share</div>
+                </a>
+              </div>
+            
+            </div>
+          </div>
+          <div class="cardcontent__buttons flex items-center content-start">
+            <div class="cardcontent__button">
+              <a href="#" class="cardaction">
+                <div class="cardaction__icon">
+                  <div class="cardaction__img">
+                    <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g opacity="0.2">
+                      <path d="M3.89606 3.5C3.71373 3.50002 3.53888 3.57246 3.40995 3.70138C3.28102 3.83031 3.20858 4.00517 3.20856 4.1875V20.2292C3.20728 20.3203 3.22411 20.4107 3.25808 20.4953C3.29205 20.5798 3.34249 20.6567 3.40645 20.7216C3.47042 20.7865 3.54665 20.838 3.6307 20.8732C3.71475 20.9084 3.80495 20.9265 3.89606 20.9265C3.98718 20.9265 4.07738 20.9084 4.16143 20.8732C4.24548 20.838 4.32171 20.7865 4.38567 20.7216C4.44964 20.6567 4.50008 20.5798 4.53405 20.4953C4.56802 20.4107 4.58485 20.3203 4.58356 20.2292V15.875H19.0211C19.1487 15.8749 19.2739 15.8393 19.3824 15.7722C19.491 15.705 19.5787 15.6089 19.6358 15.4947C19.6928 15.3805 19.717 15.2527 19.7055 15.1255C19.694 14.9984 19.6473 14.8769 19.5707 14.7748L15.7554 9.6875L19.5707 4.60018C19.6473 4.49806 19.694 4.37662 19.7055 4.24947C19.717 4.12232 19.6928 3.99449 19.6358 3.88028C19.5787 3.76607 19.491 3.67001 19.3824 3.60284C19.2739 3.53568 19.1487 3.50007 19.0211 3.5H3.89606Z" fill="#212531"/>
+                      </g>
+                      </svg>
+                      
+                  </div>
+                </div>
+                <div class="cardaction__caption">Report</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contentblock__actions flex wrap">
+          <div class="contentactions__action onlyDesktop">
+            <a href="#" class="contentactions__button">
+              <img src="img/DeleteFolder.svg" alt="">
+              <span class="contentactions__text">Close recommendation</span>
+            </a>
+          </div>
+          <div class="contentactions__action onlyDesktop">
+            <a href="#" class="contentactions__button">
+              <img src="img/Add.svg" alt="">
+              <span class="contentactions__text">Update</span>
+            </a>
+          </div>
+          <div class="contentactions__action contentactions__action_full">
+            <a href="#" class="contentactions__button contentactions__button_large">
+              <span class="contentactions__text">There are <span class="green">5 bullish</span> and <span class="red">3 bearish</span> calls on this asset on our website </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="commentsblock">
+        <div class="commentsblock__title">Comments <span class="commentsblock__count">8</span>
+        </div>
+        <div class="commentsblock__form commentform">
+          <form action="">
+            <div class="commentform__input">
+              <input type="text" placeholder="Your comment">
+              <button type="submit">
+                <img src="img/Sent.svg" alt="">
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="commentsblock__items">
+          <div class="commentsblock__item ">
+            <div class=" comment__level">
+              <div class="comment">
+                <div class="comment__header flex items-center">
+                  <div class="comment__image">
+                    <div class="comment__img">
+                      <a href="#">
+                        <img src="img/man.png" alt="">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="comment__name">
+                    <a href="#">Victor Ivanov</a>
+                  </div>
+                </div>
+                <div class="comment__content"> > По прогнозу Банка России, с учетом проводимой денежно-кредитной политики годовая инфляция снизится до 5,0–7,0% в 2023 году :: какова реальная доходность такого портфеля с учетом ожидаемой инфляции на уровне 5-7% в следующем году? печальная весьма. эмитенты классные, но было бы здорово их купить на просадке конца февраля или конца сентября по более интересным ценам, значительно повысив доходность. :( жаль, момент упущен. </div>
+                <div class="comment__footer flex items-center">
+                  <div class="comment__info">
+                    <div class="comment__param">
+                      <img src="img/Clock.svg" alt="">
+                      <span>2 July in 22:02</span>
+                    </div>
+                  </div>
+                  <div class="comment__reply">
+                    <a href="" class="btn_reply">
+                      <img src="img/ReplyArrow.svg" alt="">
+                      <span>Reply</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class=" comment__level">
+                <div class="commentsblock__form commentform">
+                  <form action="">
+                    <div class="commentform__input">
+                      <input type="text" placeholder="Your comment">
+                      <button type="submit">
+                        <img src="img/Sent.svg" alt="">
+                      </button>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="comment">
+                  <div class="comment__header flex items-center">
+                    <div class="comment__image">
+                      <div class="comment__img">
+                        <a href="#">
+                          <img src="img/man.png" alt="">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="comment__name">
+                      <a href="#">Victor Ivanov</a>
+                    </div>
+                  </div>
+                  <div class="comment__content"> > По прогнозу Банка России, с учетом проводимой денежно-кредитной политики годовая инфляция снизится до 5,0–7,0% в 2023 году :: какова реальная доходность такого портфеля с учетом ожидаемой инфляции на уровне 5-7% в следующем году? печальная весьма. эмитенты классные, но было бы здорово их купить на просадке конца февраля или конца сентября по более интересным ценам, значительно повысив доходность. :( жаль, момент упущен. </div>
+                  <div class="comment__footer flex items-center">
+                    <div class="comment__info">
+                      <div class="comment__param">
+                        <img src="img/Clock.svg" alt="">
+                        <span>2 July in 22:02</span>
+                      </div>
+                    </div>
+                    <div class="comment__reply">
+                      <a href="" class="btn_reply">
+                        <img src="img/ReplyArrow.svg" alt="">
+                        <span>Reply</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class=" comment__level">
+                  
+                  <div class="comment">
+                    <div class="comment__header flex items-center">
+                      <div class="comment__image">
+                        <div class="comment__img">
+                          <a href="#">
+                            <img src="img/man.png" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="comment__name">
+                        <a href="#">Victor Ivanov</a>
+                      </div>
+                    </div>
+                    <div class="comment__content"> > По прогнозу Банка России, с учетом проводимой денежно-кредитной политики годовая инфляция снизится до 5,0–7,0% в 2023 году :: какова реальная доходность такого портфеля с учетом ожидаемой инфляции на уровне 5-7% в следующем году? печальная весьма. эмитенты классные, но было бы здорово их купить на просадке конца февраля или конца сентября по более интересным ценам, значительно повысив доходность. :( жаль, момент упущен. </div>
+                    <div class="comment__footer flex items-center">
+                      <div class="comment__info">
+                        <div class="comment__param">
+                          <img src="img/Clock.svg" alt="">
+                          <span>2 July in 22:02</span>
+                        </div>
+                      </div>
+                      <div class="comment__reply">
+                        <a href="" class="btn_reply">
+                          <img src="img/ReplyArrow.svg" alt="">
+                          <span>Reply</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="comment__level">
+                <div class="comment">
+                  <div class="comment__header flex items-center">
+                    <div class="comment__image">
+                      <div class="comment__img">
+                        <a href="#">
+                          <img src="img/man.png" alt="">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="comment__name">
+                      <a href="#">Victor Ivanov</a>
+                    </div>
+                  </div>
+                  <div class="comment__content"> > По прогнозу Банка России, с учетом проводимой денежно-кредитной политики годовая инфляция снизится до 5,0–7,0% в 2023 году :: какова реальная доходность такого портфеля с учетом ожидаемой инфляции на уровне 5-7% в следующем году? печальная весьма. эмитенты классные, но было бы здорово их купить на просадке конца февраля или конца сентября по более интересным ценам, значительно повысив доходность. :( жаль, момент упущен. </div>
+                  <div class="comment__footer flex items-center">
+                    <div class="comment__info">
+                      <div class="comment__param">
+                        <img src="img/Clock.svg" alt="">
+                        <span>2 July in 22:02</span>
+                      </div>
+                    </div>
+                    <div class="comment__reply">
+                      <a href="" class="btn_reply">
+                        <img src="img/ReplyArrow.svg" alt="">
+                        <span>Reply</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="commentblock__item">
+            <div class="comment__level">
+              <div class="comment">
+                <div class="comment__header flex items-center">
+                  <div class="comment__image">
+                    <div class="comment__img">
+                      <a href="#">
+                        <img src="img/man.png" alt="">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="comment__name">
+                    <a href="#">Victor Ivanov</a>
+                  </div>
+                </div>
+                <div class="comment__content"> > По прогнозу Банка России, с учетом проводимой денежно-кредитной политики годовая инфляция снизится до 5,0–7,0% в 2023 году :: какова реальная доходность такого портфеля с учетом ожидаемой инфляции на уровне 5-7% в следующем году? печальная весьма. эмитенты классные, но было бы здорово их купить на просадке конца февраля или конца сентября по более интересным ценам, значительно повысив доходность. :( жаль, момент упущен. </div>
+                <div class="comment__footer flex items-center">
+                  <div class="comment__info">
+                    <div class="comment__param">
+                      <img src="img/Clock.svg" alt="">
+                      <span>2 July in 22:02</span>
+                    </div>
+                  </div>
+                  <div class="comment__reply">
+                    <a href="" class="btn_reply">
+                      <img src="img/ReplyArrow.svg" alt="">
+                      <span>Reply</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="commentblock__item">
+            <div class="comment__level">
+              <div class="comment">
+                <div class="comment__header flex items-center">
+                  <div class="comment__image">
+                    <div class="comment__img">
+                      <a href="#">
+                        <img src="img/man.png" alt="">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="comment__name">
+                    <a href="#">Victor Ivanov</a>
+                  </div>
+                </div>
+                <div class="comment__content"> > По прогнозу Банка России, с учетом проводимой денежно-кредитной политики годовая инфляция снизится до 5,0–7,0% в 2023 году :: какова реальная доходность такого портфеля с учетом ожидаемой инфляции на уровне 5-7% в следующем году? печальная весьма. эмитенты классные, но было бы здорово их купить на просадке конца февраля или конца сентября по более интересным ценам, значительно повысив доходность. :( жаль, момент упущен. </div>
+                <div class="comment__footer flex items-center">
+                  <div class="comment__info">
+                    <div class="comment__param">
+                      <img src="img/Clock.svg" alt="">
+                      <span>2 July in 22:02</span>
+                    </div>
+                  </div>
+                  <div class="comment__reply">
+                    <a href="" class="btn_reply">
+                      <img src="img/ReplyArrow.svg" alt="">
+                      <span>Reply</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="itemsblock__nav itemsblock__nav_showmore">
+          <div class="showmoreblock">
+            <a href="" class="showmoreblock__btn btn btn_main">
+              <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.7279 3.5C9.6485 3.5 6.89488 4.93949 5.11075 7.17529C5.01651 7.28581 4.94546 7.41415 4.90182 7.55267C4.85817 7.69119 4.84282 7.83708 4.85668 7.98165C4.87054 8.12623 4.91333 8.26654 4.9825 8.39425C5.05167 8.52196 5.14581 8.63446 5.25933 8.72506C5.37284 8.81565 5.50342 8.88251 5.64328 8.92164C5.78315 8.96076 5.92946 8.97137 6.07351 8.95283C6.21755 8.93429 6.3564 8.88697 6.4818 8.8137C6.6072 8.74042 6.71659 8.64268 6.80346 8.52629C8.19457 6.783 10.3214 5.66667 12.7279 5.66667C16.5636 5.66667 19.7079 8.48849 20.2277 12.1762L19.7231 11.6715C19.622 11.5676 19.5011 11.4851 19.3675 11.4287C19.2339 11.3724 19.0904 11.3435 18.9455 11.3436C18.73 11.3439 18.5196 11.4083 18.341 11.5288C18.1624 11.6492 18.0238 11.8202 17.9428 12.0198C17.8618 12.2195 17.8422 12.4387 17.8865 12.6495C17.9307 12.8603 18.0368 13.0532 18.1912 13.2035L20.6287 15.641C20.8318 15.844 21.1073 15.9581 21.3946 15.9581C21.6819 15.9581 21.9574 15.844 22.1606 15.641L24.5981 13.2035C24.702 13.1036 24.785 12.9841 24.8422 12.8518C24.8994 12.7194 24.9296 12.5771 24.9311 12.4329C24.9325 12.2888 24.9052 12.1458 24.8508 12.0124C24.7963 11.8789 24.7157 11.7577 24.6138 11.6558C24.5119 11.5539 24.3907 11.4733 24.2572 11.4188C24.1238 11.3644 23.9808 11.3371 23.8367 11.3385C23.6925 11.34 23.5502 11.3702 23.4178 11.4274C23.2855 11.4846 23.166 11.5676 23.0662 11.6715L22.4303 12.3074C21.9535 7.37549 17.7818 3.5 12.7279 3.5ZM4.58707 10.5417C4.30528 10.5459 4.03622 10.6597 3.83698 10.859L1.39948 13.2965C1.29551 13.3964 1.2125 13.5159 1.15532 13.6482C1.09814 13.7806 1.06793 13.9229 1.06646 14.0671C1.065 14.2112 1.0923 14.3542 1.14678 14.4876C1.20126 14.621 1.28182 14.7423 1.38374 14.8442C1.48566 14.9461 1.60689 15.0267 1.74033 15.0812C1.87377 15.1356 2.01674 15.1629 2.16087 15.1615C2.305 15.16 2.44738 15.1298 2.57969 15.0726C2.71199 15.0154 2.83156 14.9324 2.93138 14.8285L3.56932 14.1905C4.06027 19.1079 8.2261 22.9672 13.2696 22.9672C16.3401 22.9672 19.0877 21.5364 20.872 19.312C20.9629 19.2012 21.031 19.0735 21.0723 18.9362C21.1135 18.7989 21.1271 18.6548 21.1122 18.5122C21.0974 18.3696 21.0544 18.2314 20.9857 18.1056C20.9171 17.9798 20.8241 17.8688 20.7123 17.7791C20.6004 17.6895 20.4719 17.6229 20.3342 17.5833C20.1964 17.5436 20.0521 17.5317 19.9097 17.5483C19.7673 17.5648 19.6296 17.6094 19.5046 17.6795C19.3796 17.7497 19.2697 17.8439 19.1814 17.9568C17.7904 19.6909 15.6689 20.8005 13.2696 20.8005C9.44763 20.8005 6.31276 17.9985 5.77619 14.3302L6.27448 14.8285C6.37431 14.9324 6.49387 15.0154 6.62618 15.0726C6.75849 15.1298 6.90087 15.16 7.045 15.1615C7.18913 15.1629 7.3321 15.1356 7.46554 15.0812C7.59899 15.0267 7.72022 14.9461 7.82214 14.8442C7.92406 14.7423 8.00461 14.6211 8.05909 14.4876C8.11357 14.3542 8.14088 14.2112 8.13941 14.0671C8.13795 13.9229 8.10774 13.7806 8.05055 13.6482C7.99337 13.5159 7.91036 13.3964 7.80638 13.2965L5.36888 10.859C5.26642 10.7565 5.14443 10.6756 5.01014 10.6211C4.87585 10.5666 4.73199 10.5396 4.58707 10.5417V10.5417Z" fill="white"></path>
+              </svg>
+              <span>Show more</span>
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</main><%= _.template(require('../includes/footer.html').default)(data) %>

@@ -1,0 +1,293 @@
+<% var data = {
+  title: "MAIN",
+  author: ""
+  }; %><%= _.template(require('../includes/head.html').default)(data) %><%= _.template(require('../includes/header.html').default)(data) %> <main>
+  <div class="topcontent topcontent_left topcontent_page topcontent_formpage">
+    <div class="container">
+      <div class="pagenav  flex wrap column items-start ">
+        <a href="#" class="backbtn">
+          <img src="img/backbtn.svg" alt="">
+        </a>
+        <div class="pagetitle pagetitle_left">
+          <div class="pagetitle__title pagetitle__title_small text-left">Update Recommendation</div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="maincontent mt-0">
+    <div class="container">
+      <div class="contentform">
+        <form action="">
+          <div class="contentform__items">
+            <div class="contentform__item">
+              <div class="contentform__input contentform__input_radio contentform__input_topradio">
+                <div class="radiogroup">
+                  <div class="contentform__label">I am currently…</div>
+                  <div class="radiogroup__items">
+                  <div class="radiogroup__item">
+                    <label class="customradio customradio_currently" for="currently_1">
+                      <div class="customradio__wrapper">
+                        <input type="radio" checked="checked" name="currently" id="currently_1">
+                        <div class="customradio__icon">
+                          <div class="customradio__icn"><img src="img/Bullish.svg" alt=""></div>
+                        </div>
+                        <div class="customradio__text">Bullish</div>
+                        <div class="customradio__check">
+                          <span class="customradio__unselected"></span>
+                          <span class="customradio__selected">
+                            <img src="img/selected_radio.svg" alt="">
+                          </span>
+                        </div>
+                      </div>
+                      
+                    </label>
+                </div>
+                  <div class="radiogroup__item">
+                    <label class="customradio customradio_currently" for="currently_2">
+                      <div class="customradio__wrapper">
+                        <input type="radio" name="currently" id="currently_2">
+                        <div class="customradio__icon">
+                          <div class="customradio__icn"><img src="img/Bearrish.svg" alt=""></div>
+                        </div>
+                        <div class="customradio__text">Bearrish</div>
+                        <div class="customradio__check">
+                          <span class="customradio__unselected"></span>
+                          <span class="customradio__selected">
+                            <img src="img/selected_radio.svg" alt="">
+                          </span>
+                        </div>
+                      </div>
+                      
+                    </label>
+                </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="contentform__item">
+              <div class="contentform__label">
+                Select NFT<span class="red">*</span>
+              </div>
+        
+            <div class="contentform__input" data-togglewrapper="suggestions">
+              <div class="searchinput">
+                <input type="text" placeholder="The Ugly Duck" oninput="showSuggestions(this)">
+              </div>
+              <div class="suggestions" data-toggle="suggestions">
+                <div class="suggestions__wrapper">
+                  <div class="suggestions__blocks"> 
+                    <div class="suggestions__block">
+                      <div class="suggestions__items">
+                        <a href="#" class="suggestions__item">
+                          <div class="suggestions__icon">
+                            <div class="suggestions__img"><img src="img/Forefront.png" alt=""></div>
+                          </div>
+                          <div class="suggestions__name">Forefront (FF)</div>
+                        </a>
+                        <a href="#" class="suggestions__item">
+                          <div class="suggestions__icon">
+                            <div class="suggestions__img"><img src="img/FFA.png" alt=""></div>
+                          </div>
+                          <div class="suggestions__name">FFA.Games (FFA)</div>
+                        </a>
+                        <a href="#" class="suggestions__item">
+                          <div class="suggestions__icon">
+                            <div class="suggestions__img"><img src="img/FiFaSport.png" alt=""></div>
+                          </div>
+                          <div class="suggestions__name">FiFaSport (FFS)</div>
+                        </a>
+                        <a href="#" class="suggestions__item">
+                          <div class="suggestions__icon">
+                            <div class="suggestions__img"><img src="img/FairyForest.png" alt=""></div>
+                          </div>
+                          <div class="suggestions__name">Fairy Forest (FFN)</div>
+                        </a>
+                     
+                        <a href="#" class="suggestions__item">
+                          <div class="suggestions__icon">
+                            <div class="suggestions__img"><img src="img/Forefront2.png" alt=""></div>
+                          </div>
+                          <div class="suggestions__name">Forefront (FF)</div>
+                        </a>
+                        <a href="#" class="suggestions__item">
+                          <div class="suggestions__icon">
+                            <div class="suggestions__img"><img src="img/FFA.png" alt=""></div>
+                          </div>
+                          <div class="suggestions__name">FFA.Games (FFA)</div>
+                        </a>
+                        <a href="#" class="suggestions__item">
+                          <div class="suggestions__icon">
+                            <div class="suggestions__img"><img src="img/FiFaSport.png" alt=""></div>
+                          </div>
+                          <div class="suggestions__name">FiFaSport (FFS)</div>
+                        </a>
+                        <a href="#" class="suggestions__item">
+                          <div class="suggestions__icon">
+                            <div class="suggestions__img"><img src="img/FairyForest.png" alt=""></div>
+                          </div>
+                          <div class="suggestions__name">Fairy Forest (FFN)</div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contentform__item contentform__item_cols contentform__item_cols2 flex ">
+            <div class="contentform__item_col">
+              <div class="contentform__label flex items-center">
+                Entry Price<span class="red">*</span>
+                <span class="oversize oversize_desktop">
+                  <img src="img/info.svg" alt="">
+                  <span class="oversize__tooltip oversize__tooltip_large">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </span>
+                </span>
+              </div>
+              <div class="contentform__input">
+                <div class="contentform__inputbtn contentform__inputprice inputplaceholder w-full">
+                  <input type="text" class="input input_dark" value="250">
+                  <div class="inputplaceholder__placeholder ">$</div>
+                  <a href="#" class="btn btn_main">Update</a>
+                </div>
+              </div>
+            </div>
+            <div class="contentform__item_col">
+              <div class="contentform__label">
+                Duration<span class="red">*</span>
+              </div>
+              <div class="contentform__input">
+              
+                <div class="form-control__wrapper range-slider" data-range-slider-type="day" data-range-slider-ready="yes">
+                  <input class="form-control range-slider__control input input_dark" data-max="365" data-min="1" data-day-format="" name="day1" placeholder="1 day" type="text" inputmode="integer" value="1">
+                  <div class="range-slider__ui"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contentform__item">
+            <div class="contentform__label">
+              Title<span class="red">*</span>
+            </div>
+            <div class="contentform__input">
+              <input type="text" class="input input_bold" placeholder="Bond portfolio with monthly payments">
+            </div>
+          </div>
+        </div>
+
+        <div class="contentdelimeter">
+          <div class="contentdelimeter__title">Your recommendation</div>
+        </div>
+
+          <div class="contentblock">
+          
+            <div class="contentblock__body">
+              <div class="contentblock__header">
+                <div class="contentblock__title">
+                  <h1>Bond portfolio with monthly payments</h1>
+                </div>
+                <div class="contentblock__params flex">
+                  <div class="contentblock__param">29.12.2020</div>
+                  <div class="contentblock__param">Duration: 29 days</div>
+                </div>
+              </div>
+              <div class="contentblock__content">
+                <div class="text">
+                  <p>Aenean dapibus bibendum dolor nec vulputate. Cras commodo facilisis lacus id accumsan. Integer venenatis augue sit amet fringilla cursus. Nulla ullamcorper quis metus id feugiat. Quisque diam urna, fermentum in varius quis, laoreet quis augue. Nam semper fermentum velit. Ut volutpat dictum orci vitae rhoncus. Aenean eu ante egestas, blandit neque nec, euismod mauris. Ut molestie fermentum egestas. Cras sollicitudin consequat sodales. Maecenas tortor augue, volutpat et mi eget, auctor mattis enim. Integer a convallis odio. Ut luctus tincidunt est a lobortis. Sed neque lacus, sollicitudin ac facilisis commodo, egestas in libero.</p>
+                  <p> Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla semper risus a orci malesuada aliquam. Nam faucibus finibus lacus, ac dapibus nisl. Ut sed nisi eget erat aliquam eleifend. Aliquam erat volutpat. Curabitur vel pellentesque velit, nec iaculis ligula. Vivamus dictum bibendum tristique. Aliquam quis ipsum finibus, ornare metus at, fringilla odio.</p>
+                  <p>Nunc vel orci non sapien sagittis bibendum a quis justo. Donec consequat pellentesque lorem sed commodo. Ut quis dolor vitae ligula fermentum vulputate a sit amet dolor. Nullam pharetra metus nibh, nec lacinia turpis condimentum vel. Donec eget urna vitae risus fermentum tempor. Fusce facilisis est eu ante porta egestas. Morbi at nulla vitae nulla ullamcorper porta.</p>
+                </div>
+                <div class="picture">
+                  <a href="img/table.png" data-lightbox="content_img">
+                    <img src="img/table.png" alt="">
+                  </a>
+                </div>
+                <div class="text">
+                  <p>Aenean dapibus bibendum dolor nec vulputate. Cras commodo facilisis lacus id accumsan. Integer venenatis augue sit amet fringilla cursus. Nulla ullamcorper quis metus id feugiat. Quisque diam urna, fermentum in varius quis, laoreet quis augue. Nam semper fermentum velit. Ut volutpat dictum orci vitae rhoncus. Aenean eu ante egestas, blandit neque nec, euismod mauris. Ut molestie fermentum egestas. Cras sollicitudin consequat sodales. Maecenas tortor augue, volutpat et mi eget, auctor mattis enim. Integer a convallis odio. Ut luctus tincidunt est a lobortis. Sed neque lacus, sollicitudin ac facilisis commodo, egestas in libero.</p>
+                  <p> Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla semper risus a orci malesuada aliquam. Nam faucibus finibus lacus, ac dapibus nisl. Ut sed nisi eget erat aliquam eleifend. Aliquam erat volutpat. Curabitur vel pellentesque velit, nec iaculis ligula. Vivamus dictum bibendum tristique. Aliquam quis ipsum finibus, ornare metus at, fringilla odio.</p>
+                  <p>Nunc vel orci non sapien sagittis bibendum a quis justo. Donec consequat pellentesque lorem sed commodo. Ut quis dolor vitae ligula fermentum vulputate a sit amet dolor. Nullam pharetra metus nibh, nec lacinia turpis condimentum vel. Donec eget urna vitae risus fermentum tempor. Fusce facilisis est eu ante porta egestas. Morbi at nulla vitae nulla ullamcorper porta.</p>
+                </div>
+                <div class="contentblock__updated updatedtext updatedtext_edit">
+                  <div class="updatedtext__info inline-flex items-center">
+                    <div class="updatedtext__text"> Update block 1</div>
+                    <div class="updatedtext__buttons flex items-center">
+                      <a href="#">
+                        <img src="img/Edit1.svg" alt="">
+                      </a>
+                      <a href="#">
+                        <img src="img/Remove1.svg" alt="">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="updatedtext__content">
+                    <p>Aenean dapibus bibendum dolor nec vulputate. Cras commodo facilisis lacus id accumsan. Integer venenatis augue sit amet fringilla cursus. Nulla ullamcorper quis metus id feugiat. Quisque diam urna, fermentum in varius quis, laoreet quis augue. Nam semper fermentum velit. Ut volutpat dictum orci vitae rhoncus. Aenean eu ante egestas, blandit neque nec, euismod mauris. Ut molestie fermentum egestas. Cras sollicitudin consequat sodales. Maecenas tortor augue, volutpat et mi eget, auctor mattis enim. Integer a convallis odio. Ut luctus tincidunt est a lobortis. Sed neque lacus, sollicitudin ac facilisis commodo, egestas in libero.</p>
+                    <p> Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla semper risus a orci malesuada aliquam. Nam faucibus finibus lacus, ac dapibus nisl. Ut sed nisi eget erat aliquam eleifend. Aliquam erat volutpat. Curabitur vel pellentesque velit, nec iaculis ligula. Vivamus dictum bibendum tristique. Aliquam quis ipsum finibus, ornare metus at, fringilla odio.</p>
+                    <p>Nunc vel orci non sapien sagittis bibendum a quis justo. Donec consequat pellentesque lorem sed commodo. Ut quis dolor vitae ligula fermentum vulputate a sit amet dolor. Nullam pharetra metus nibh, nec lacinia turpis condimentum vel. Donec eget urna vitae risus fermentum tempor. Fusce facilisis est eu ante porta egestas. Morbi at nulla vitae nulla ullamcorper porta.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contentblock__footer flex items-center content-between">
+              <div class="contentblock__actions flex wrap">
+                <div class="contentactions__action contentactions__action_half">
+                  <a href="#" class="contentactions__button ">
+                    <div class="contentactions__icon">
+                      <div class="contentactions__icn">
+                        <img src="img/MultilineText.svg" alt="">
+                      </div>
+                    </div>
+                    <div class="contentactions__text">Add text</div>
+                  </a>
+                </div>
+                <div class="contentactions__action contentactions__action_half">
+                  <a href="#" class="contentactions__button ">
+                    <div class="contentactions__icon">
+                      <div class="contentactions__icn">
+                        <img src="img/Picture.svg" alt="">
+                      </div>
+                    </div>
+                    <div class="contentactions__text">Add image</div>
+                  </a>
+                </div>
+              </div>
+            </div> 
+          </div>
+
+          <div class="contentform__buttons">
+            <div class="buttonsblock content-center">
+              <div class="buttonsblock__button ">
+                <a href="" class="btn ">
+                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.1094 3.95825C7.67646 3.95825 4.84399 6.57534 4.50024 9.91659H4.23438C1.96104 9.91659 0.109375 11.7683 0.109375 14.0416C0.109375 16.3149 1.96104 18.1666 4.23438 18.1666H9.16593C9.08802 17.9512 9.04688 17.722 9.04688 17.4791V16.7916H4.23438C2.71729 16.7916 1.48438 15.5587 1.48438 14.0416C1.48438 12.5245 2.71729 11.2916 4.23438 11.2916H5.15104C5.53146 11.2916 5.83854 10.9845 5.83854 10.6041C5.83854 7.69825 8.20354 5.33325 11.1094 5.33325C14.0152 5.33325 16.3802 7.69825 16.3802 10.6041C16.3802 10.9845 16.6873 11.2916 17.0677 11.2916H17.9844C19.5015 11.2916 20.7344 12.5245 20.7344 14.0416C20.7344 15.5587 19.5015 16.7916 17.9844 16.7916H13.1719V17.4791C13.1719 17.722 13.1307 17.9512 13.0528 18.1666H17.9844C20.2577 18.1666 22.1094 16.3149 22.1094 14.0416C22.1094 11.7683 20.2577 9.91659 17.9844 9.91659H17.7185C17.3748 6.57534 14.5423 3.95825 11.1094 3.95825ZM11.0754 9.00081C10.9131 9.00896 10.759 9.07429 10.6403 9.18522L7.2028 12.3936C7.13337 12.4542 7.07686 12.5283 7.03662 12.6112C6.99638 12.6942 6.97324 12.7844 6.96858 12.8765C6.96391 12.9686 6.97781 13.0607 7.00946 13.1473C7.04111 13.2339 7.08985 13.3132 7.15279 13.3806C7.21573 13.448 7.29158 13.502 7.37583 13.5395C7.46008 13.577 7.551 13.5971 7.64319 13.5987C7.73539 13.6003 7.82696 13.5834 7.91247 13.5489C7.99798 13.5144 8.07568 13.4631 8.14095 13.3979L10.4219 11.2701V17.4791C10.4206 17.5702 10.4374 17.6606 10.4714 17.7452C10.5054 17.8297 10.5558 17.9067 10.6198 17.9715C10.6837 18.0364 10.76 18.0879 10.844 18.1231C10.9281 18.1583 11.0183 18.1764 11.1094 18.1764C11.2005 18.1764 11.2907 18.1583 11.3747 18.1231C11.4588 18.0879 11.535 18.0364 11.599 17.9715C11.663 17.9067 11.7134 17.8297 11.7474 17.7452C11.7813 17.6606 11.7982 17.5702 11.7969 17.4791V11.2701L14.0778 13.3979C14.1431 13.4631 14.2208 13.5144 14.3063 13.5489C14.3918 13.5834 14.4834 13.6003 14.5756 13.5987C14.6677 13.5971 14.7587 13.577 14.8429 13.5395C14.9272 13.502 15.003 13.448 15.066 13.3806C15.1289 13.3132 15.1776 13.2339 15.2093 13.1473C15.2409 13.0607 15.2548 12.9686 15.2502 12.8765C15.2455 12.7844 15.2224 12.6942 15.1821 12.6112C15.1419 12.5283 15.0854 12.4542 15.016 12.3936L11.5785 9.18522C11.5112 9.12238 11.432 9.07367 11.3456 9.04199C11.2592 9.01032 11.1673 8.99631 11.0754 9.00081Z" fill="#30CA4C"/>
+                    </svg>
+                    
+                    
+                  <span>Save at drafts</span>
+                </a>
+              </div>
+              <div class="buttonsblock__button">
+                <a href="" class="btn btn_main ">
+                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.7642 9.24572L18.8826 8.12738C20.044 6.96597 20.044 5.0758 18.8826 3.91392C18.3202 3.35201 17.5726 3.04309 16.7756 3.04309C15.9786 3.04309 15.2306 3.35247 14.6686 3.91438L13.5508 5.03226L17.7642 9.24572ZM12.5786 6.00438L4.29702 14.286C4.12056 14.4625 3.98627 14.6802 3.90835 14.9162L2.37294 19.555C2.29089 19.8016 2.35552 20.0734 2.53931 20.2572C2.67085 20.3883 2.84594 20.4584 3.0256 20.4584C3.09802 20.4584 3.17089 20.4469 3.24194 20.4235L7.87935 18.8877C8.11631 18.8098 8.33448 18.6755 8.51094 18.4985L16.7921 10.2174L12.5786 6.00438Z" fill="white"></path>
+                    </svg>
+                    
+                  <span>Publish recommendation</span>
+                </a>
+              </div>
+            </div>
+            <div class="buttonsblock content-center">
+              <div class="buttonsblock__button ">
+                <a href="" class="link_large ">
+                 <img src="img/Eye.svg" alt="">
+                  <span>View reccomendation preview</span>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main><%= _.template(require('../includes/footer.html').default)(data) %>

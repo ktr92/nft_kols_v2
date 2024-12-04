@@ -1,0 +1,154 @@
+<% var data={ title: "MAIN" , author: "" }; %>
+  <%= _.template(require('../includes/head.html').default)(data) %>
+    <div class='darkmode sm_mode'>
+      <%= _.template(require('../includes/header_small.html').default)(data) %>
+        <main>
+
+
+          <div class="navcontent">
+  
+              <div class="tabsnav tabsnav_v2">
+                <div class="container">
+                <div class="tabsnav__links flex content-between items-center tabsnav__links_wallets">
+                  <div class="linkset__items statistics_ranges flex">
+
+                    <div class="linkset__item"><a data-value="15m" href="#" class="linkset__link ">15m</a></div>
+                    <div class="linkset__item"><a data-value="30m" href="#" class="linkset__link active">30m</a></div>
+                    <div class="linkset__item"><a data-value="1h" href="#" class="linkset__link ">1h</a></div>
+                    <div class="linkset__item"><a data-value="3h" href="#" class="linkset__link ">3h</a></div>
+                    <div class="linkset__item"><a data-value="6h" href="#" class="linkset__link ">6h</a></div>
+                    <div class="linkset__item"><a data-value="12h" href="#" class="linkset__link ">12h</a></div>
+                    <div class="linkset__item"><a data-value="24h" href="#" class="linkset__link ">24h</a></div>
+                    <div class="linkset__item"><a data-value="3d" href="#" class="linkset__link ">3d</a></div>
+                    <div class="linkset__item"><a data-value="7d" href="#" class="linkset__link ">7d</a></div>
+                  </div>
+                  <div class="itemsnav itemsnav_table flex items-center content-between mt-0">
+                    <a href="#" data-toggleclick="searchv2" class="searchv2"><img src="img/searchv2.svg" alt=""></a>
+
+                    <div class="itemsnav__right" data-togglewrapper="searchv2" data-toggle="searchv2">
+                      <div class="pagesearch" >
+                        <div class="pagesearch__form">
+                          <form action="">
+                            <div class="pagesearch__input">
+                              <div class="searchinput">
+                                <input type="text" placeholder="Search by Twitter Handle" oninput="" value=''>
+
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tableblock tableblock_tab tableblock_tab_full tableblock__kols">
+                <div class="tableblock__wrapper">
+                  <div class="tableblock__table">
+                    <div class="tableblock__scroll">
+                      <div class="tableblock__header">
+                        <div class="tableblock__row">
+                          <div
+                          class="tableblock__col tableblock__param tableblock__param_roi flex items-center   tableblock__col_fav">
+                          <span class="tableblock__title"></span>
+                        </div>
+
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_roi flex items-center   tableblock__col_project">
+                            <span class="tableblock__title">Project</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_bullish flex items-center   tableblock__col_date" >
+                            <a href='#' class="tableblock__title" >
+                              <span>Date</span>
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.4">
+                                <path d="M2.2339 2.35988C2.3804 2.21337 2.61765 2.21337 2.76415 2.35988L5.99915 5.59488L9.2339 2.35988C9.3804 2.21337 9.61765 2.21337 9.76415 2.35988L11.3891 3.98488C11.5356 4.13138 11.5356 4.36862 11.3891 4.51513L6.26415 9.64013C6.19115 9.71363 6.09515 9.75013 5.99915 9.75013C5.90315 9.75013 5.80715 9.71363 5.7339 9.64038L0.608898 4.51538C0.462399 4.36888 0.462399 4.13163 0.608898 3.98513L2.2339 2.35988Z" fill="white"/>
+                                </g>
+                                </svg>
+                                
+                            </a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_shiller flex items-center   tableblock__col_newkols">
+                            <a href='#' class="tableblock__title">
+                              <span>New Kols</span>
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.4">
+                                <path d="M2.2339 2.35988C2.3804 2.21337 2.61765 2.21337 2.76415 2.35988L5.99915 5.59488L9.2339 2.35988C9.3804 2.21337 9.61765 2.21337 9.76415 2.35988L11.3891 3.98488C11.5356 4.13138 11.5356 4.36862 11.3891 4.51513L6.26415 9.64013C6.19115 9.71363 6.09515 9.75013 5.99915 9.75013C5.90315 9.75013 5.80715 9.71363 5.7339 9.64038L0.608898 4.51538C0.462399 4.36888 0.462399 4.13163 0.608898 3.98513L2.2339 2.35988Z" fill="white"/>
+                                </g>
+                                </svg>
+                                
+                            </a>
+
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center    tableblock__col_time">
+                            <a href='#' class="tableblock__title">
+                              <span>24h</span>
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.4">
+                                <path d="M2.2339 2.35988C2.3804 2.21337 2.61765 2.21337 2.76415 2.35988L5.99915 5.59488L9.2339 2.35988C9.3804 2.21337 9.61765 2.21337 9.76415 2.35988L11.3891 3.98488C11.5356 4.13138 11.5356 4.36862 11.3891 4.51513L6.26415 9.64013C6.19115 9.71363 6.09515 9.75013 5.99915 9.75013C5.90315 9.75013 5.80715 9.71363 5.7339 9.64038L0.608898 4.51538C0.462399 4.36888 0.462399 4.13163 0.608898 3.98513L2.2339 2.35988Z" fill="white"/>
+                                </g>
+                                </svg>
+                                
+                            </a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center    tableblock__col_watchlist">
+                            <a href='#' class="tableblock__title">
+                              <span>Watchlist</span>
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.4">
+                                <path d="M2.2339 2.35988C2.3804 2.21337 2.61765 2.21337 2.76415 2.35988L5.99915 5.59488L9.2339 2.35988C9.3804 2.21337 9.61765 2.21337 9.76415 2.35988L11.3891 3.98488C11.5356 4.13138 11.5356 4.36862 11.3891 4.51513L6.26415 9.64013C6.19115 9.71363 6.09515 9.75013 5.99915 9.75013C5.90315 9.75013 5.80715 9.71363 5.7339 9.64038L0.608898 4.51538C0.462399 4.36888 0.462399 4.13163 0.608898 3.98513L2.2339 2.35988Z" fill="white"/>
+                                </g>
+                                </svg>
+                                
+                            </a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center    tableblock__col_hashtags">
+                            <span class="tableblock__title">Hashtags</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center    tableblock__col_notes">
+                            <span class="tableblock__title">Notes</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center    tableblock__col_count">
+                            <span class="tableblock__title"></span>
+                          </div>
+
+
+
+                        </div>
+                      </div>
+                     
+
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="emptyblock emptyblock_lg vhblock">
+            <div class="emptyblock__wrapper flex  items-center">
+              <div class="emptyblock__image">
+                <div class="emptyblock__img">
+                  <img src="img/empty_folder_dark.svg" alt="">
+                </div>
+              </div>
+              <div class="emptyblock__text"> There are no trending projects here. </div>
+            </div>
+          </div>
+
+        </main>
+        <%= _.template(require('../includes/footer_small.html').default)(data) %>
+
+    </div>

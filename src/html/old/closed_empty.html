@@ -1,0 +1,268 @@
+<% var data = {
+  title: "MAIN",
+  author: ""
+  }; %><%= _.template(require('../includes/head.html').default)(data) %><%= _.template(require('../includes/header.html').default)(data) %> <main>
+  <div class="breadcrumbs">
+    <div class="container">
+      <div class="breadcrumbs__items">
+        <ul>
+          <li>
+            <a href="/">
+              <span>
+                <img src="img/Home.svg" alt="">
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span>Victor Ivanov</span>
+            </a>
+          </li>
+          <li>
+            <span>The Ugly Duck</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="maincontent">
+    <div class="container">
+      <div class="profileblock">
+        <div class="profileblock__wrapper">
+          <div class="profileblock__main">
+            <div class="profileblock__photo">
+              <div class="profileblock__img">
+                <img src="img/man.png" alt="">
+              </div>
+            </div>
+            <div class="profileblock__info">
+              <div class="profileblock__header flex content-between items-center">
+                <div class="profileblock__card flex content-between items-center">
+                  <div class="cardprofile flex items-center">
+                    <div class="cardprofile__info">
+                      <div class="cardprofile__name">Victor Ivanov</div>
+                      <div class="cardprofile__stats flex items-center">
+                        <div class="cardstat cardstat_fw">
+                          <div class="cardstat__icon onlyMobile"></div>
+                          <div class="cardstat__text">7 400 followers</div>
+                        </div>
+                        <div class="cardstat onlyMobile">
+                          <div class="cardstat__icon onlyMobile"></div>
+                          <div class="cardstat__text">518 Shills</div>
+                        </div>
+                        <div class="cardstat cardstat_green cardstat_bold">
+                          <div class="cardstat__icon onlyMobile"></div>
+                          <div class="cardstat__text">87% Profitable</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__follow mflex">
+                    <a href="#popup_edit" data-toggle='modal' class="btn btn_gray">Edit</a>
+                    <div class="iconlink onlyMobile">
+                      <a href="#" class="iconlink__link">
+                        <span class="iconlink__content">
+                          <span class="iconlink__icon">
+                            <span class="iconlink__img">
+                              <img src="img/Share.svg" alt="">
+                            </span>
+                          </span>
+                        </span>
+                      </a>
+                    </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="profileblock__text"> ✅ Only profitable recommendations <br> 🖥 24/7 market monitoring <br> 💼 NFT, BTC, ETH, TRC, GOLD <br>
+                <br> Hi, My name is Victor Ivanov, my story is so boring b...
+              </div>
+              <div class="profileblock__footer">
+                <div class="socials">
+                  <div class="socials__items">
+                    <div class="socials__item">
+                      <a href="//twitter.com/leakmeee" target="_blank">
+                        <img src="img/Twitter_green.svg" alt="">
+                      </a>
+                    </div>
+                    <div class="socials__item">
+                      <a href="//discord.gg/FzXFJyMjH" target="_blank">
+                        <img src="img/Discord_green.svg" alt="">
+                      </a>
+                    </div>
+                    <div class="socials__item">
+                      <a href="mailto:support@leak.me" target="_blank">
+                        <img src="img/TelegramApp.svg" alt="">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="profileblock__stats">
+            <div class="profilestats" data-toggleactive="statsview">
+              <div class="onlyMobile statsview" data-toggleclick="statsview">
+                <div class="statsview__content">
+                  <div class="statsview__icon">
+                    <div class="statsview__img">
+                      <img src="img/BulletedList.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="statsview__text">View stats</div>
+                </div>
+                <div class="statsview__dd">
+                  <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.13793 0.716563C8.01584 0.594479 7.81814 0.594479 7.69605 0.716563L5.00022 3.4124L2.3046 0.716563C2.18251 0.594479 1.9848 0.594479 1.86272 0.716563L0.508555 2.07073C0.386471 2.19281 0.386471 2.39052 0.508555 2.5126L4.77939 6.78344C4.84022 6.84469 4.92022 6.8751 5.00022 6.8751C5.08022 6.8751 5.16022 6.84469 5.22126 6.78365L9.49209 2.51281C9.61418 2.39073 9.61418 2.19302 9.49209 2.07094L8.13793 0.716563Z" fill="#212531"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="profilestats__wrapper" data-toggle="statsview">
+                <div class="profilestats__rows">
+                  <div class="profilestats__row">
+                    <div class="profilestats__items">
+                      <div class="profilestats__col">
+                        <div class="profilestats__item">
+                          <div class="profilestats__value">Shills:</div>
+                        </div>
+                      </div>
+                      <div class="profilestats__col">
+                        <div class="profilestats__item">
+                          <div class="profilestats__value">5</div>
+                          <div class="profilestats__caption">Total</div>
+                        </div>
+                        <div class="profilestats__item">
+                          <div class="profilestats__value">10</div>
+                          <div class="profilestats__caption">Profitable</div>
+                        </div>
+                        <div class="profilestats__item">
+                          <div class="profilestats__value">467</div>
+                          <div class="profilestats__caption">Unprofitable</div>
+                        </div>
+                        <div class="profilestats__item">
+                          <div class="profilestats__value green">58%</div>
+                          <div class="profilestats__caption">Profitability</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profilestats__row">
+                    <div class="profilestats__items">
+                      <div class="profilestats__col">
+                        <div class="profilestats__item">
+                          <div class="profilestats__value">ROI:</div>
+                        </div>
+                      </div>
+                      <div class="profilestats__col">
+                        <div class="profilestats__item">
+                          <div class="profilestats__value">5%</div>
+                          <div class="profilestats__caption">24h</div>
+                        </div>
+                        <div class="profilestats__item">
+                          <!-- елси большое число, добавляет класс oversize и блок с подсказкой-->
+                          <div class="profilestats__value oversize"> 50000+ <span class="oversize__tooltip">500&nbsp;000&nbsp;000&nbsp;000&nbsp;000</span>
+                          </div>
+                          <div class="profilestats__caption">5 days</div>
+                        </div>
+                        <div class="profilestats__item">
+                          <div class="profilestats__value">5%</div>
+                          <div class="profilestats__caption">30 days</div>
+                        </div>
+                        <div class="profilestats__item">
+                          <div class="profilestats__value green">5%</div>
+                          <div class="profilestats__caption">All time</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabs" data-tabswrapper="tabswrapper">
+        <div class="itemsblock">
+          <div class="itemsblock__header tabletWrap">
+            <div class="tabs__header mfull mcenter" data-tabsheader="tabsheader">
+              <ul class="mcenter">
+                <li data-tabindex="1">
+                  <span class="tabs__title">Open <span class="onlyDesktop">positions</span>
+                  </span>
+                  <span class="tabs__count">26</span>
+                </li>
+                <li class="active" data-tabindex="2">
+                  <span class="tabs__title">Closed <span class="onlyDesktop">positions</span>
+                  </span>
+                  <span class="tabs__count">4228</span>
+                </li>
+                <li data-tabindex="3">
+                  <span class="tabs__title">Drafts</span>
+                  <span class="tabs__count">5</span>
+                </li>
+              </ul>
+            </div>
+            <div class="buttonsblock">
+              <div class="buttonsblock__button onlyDesktop">
+                <a href="" class="btn h-48">
+                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.7764 3.04163C16.3187 3.0422 15.8674 3.1482 15.4573 3.3514C15.0473 3.5546 14.6895 3.84954 14.4119 4.21333C14.1342 4.57713 13.9441 5 13.8563 5.44914C13.7685 5.89827 13.7853 6.3616 13.9055 6.80318L13.8527 6.82914L7.71891 9.89514L7.6661 9.9211C7.38795 9.56343 7.03189 9.27392 6.62501 9.07459C6.21812 8.87525 5.77112 8.77135 5.31803 8.77079C4.52791 8.77079 3.77015 9.08467 3.21144 9.64337C2.65274 10.2021 2.33887 10.9598 2.33887 11.75C2.33887 12.5401 2.65274 13.2978 3.21144 13.8565C3.77015 14.4152 4.52791 14.7291 5.31803 14.7291C5.77143 14.7288 6.21877 14.6251 6.62599 14.4257C7.03321 14.2264 7.38956 13.9367 7.66789 13.5788L7.71891 13.6048L13.8527 16.6708L13.9028 16.6958C13.7824 17.1377 13.7655 17.6014 13.8534 18.0508C13.9413 18.5003 14.1316 18.9234 14.4096 19.2874C14.6875 19.6513 15.0457 19.9463 15.4561 20.1494C15.8666 20.3525 16.3184 20.4582 16.7764 20.4583C17.5665 20.4583 18.3243 20.1444 18.883 19.5857C19.4417 19.027 19.7555 18.2692 19.7555 17.4791C19.7555 16.689 19.4417 15.9312 18.883 15.3725C18.3243 14.8138 17.5665 14.5 16.7764 14.5C16.3588 14.5005 15.946 14.5889 15.5648 14.7593C15.1835 14.9297 14.8424 15.1784 14.5635 15.4891L14.4668 15.4408L8.3339 12.3748L8.23812 12.3274C8.31302 11.9463 8.31272 11.5544 8.23722 11.1735L8.3339 11.1251L14.4668 8.05912L14.5608 8.01168C14.8401 8.32261 15.1817 8.57129 15.5634 8.74155C15.9451 8.91182 16.3584 8.99986 16.7764 8.99996C17.5665 8.99996 18.3243 8.68608 18.883 8.12738C19.4417 7.56868 19.7555 6.81092 19.7555 6.02079C19.7555 5.23067 19.4417 4.47291 18.883 3.9142C18.3243 3.3555 17.5665 3.04163 16.7764 3.04163Z" fill="#30CA4C" />
+                  </svg>
+                  <span>Share profile</span>
+                </a>
+              </div>
+              <div class="buttonsblock__button">
+                <a href="" class="btn btn_main h-48">
+                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.7642 9.24572L18.8826 8.12738C20.044 6.96597 20.044 5.0758 18.8826 3.91392C18.3202 3.35201 17.5726 3.04309 16.7756 3.04309C15.9786 3.04309 15.2306 3.35247 14.6686 3.91438L13.5508 5.03226L17.7642 9.24572ZM12.5786 6.00438L4.29702 14.286C4.12056 14.4625 3.98627 14.6802 3.90835 14.9162L2.37294 19.555C2.29089 19.8016 2.35552 20.0734 2.53931 20.2572C2.67085 20.3883 2.84594 20.4584 3.0256 20.4584C3.09802 20.4584 3.17089 20.4469 3.24194 20.4235L7.87935 18.8877C8.11631 18.8098 8.33448 18.6755 8.51094 18.4985L16.7921 10.2174L12.5786 6.00438Z" fill="white" />
+                  </svg>
+                  <span>Create recommendation</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tabs__main">
+          <div class="tabs__content " data-tabscontent="tabscontent" data-tabindex="1">
+            <div class="emptyblock">
+              <div class="emptyblock__wrapper flex column items-center">
+                <div class="emptyblock__image">
+                  <div class="emptyblock__img">
+                    <img src="img/empty_folder.svg" alt="">
+                  </div>
+                </div>
+                <div class="emptyblock__text"> You has no active recommendation </div>
+              </div>
+            </div>
+          </div>
+          <div class="tabs__content active" data-tabscontent="tabscontent" data-tabindex="1">
+            <div class="emptyblock">
+              <div class="emptyblock__wrapper flex column items-center">
+                <div class="emptyblock__image">
+                  <div class="emptyblock__img">
+                    <img src="img/empty_folder.svg" alt="">
+                  </div>
+                </div>
+                <div class="emptyblock__text"> You has no active recommendation </div>
+              </div>
+            </div>
+          </div>
+          <div class="tabs__content " data-tabscontent="tabscontent" data-tabindex="1">
+            <div class="emptyblock">
+              <div class="emptyblock__wrapper flex column items-center">
+                <div class="emptyblock__image">
+                  <div class="emptyblock__img">
+                    <img src="img/empty_folder.svg" alt="">
+                  </div>
+                </div>
+                <div class="emptyblock__text"> You has no active recommendation </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</main><%= _.template(require('../includes/footer.html').default)(data) %>

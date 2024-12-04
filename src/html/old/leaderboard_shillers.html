@@ -1,0 +1,668 @@
+<% var data = {
+  title: "MAIN",
+  author: ""
+  }; %>
+<%= _.template(require('../includes/head.html').default)(data) %>
+<%= _.template(require('../includes/header.html').default)(data) %>
+<main>
+  <div class="topcontent topcontent_left">
+    <div class="container">
+      <div class="pagetitle pagetitle_left">
+        <div class="pagetitle__title text-left">Leaderboard</div>
+      </div> 
+      <div class="pagecontent">
+        <div class="pagecontent__text">
+          <p>Leaderboard for top alpha callers on our website</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+    <div class="maincontent">
+      <div class="container">
+        <div class="tabsnav">
+          <div class="tabsnav__links">
+            <ul class="flex">
+              <li class="active">
+                <a href="#">Top Shillers</a>
+              </li>
+              <li>
+                <a href="#">Top Shills</a>
+              </li>
+              <li>
+                <a href="#">Top Assets</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="itemsnav itemsnav_table flex items-center content-between">
+          <div class="itemsnav__left flex items-center">
+            <div class="itemsnav__select">
+              <div class="filterblock__item">
+                <div class="fdropdown">
+                  <div class="fdropdown__button" data-toggleclick="fdropdown__menu1">
+                    <span>
+                      <img src="img/menu.svg" alt="" class="itemsnav__iconasset">
+                      <span  class="itemsnav__titleasset">All assets</span>
+                    </span>
+                   
+                    <svg  class="itemsnav__arrowasset" width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.13793 0.716563C8.01584 0.594479 7.81814 0.594479 7.69605 0.716563L5.00022 3.4124L2.3046 0.716563C2.18251 0.594479 1.9848 0.594479 1.86272 0.716563L0.508555 2.07073C0.386471 2.19281 0.386471 2.39052 0.508555 2.5126L4.77939 6.78344C4.84022 6.84469 4.92022 6.8751 5.00022 6.8751C5.08022 6.8751 5.16022 6.84469 5.22126 6.78365L9.49209 2.51281C9.61418 2.39073 9.61418 2.19302 9.49209 2.07094L8.13793 0.716563Z" fill="#212531"/>
+                      </svg>
+                      
+                  </div>
+                  <div class="fdropdown__menu dropdownblock" data-toggle="fdropdown__menu1">
+                    <div class="fdropdown__wrapper dropdownblock__wrapper">
+                      <div class="fdropdown__items">
+                        <div class="fdropdown__item">
+                          <div class="dcheckbox">
+                            <label for="filter1-1" class="dcheckbox__label">
+                              <span>
+                                <input type="checkbox" id="filter1-1">
+                                <span class="dcheckbox__text">All assets</span>
+                              </span>
+                            </label>                                  
+                          </div>
+                        </div>
+                        <div class="fdropdown__item">
+                          <div class="dcheckbox">
+                            <label for="filter1-2" class="dcheckbox__label">
+                              <span>
+                                <input type="checkbox" id="filter1-2">
+                                <span class="dcheckbox__text">All assets</span>
+                              </span>
+                            </label>                                  
+                          </div>
+                        </div>
+                        <div class="fdropdown__item">
+                          <div class="dcheckbox">
+                            <label for="filter1-3" class="dcheckbox__label">
+                              <span>
+                                <input type="checkbox" id="filter1-3">
+                                <span class="dcheckbox__text">All assets</span>
+                              </span>
+                            </label>                                  
+                          </div>
+                        </div>
+                        <div class="fdropdown__item">
+                          <div class="dcheckbox">
+                            <label for="filter1-4" class="dcheckbox__label">
+                              <span>
+                                <input type="checkbox" id="filter1-4">
+                                <span class="dcheckbox__text">All assets</span>
+                              </span>
+                            </label>                                  
+                          </div>
+                        </div>
+                        <div class="fdropdown__item">
+                          <div class="dcheckbox">
+                            <label for="filter1-5" class="dcheckbox__label">
+                              <span>
+                                <input type="checkbox" id="filter1-5">
+                                <span class="dcheckbox__text">All assets</span>
+                              </span>
+                            </label>                                  
+                          </div>
+                        </div>
+                        <div class="fdropdown__item">
+                          <div class="dcheckbox">
+                            <label for="filter1-6" class="dcheckbox__label">
+                              <span>
+                                <input type="checkbox" id="filter1-6">
+                                <span class="dcheckbox__text">All assets</span>
+                              </span>
+                            </label>                                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="itemsnav__input">
+              
+              <div class="inputplaceholder">
+                <div class="inputplaceholder__placeholder"><span class="onlyDesktop">Minimun</span> <span  class="onlyMobile">Min.</span>  Shills:</div>
+                <input type="text" class="inputplaceholder__input" value="500">
+              </div>
+            </div>
+          </div>
+          <div class="itemsnav__right">
+            <div class="linkset">
+              <div class="linkset__items">
+                <div class="linkset__item"><a href="" class="linkset__link">All</a></div>
+                <div class="linkset__item"><a href="" class="linkset__link">1h</a></div>
+                <div class="linkset__item"><a href="" class="linkset__link">6h</a></div>
+                <div class="linkset__item"><a href="" class="linkset__link active">12h</a></div>
+                <div class="linkset__item"><a href="" class="linkset__link">24h</a></div>
+                <div class="linkset__item"><a href="" class="linkset__link">7d</a></div>
+                <div class="linkset__item"><a href="" class="linkset__link">30d</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tableblock">
+          <div class="tableblock__wrapper">
+            <div class="tableblock__table">
+              
+              <div class="tableblock__scroll">
+                <div class="tableblock__header">
+                  <div class="tableblock__row">
+                    <div class="tableblock__col tableblock_number flex items-center">
+                      <span class="tableblock__title">#</span>
+                    </div>
+                    <div class="tableblock__col tableblock_name flex items-center">
+                      <span class="tableblock__title">Shiller</span>
+                     </div>
+                     <div class="tableblock__cols tableblock__row">
+                      <div class="tableblock__col tableblock__param tableblock__param_total flex items-center">
+                        <a href="#" class="tableblock_sort sort"><img src="img/sort.svg" alt=""></a>
+                        <span class="tableblock__title">Total</span>
+                        <span class="tableblock__info oversize">
+                          <img src="img/info.svg" alt="">
+                          <span class="oversize__tooltip">Text</span>
+                        </span>
+                      </div>
+                      <div class="tableblock__col tableblock__param tableblock__param_profitable flex items-center">
+                        <a href="#" class="tableblock_sort sort active"><img src="img/sort.svg" alt=""></a>
+                        <span class="tableblock__title">Profitable</span>
+                        <span class="tableblock__info oversize">
+                          <img src="img/info.svg" alt="">
+                          <span class="oversize__tooltip">Text</span>
+                        </span>
+                      </div>
+                      <div class="tableblock__col tableblock__param tableblock__param_unprofitable flex items-center">
+                        <a href="#" class="tableblock_sort sort"><img src="img/sort.svg" alt=""></a>
+                        <span class="tableblock__title">Unprofitable</span>
+                        <span class="tableblock__info oversize">
+                          <img src="img/info.svg" alt="">
+                          <span class="oversize__tooltip">Text</span>
+                        </span>
+                      </div>
+                      <div class="tableblock__col tableblock__param tableblock__param_profitability flex items-center">
+                        <a href="#" class="tableblock_sort sort"><img src="img/sort.svg" alt=""></a>
+                        <span class="tableblock__title">Profitability</span>
+                        <span class="tableblock__info oversize">
+                          <img src="img/info.svg" alt="">
+                          <span class="oversize__tooltip">Text</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <div class="tableblock__body">
+                <div class="tableblock__row">
+                  <div class="tableblock__col tableblock_number flex items-center">
+                    <span class="tableblock__title">1</span>
+                  </div>
+                  <div class="tableblock__col tableblock_name  flex items-center">
+                    <div class="tablecard__header flex items-center">
+                      <div class="tablecard__image">
+                        <div class="tablecard__img">
+                          <a href="#">
+                            <img src="img/card.png" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="tablecard__name">
+                        <a href="#">Ivan Petrov</a>
+                      </div>
+                    </div>
+                   </div>
+                   <div class="tableblock__cols tableblock__row">
+                    <div class="tableblock__col tableblock__param tableblock__param_total flex items-center">
+                      <span class="tableblock__value">20</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitable flex items-center">
+                      <span class="tableblock__value">1348</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_unprofitable flex items-center">
+                      <span class="tableblock__value">481</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitability flex items-center">
+                      <span class="tableblock__value tableblock__value_green">90%</span>
+                    </div>
+                  </div>
+                </div><!-- /.tableblock__row -->                
+
+                <div class="tableblock__row">
+                  <div class="tableblock__col tableblock_number flex items-center">
+                    <span class="tableblock__title">2</span>
+                  </div>
+                  <div class="tableblock__col tableblock_name  flex items-center">
+                    <div class="tablecard__header flex items-center">
+                      <div class="tablecard__image">
+                        <div class="tablecard__img">
+                          <a href="#">
+                            <img src="img/card6.jpg" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="tablecard__name">
+                        <a href="#">Ivan Petrov</a>
+                      </div>
+                    </div>
+                   </div>
+                   <div class="tableblock__cols tableblock__row">
+                    <div class="tableblock__col tableblock__param tableblock__param_total flex items-center">
+                      <span class="tableblock__value">20</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitable flex items-center">
+                      <span class="tableblock__value">1348</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_unprofitable flex items-center">
+                      <span class="tableblock__value">481</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitability flex items-center">
+                      <span class="tableblock__value tableblock__value_yellow">48%</span>
+                    </div>
+                  </div>
+                </div><!-- /.tableblock__row -->    
+
+                <div class="tableblock__row">
+                  <div class="tableblock__col tableblock_number flex items-center">
+                    <span class="tableblock__title">3</span>
+                  </div>
+                  <div class="tableblock__col tableblock_name  flex items-center">
+                    <div class="tablecard__header flex items-center">
+                      <div class="tablecard__image">
+                        <div class="tablecard__img">
+                          <a href="#">
+                            <img src="img/card7.jpg" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="tablecard__name">
+                        <a href="#">Ivan Petrov</a>
+                      </div>
+                    </div>
+                   </div>
+                   <div class="tableblock__cols tableblock__row">
+                    <div class="tableblock__col tableblock__param tableblock__param_total flex items-center">
+                      <span class="tableblock__value">20</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitable flex items-center">
+                      <span class="tableblock__value">1348</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_unprofitable flex items-center">
+                      <span class="tableblock__value">481</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitability flex items-center">
+                      <span class="tableblock__value tableblock__value_orange">35%</span>
+                    </div>
+                  </div>
+                </div><!-- /.tableblock__row -->  
+
+                <div class="tableblock__row">
+                  <div class="tableblock__col tableblock_number flex items-center">
+                    <span class="tableblock__title">4</span>
+                  </div>
+                  <div class="tableblock__col tableblock_name  flex items-center">
+                    <div class="tablecard__header flex items-center">
+                      <div class="tablecard__image">
+                        <div class="tablecard__img">
+                          <a href="#">
+                            <img src="img/card8.jpg" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="tablecard__name">
+                        <a href="#">Ivan Petrov</a>
+                      </div>
+                    </div>
+                   </div>
+                   <div class="tableblock__cols tableblock__row">
+                    <div class="tableblock__col tableblock__param tableblock__param_total flex items-center">
+                      <span class="tableblock__value">20</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitable flex items-center">
+                      <span class="tableblock__value">1348</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_unprofitable flex items-center">
+                      <span class="tableblock__value">481</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitability flex items-center">
+                      <span class="tableblock__value tableblock__value_red">14%</span>
+                    </div>
+                  </div>
+                </div><!-- /.tableblock__row -->    
+
+                <div class="tableblock__row">
+                  <div class="tableblock__col tableblock_number flex items-center">
+                    <span class="tableblock__title">5</span>
+                  </div>
+                  <div class="tableblock__col tableblock_name  flex items-center">
+                    <div class="tablecard__header flex items-center">
+                      <div class="tablecard__image">
+                        <div class="tablecard__img">
+                          <a href="#">
+                            <img src="img/card.png" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="tablecard__name">
+                        <a href="#">Ivan Petrov</a>
+                      </div>
+                    </div>
+                   </div>
+                   <div class="tableblock__cols tableblock__row">
+                    <div class="tableblock__col tableblock__param tableblock__param_total flex items-center">
+                      <span class="tableblock__value">20</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitable flex items-center">
+                      <span class="tableblock__value">1348</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_unprofitable flex items-center">
+                      <span class="tableblock__value">481</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitability flex items-center">
+                      <span class="tableblock__value tableblock__value_green">90%</span>
+                    </div>
+                  </div>
+                </div><!-- /.tableblock__row -->    
+                
+                <div class="tableblock__row">
+                  <div class="tableblock__col tableblock_number flex items-center">
+                    <span class="tableblock__title">6</span>
+                  </div>
+                  <div class="tableblock__col tableblock_name  flex items-center">
+                    <div class="tablecard__header flex items-center">
+                      <div class="tablecard__image">
+                        <div class="tablecard__img">
+                          <a href="#">
+                            <img src="img/card.png" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="tablecard__name">
+                        <a href="#">Ivan Petrov</a>
+                      </div>
+                    </div>
+                   </div>
+                   <div class="tableblock__cols tableblock__row">
+                    <div class="tableblock__col tableblock__param tableblock__param_total flex items-center">
+                      <span class="tableblock__value">20</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitable flex items-center">
+                      <span class="tableblock__value">1348</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_unprofitable flex items-center">
+                      <span class="tableblock__value">481</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitability flex items-center">
+                      <span class="tableblock__value tableblock__value_green">90%</span>
+                    </div>
+                  </div>
+                </div><!-- /.tableblock__row -->     
+                
+                <div class="tableblock__row">
+                  <div class="tableblock__col tableblock_number flex items-center">
+                    <span class="tableblock__title">7</span>
+                  </div>
+                  <div class="tableblock__col tableblock_name  flex items-center">
+                    <div class="tablecard__header flex items-center">
+                      <div class="tablecard__image">
+                        <div class="tablecard__img">
+                          <a href="#">
+                            <img src="img/card.png" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="tablecard__name">
+                        <a href="#">Ivan Petrov</a>
+                      </div>
+                    </div>
+                   </div>
+                   <div class="tableblock__cols tableblock__row">
+                    <div class="tableblock__col tableblock__param tableblock__param_total flex items-center">
+                      <span class="tableblock__value">20</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitable flex items-center">
+                      <span class="tableblock__value">1348</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_unprofitable flex items-center">
+                      <span class="tableblock__value">481</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitability flex items-center">
+                      <span class="tableblock__value tableblock__value_green">90%</span>
+                    </div>
+                  </div>
+                </div><!-- /.tableblock__row -->    
+                
+                <div class="tableblock__row">
+                  <div class="tableblock__col tableblock_number flex items-center">
+                    <span class="tableblock__title">8</span>
+                  </div>
+                  <div class="tableblock__col tableblock_name  flex items-center">
+                    <div class="tablecard__header flex items-center">
+                      <div class="tablecard__image">
+                        <div class="tablecard__img">
+                          <a href="#">
+                            <img src="img/card.png" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="tablecard__name">
+                        <a href="#">Ivan Petrov</a>
+                      </div>
+                    </div>
+                   </div>
+                   <div class="tableblock__cols tableblock__row">
+                    <div class="tableblock__col tableblock__param tableblock__param_total flex items-center">
+                      <span class="tableblock__value">20</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitable flex items-center">
+                      <span class="tableblock__value">1348</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_unprofitable flex items-center">
+                      <span class="tableblock__value">481</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitability flex items-center">
+                      <span class="tableblock__value tableblock__value_green">90%</span>
+                    </div>
+                  </div>
+                </div><!-- /.tableblock__row -->       
+
+                <div class="tableblock__row">
+                  <div class="tableblock__col tableblock_number flex items-center">
+                    <span class="tableblock__title">9</span>
+                  </div>
+                  <div class="tableblock__col tableblock_name  flex items-center">
+                    <div class="tablecard__header flex items-center">
+                      <div class="tablecard__image">
+                        <div class="tablecard__img">
+                          <a href="#">
+                            <img src="img/card.png" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="tablecard__name">
+                        <a href="#">Ivan Petrov</a>
+                      </div>
+                    </div>
+                   </div>
+                   <div class="tableblock__cols tableblock__row">
+                    <div class="tableblock__col tableblock__param tableblock__param_total flex items-center">
+                      <span class="tableblock__value">20</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitable flex items-center">
+                      <span class="tableblock__value">1348</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_unprofitable flex items-center">
+                      <span class="tableblock__value">481</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitability flex items-center">
+                      <span class="tableblock__value tableblock__value_green">90%</span>
+                    </div>
+                  </div>
+                </div><!-- /.tableblock__row --> 
+                
+                <div class="tableblock__row">
+                  <div class="tableblock__col tableblock_number flex items-center">
+                    <span class="tableblock__title">10</span>
+                  </div>
+                  <div class="tableblock__col tableblock_name  flex items-center">
+                    <div class="tablecard__header flex items-center">
+                      <div class="tablecard__image">
+                        <div class="tablecard__img">
+                          <a href="#">
+                            <img src="img/card.png" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="tablecard__name">
+                        <a href="#">Ivan Petrov</a>
+                      </div>
+                    </div>
+                   </div>
+                   <div class="tableblock__cols tableblock__row">
+                    <div class="tableblock__col tableblock__param tableblock__param_total flex items-center">
+                      <span class="tableblock__value">20</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitable flex items-center">
+                      <span class="tableblock__value">1348</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_unprofitable flex items-center">
+                      <span class="tableblock__value">481</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitability flex items-center">
+                      <span class="tableblock__value tableblock__value_green">90%</span>
+                    </div>
+                  </div>
+                </div><!-- /.tableblock__row -->   
+                
+                <div class="tableblock__row">
+                  <div class="tableblock__col tableblock_number flex items-center">
+                    <span class="tableblock__title">11</span>
+                  </div>
+                  <div class="tableblock__col tableblock_name  flex items-center">
+                    <div class="tablecard__header flex items-center">
+                      <div class="tablecard__image">
+                        <div class="tablecard__img">
+                          <a href="#">
+                            <img src="img/card.png" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="tablecard__name">
+                        <a href="#">Ivan Petrov</a>
+                      </div>
+                    </div>
+                   </div>
+                   <div class="tableblock__cols tableblock__row">
+                    <div class="tableblock__col tableblock__param tableblock__param_total flex items-center">
+                      <span class="tableblock__value">20</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitable flex items-center">
+                      <span class="tableblock__value">1348</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_unprofitable flex items-center">
+                      <span class="tableblock__value">481</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitability flex items-center">
+                      <span class="tableblock__value tableblock__value_green">90%</span>
+                    </div>
+                  </div>
+                </div><!-- /.tableblock__row -->       
+
+                <div class="tableblock__row">
+                  <div class="tableblock__col tableblock_number flex items-center">
+                    <span class="tableblock__title">12</span>
+                  </div>
+                  <div class="tableblock__col tableblock_name  flex items-center">
+                    <div class="tablecard__header flex items-center">
+                      <div class="tablecard__image">
+                        <div class="tablecard__img">
+                          <a href="#">
+                            <img src="img/card.png" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="tablecard__name">
+                        <a href="#">Ivan Petrov</a>
+                      </div>
+                    </div>
+                   </div>
+                   <div class="tableblock__cols tableblock__row">
+                    <div class="tableblock__col tableblock__param tableblock__param_total flex items-center">
+                      <span class="tableblock__value">20</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitable flex items-center">
+                      <span class="tableblock__value">1348</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_unprofitable flex items-center">
+                      <span class="tableblock__value">481</span>
+                    </div>
+                    <div class="tableblock__col tableblock__param tableblock__param_profitability flex items-center">
+                      <span class="tableblock__value tableblock__value_green">90%</span>
+                    </div>
+                  </div>
+                </div><!-- /.tableblock__row -->       
+              </div>
+              </div>
+
+              <div class="tableblock__footer">
+                <div class="tableblock__nav">
+                  <div class="tablenav flex items-center content-between">
+                    <div class="tablenav__left">
+                      <div class="tablenav__show">
+                        <div class="showby flex items-center" data-toggleclick="showby" data-toggleactive="showby">
+                          <div class="showby__caption">Show:</div>
+                          <div class="showby__value">
+                            <span>12</span>
+                            <img src="img/dropdown_black.svg" alt="">
+                          </div>
+                          <div class="showby__dropdown dropdownblock" data-toggle="showby">
+                            <div class=" dropdownblock__wrapper">
+                              <div class="fdropdown__items">
+                                <a href="#" class="fdropdown__item tableblock__value">
+                  12
+                </a>
+                <a  href="#" class="fdropdown__item tableblock__value">
+                  50
+                </a>
+                <a  href="#" class="fdropdown__item tableblock__value">
+                  100
+                </a>
+                                
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tablenav__right">
+                      <div class="tablenav__pagination">
+                        <div class="paginationblock">
+                          <div class="pagination">
+                            
+                            <ul>
+                              <li class="active"><a href="">1</a></li>
+                              <li><a href="">2</a></li>
+                              <li><a href="">3</a></li>
+                              <li><span>...</span></li>
+                              <li><a href="">162</a></li>
+                            </ul>
+                           
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </div>
+
+</main>
+<%= _.template(require('../includes/footer.html').default)(data) %>

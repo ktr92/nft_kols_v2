@@ -1,0 +1,525 @@
+
+  <!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>
+    MAIN
+  </title>
+  <!--   <link rel="shortcut icon" href="favicon/favicon.ico" />
+ -->
+  <link rel="preload" href="fonts/FuturaDemiC.woff" as="font" type="font/woff" crossorigin>
+
+
+
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery.datetimepicker.min.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/slick.min.css">
+  <link rel="stylesheet" href="css/slick-theme.min.css">
+  <link rel="stylesheet" href="css/lightbox.min.css" />
+  <link rel="stylesheet" href="css/nouislider.min.css" />
+  <link rel="stylesheet" href="css/style.bundle.css" />
+  <link rel="stylesheet" href="css/v3.css" />
+  <link rel="stylesheet" href="css/howitworks.css" />
+  <link rel="stylesheet" href="css/howitworks_fix.css" />
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/selectbox.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/flatpickr.js"></script>
+  <script src="js/html2canvas.min.js"></script>
+  <script src="js/lightbox.min.js"></script>
+  <script src="js/nouislider.min.js"></script>
+  <script src="js/jquery.datetimepicker.min.js"></script>
+
+  <script src="js/jquery.inputmask.min.js"></script>
+  <script src="js/inputmask.binding.js"></script>
+
+</head>
+
+<body>
+
+    <div class="landingwrapper">
+      <div class="landingwrapper__top">
+
+        
+<div class="jsbackdrop jsbackdrop_v2"></div>
+
+<header id="header" class="siteheader siteheader_v2">
+  <div class="siteheader__main">
+  <div class="container">
+     <div class="flex content-between items-center relative">
+      <div class="siteheader__left flex items-center">
+        <div class="logo logo_default"><a href="/"><img src="img/landing_svg.svg" alt=""></a></div>
+       
+      </div>
+    
+      <div class="siteheader__right flex">
+        <div class="accountblock accountblock_authored flex items-center">
+        
+       
+          <!-- <div class="accountmenu" data-toggleclick="accountmenu">
+            <div class="accountmenu__wrapper flex items-center">
+              <div class="accountmenu__icon">
+                <div class="accountmenu__img"><img src="img/Avatar.svg" alt=""></div>
+              </div>
+              <div class="accountmenu__name">
+                <span>Andrew M.</span>
+                <img src="img/ChevronDown.svg" alt="">               
+              </div>
+            </div>
+            <div class="accountmenu__menu dropdownblock" data-toggle="accountmenu">
+              <div class="dropdownblock__wrapper">
+                <div class="dropdownblock__links">
+                  <ul>
+                    <li class="signout"><a href="">Sign Out</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div> -->
+        <div class="accountblock accountblock_unauthored">
+            <a href="" class="accountblock__link">Sign In</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  </div>
+
+  <div class="mobilemenu mobilemenu_v2" data-menu="mobilemenu">
+    <div class="mobilemenu__wrapper">
+      <div class="mobilemenu__block">
+        <div class="mobilemenu__title">Filters</div><!-- /.mobilemenu__title -->
+        <div class="mobilemenu__nav">
+          <div class="tabsnav ">
+            <div class="tabsnav__links  tabsnav__links_wallets">
+             
+
+              <div class="itemsnav_v2">
+                <ul class="flex tabsbuttons ">
+                  <li>
+                    <a class="change_leaderboard_tab" data-name="popular_tokens" href="#">New</a>
+                  </li>
+                  <li>
+                    <a class="change_leaderboard_tab" data-name="popular_presales" href="#">Curated</a>
+                  </li>
+                  <li class="active">
+                    <a class="change_leaderboard_tab " data-name="top_calls" href="#">Everyone</a>
+                  </li>
+
+                </ul>
+
+
+                <div class="flex items-center">
+                  <div class="linkset linkset_v2">
+                    <div class="linkset__items statistics_ranges" >
+                      <div class="linkset__item"><a data-value="15m" href="#" class="linkset__link ">15m</a></div>
+                      <div class="linkset__item"><a data-value="30m" href="#" class="linkset__link ">30m</a></div>
+                      <div class="linkset__item"><a data-value="1h" href="#" class="linkset__link ">1h</a></div>
+                      <div class="linkset__item"><a data-value="3h" href="#" class="linkset__link ">3h</a></div>
+                      <div class="linkset__item"><a data-value="6h" href="#" class="linkset__link ">6h</a></div>
+                      <div class="linkset__item"><a data-value="12h" href="#" class="linkset__link ">12h</a></div>
+                      <div class="linkset__item"><a data-value="24h" href="#" class="linkset__link active">24h</a></div>
+                      <div class="linkset__item"><a data-value="3d" href="#" class="linkset__link ">3d</a></div>
+                      <div class="linkset__item"><a data-value="7d" href="#" class="linkset__link ">7d</a></div>
+                    </div>
+                  </div>
+                </div><!-- /.flex -->
+              </div><!-- /.flex -->
+            </div>
+          </div>
+        </div><!-- /.mobilemenu__nav -->
+      </div>
+      <!-- /.mobilemenu__block -->
+      <div class="mobilemenu__footer">
+        <div class="mobilemenu__item  mobilemenu__signout mb-0">
+          <div class="mobilemenu__content">
+            <a href='#' class="mobilemenu__link">
+            <span class='mobilemenu__icon'><img src="img/Logout.svg" alt=""></span>
+            <span class='mobilemenu__name'>Sign Out</span>
+            </a>    
+          </div>
+        </div>
+          <!-- <div class="subscribelink ">
+            <a href='#' class="subscribelink__wrapper flex items-center">
+              <div class="subscribelink__main flex items-center">
+                <div class="subscribelink__icon"><img src="img/coin_3305481.svg" alt=""></div>
+                <div class="subscribelink__content">
+                  <div class="subscribelink__title">Start subscription</div>
+                  <div class="subscribelink__text">
+                    <div class="subscribelink__price">For $49.00</div>
+                    <div class="subscribelink__subprice">/month</div>
+                  </div>
+                </div>
+              </div>
+              <div class="subscribelink__link">Sign In</div>
+            </a>
+          </div> -->
+
+      </div>
+    </div>
+  </div>
+
+</header>
+<!-- /#header.header -->
+
+          <div class="landingcontent">
+            <div class="container">
+              <div class="langindtitle">
+                Best Tools For Your <br>Crypto Research
+              </div><!-- /.langindtitle -->
+
+              <div class="landingbanner">
+                <img src="img/landingbanner.png" alt="">
+              </div><!-- /.landingbanner -->
+
+            </div><!-- /.container -->
+          </div><!-- /.landingcontent -->
+
+      </div><!-- /.landingwrapper__top -->
+
+      <div class="landingwrapper__main">
+        <div class="container">
+
+
+          <div class="landingcards">
+            <div class="landingcards__item">
+              <div class="landingcard">
+                <div class="landingcard__row">
+                  <div class="landingcard__coltext">
+                    <div class="landingcard__content">
+                      <div class="landingcard__title desktop">Twitter KOL Tracker</div>
+                      <div class="landingcard__text">The tool tracks followings of thousands of Twitter influencers, and
+                        spots trending projects before the 99% other traders</div>
+                      <div class="landingcard__small">If you are a crypto degen, this is a must have tool for your
+                        trading.</div><!-- /.landingcard__small -->
+                    </div>
+
+                    <div class="landingcard__footer">
+                      <div class="landingcard__footertext">Video on how it works</div>
+                      <div class="landingcard__footericon">
+                        <img src="img/landingcard__footericon.svg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="landingcard__colimage">
+                    <div class="landingcard__title mobile">Twitter KOL Tracker</div>
+
+                    <div class="landingcard__img">
+                      <img src="img/landingcard__img.png" alt="">
+                      <!-- <iframe width="100%" height="442" src="https://www.youtube.com/embed/ScMzIvxBSi4?si=VY9Lo9fVRRKSNLkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+                    </div><!-- /.landingcard__img -->
+                  </div>
+                </div><!-- /.landingcard__row -->
+              </div><!-- /.landingcard -->
+            </div><!-- /.landingcards__item -->
+            <div class="landingcards__item">
+              <div class="landingcard">
+                <div class="landingcard__row">
+
+                  <div class="landingcard__colimage">
+                    <div class="landingcard__title mobile">Pro Alpha Channel</div>
+
+                    <div class="landingcard__img">
+                      <img src="img/landingcard__img2.png" alt="">
+                      <!-- <iframe width="100%" height="442" src="https://www.youtube.com/embed/ScMzIvxBSi4?si=VY9Lo9fVRRKSNLkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+                    </div><!-- /.landingcard__img -->
+                  </div>
+                  <div class="landingcard__coltext">
+                    <div class="landingcard__content">
+                      <div class="landingcard__title desktop">Pro Alpha Channel</div>
+                      <div class="landingcard__text landingcard__text_2">Our analysts screen alpha daily using our
+                        tools, and a from many sources like Twitter, Telegram, Discord, paid subscription, and more
+                      </div>
+                      <div class="landingcard__small">We share half of the alpha for free, and the rest goes to our
+                        Pro Alpha Channel.</div><!-- /.landingcard__small -->
+                    </div>
+
+
+                  </div>
+                </div><!-- /.landingcard__row -->
+              </div><!-- /.landingcard -->
+            </div><!-- /.landingcards__item -->
+            <div class="landingcards__item">
+              <div class="landingcard">
+                <div class="landingcard__row">
+                  <div class="landingcard__coltext">
+                    <div class="landingcard__content">
+                      <div class="landingcard__title desktop">Twitter Trending Tickers</div>
+                      <div class="landingcard__text landingcard__text_3">This tools Scans Tweets of Multiple Crypto
+                        researchers, and aggregates information based on tickers they mentiond. It will help you find
+                        good research threads, and understand the tokens that are trending. 
+
+                      </div>
+                      <div class="landingcard__small"> It works good if you are not degening, but trying to find more
+                        quality projects
+                      </div><!-- /.landingcard__small -->
+                    </div>
+
+                    <div class="landingcard__footer">
+                      <div class="landingcard__footertext">Video on how it works</div>
+                      <div class="landingcard__footericon">
+                        <img src="img/landingcard__footericon.svg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="landingcard__colimage">
+                    <div class="landingcard__title mobile">Twitter Trending Tickers</div>
+
+                    <div class="landingcard__img">
+                      <img src="img/landingcard__img.png" alt="">
+                      <!-- <iframe width="100%" height="442" src="https://www.youtube.com/embed/ScMzIvxBSi4?si=VY9Lo9fVRRKSNLkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+                    </div><!-- /.landingcard__img -->
+                  </div>
+                </div><!-- /.landingcard__row -->
+              </div><!-- /.landingcard -->
+            </div><!-- /.landingcards__item -->
+          </div><!-- /.landingcards -->
+        </div><!-- /.container -->
+
+        <div class="landingslider landingsliderbg">
+          <div class="landingslider__title">
+            With our Tools you would spot <br> these projects yearly
+          </div><!-- /.landingslider__title -->
+          <div class="landingslider__container">
+            <div class="landingslider__slider">
+              <div class="landingslider__slide">
+                <div class="landingslide">
+                  <div class="landingslide__content">
+                    <div class="landingslide__badge">
+                      <div class="landingslide__badgetitle">Pnut</div><!-- /.landingslide__badgetitle -->
+                      <div class="landingslide__badgevalue">44x</div><!-- /.landingslide__badgevalue -->
+                    </div><!-- /.landingslide__badge -->
+                    <div class="landingslide__img">
+                      <img src="img/landslide.png" alt="">
+                    </div><!-- /.landingslide__img -->
+                  </div><!-- /.landingslide__content -->
+                </div><!-- /.landingslide -->
+              </div><!-- /.landingslider__slide -->
+              <div class="landingslider__slide">
+                <div class="landingslide">
+                  <div class="landingslide__content">
+                    <div class="landingslide__badge">
+                      <div class="landingslide__badgetitle">Pnut</div><!-- /.landingslide__badgetitle -->
+                      <div class="landingslide__badgevalue">44x</div><!-- /.landingslide__badgevalue -->
+                    </div><!-- /.landingslide__badge -->
+                    <div class="landingslide__img">
+                      <img src="img/landslide.png" alt="">
+                    </div><!-- /.landingslide__img -->
+                  </div><!-- /.landingslide__content -->
+                </div><!-- /.landingslide -->
+              </div><!-- /.landingslider__slide -->
+              <div class="landingslider__slide">
+                <div class="landingslide">
+                  <div class="landingslide__content">
+                    <div class="landingslide__badge">
+                      <div class="landingslide__badgetitle">Pnut</div><!-- /.landingslide__badgetitle -->
+                      <div class="landingslide__badgevalue">44x</div><!-- /.landingslide__badgevalue -->
+                    </div><!-- /.landingslide__badge -->
+                    <div class="landingslide__img">
+                      <img src="img/landslide.png" alt="">
+                    </div><!-- /.landingslide__img -->
+                  </div><!-- /.landingslide__content -->
+                </div><!-- /.landingslide -->
+              </div><!-- /.landingslider__slide -->
+            </div><!-- /.landingslider__slider -->
+          </div><!-- /.landingslider__container -->
+          <div class="landingslider__link">
+            <a href="#" target='_blank'>
+              <img src="img/landingtg.svg" alt="">
+              <span>You can find more wins in our Wins Telegram Channel</span>
+            </a>
+          </div><!-- /.landingslider__link -->
+        </div><!-- /.landingslider -->
+        <div class="landingcost">
+          <div class="container">
+            <div class="landingcost__title">How much does it cost?</div><!-- /.landingcost__title -->
+            <div class="landingcost__items">
+              <div class="landingcost__item">
+                <div class="cost cost_caption">
+                  <div class="cost__wrapper">
+                    <div class="cost__content">
+                      <div class="cost__main">
+                        <div class="cost__title ">
+                          Trial
+                        </div>
+                        <div class="cost__list cost__list_row">
+                          <ul>
+                            <li>Twitter KOL Tracker</li>
+                            <li>Pro Alpha Channel</li>
+                            <li>Twitter Trending Tickers</li>
+                            
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cost__footer">
+                        <div class="cost__price">
+                          <div class="cost__pricevalue">$10.00</div>
+                          <div class="cost__priceinfo">per 4 days</div>
+                        </div>
+                        <div class="cost__button">
+                          <a href="#">
+                            <img src="img/landing_cart.svg" alt="">
+                            <span>Register to Purchase</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               
+              </div><!-- /.landingcost__item -->
+              <div class="landingcost__item landingcost__item_center">
+                <div class="cost cost_caption">
+                  <div class="cost__wrapper">
+                    <div class="cost__content">
+                      <div class="cost__main">
+                        <div class="cost__title ">
+                          User
+                        </div>
+                        <div class="cost__list cost__list_row">
+                          <ul>
+                            <li>Twitter KOL Tracker</li>
+                            <li>Pro Alpha Channel</li>
+                            <li>Twitter Trending Tickers</li>
+                            
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cost__footer">
+                        <div class="cost__price">
+                          <div class="cost__pricevalue">$49.00</div>
+                          <div class="cost__priceinfo">per 30 days</div>
+                        </div>
+                        <div class="cost__button ">
+                          <a href="#">
+                            <img src="img/landing_cart.svg" alt="">
+                            <span>Register to Purchase</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               
+              </div><!-- /.landingcost__item -->
+              <div class="landingcost__item">
+                <div class="cost cost_caption">
+                  <div class="cost__wrapper">
+                    <div class="cost__content">
+                      <div class="cost__main">
+                        <div class="cost__title ">
+                          Degen
+                        </div>
+                        <div class="cost__list cost__list_row">
+                          <ul>
+                            <li>Twitter KOL Tracker</li>
+                            <li>Pro Alpha Channel</li>
+                            <li>Twitter Trending Tickers</li>
+                            
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cost__footer">
+                        <div class="cost__price">
+                          <div class="cost__pricevalue">$129.00</div>
+                          <div class="cost__priceinfo">per 90 days</div>
+                        </div>
+                        <div class="cost__button">
+                          <a href="#">
+                            <img src="img/landing_cart.svg" alt="">
+                            <span>Register to Purchase</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               
+              </div><!-- /.landingcost__item -->
+            </div><!-- /.landingcost__items -->
+          </div><!-- /.container -->
+        </div><!-- /.landingcost -->
+        <div class="landingcontent">
+          <div class="container">
+
+          <div class="landcontent__item ">
+            <div class="landcontent__title textwhite">Can’t afford subscription?</div><!-- /.landcontent__title textwhite -->
+            <div class="landcontent__text textwhite">We share a lot of valuable Alpha in our Social Channel absolutely for <a href="#">free</a> 
+            </div><!-- /.landcontent__text textwhite -->
+            <div class="landcontent__icons">
+              <a href="#">
+                <svg width="48" height="44" viewBox="0 0 48 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_3194_997)">
+                    <path d="M37.7602 0H45.1202L28.9602 18.6716L47.8402 44H33.0242L21.4242 28.6081L8.14422 44H0.784219L17.9042 24.0295L-0.175781 0H15.0082L25.4882 14.0605L37.7602 0ZM35.1842 39.6162H39.2642L12.8642 4.2214H8.48022L35.1842 39.6162Z" fill="white"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_3194_997">
+                      <rect width="48" height="44" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+              <a href="#">
+                <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.0447 28.5361C22.231 21.8552 41.8834 13.7099 44.5961 12.5825C51.712 9.63173 53.8954 10.1972 52.8067 16.7319C52.0249 21.4287 49.769 36.9787 47.971 46.6575C46.904 52.3971 44.5103 53.0773 40.7463 50.5942C38.9362 49.3992 29.8 43.3575 27.8172 41.9389C26.0071 40.646 23.5107 39.0909 26.6414 36.0278C27.7555 34.9366 35.0587 27.9634 40.7487 22.5355C41.4943 21.8226 40.5578 20.6517 39.6975 21.2233C32.0282 26.3091 21.3949 33.3682 20.0415 34.2878C17.997 35.6761 16.0335 36.3129 12.5088 35.3004C9.84562 34.5355 7.24407 33.6232 6.23149 33.2752C2.3322 31.9364 3.25778 30.2024 7.0447 28.5361Z" fill="white"></path>
+                </svg>
+              </a>
+            </div><!-- /.landcontent__icons -->
+          </div>
+        </div><!-- /.container -->
+
+        </div><!-- /.landcontent -->
+      </div><!-- /.landingwrapper__main -->
+
+      
+<footer id="footer" class="sitefooter sitefooter_v2">
+  <div class="sitefooter__wrapper">
+    <div class="container">
+      <div class="sitefooter__items flex content-between items-center">
+        <div class="sitefooter__left flex items-center">
+          <div class="sitefooter__copy">&copy; Leak.me 2024</div>
+        </div>
+        <div class="sitefooter__right">
+          <div class="sitefooter__links">
+            <div class="sitefooter__link"><a href="">Support</a></div><!-- /.sitefooter__link -->
+            <div class="sitefooter__link"><a href="">Affiliate</a></div><!-- /.sitefooter__link -->
+            <div class="sitefooter__link"><a href="">Privacy</a></div><!-- /.sitefooter__link -->
+            <div class="sitefooter__link"><a href="">Terms</a></div><!-- /.sitefooter__link -->
+          </div><!-- /.sitefooter__links -->
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/index.js"></script>
+<script src="js/v3.js"></script>
+<script src="js/v4.js"></script>
+
+
+    </div><!-- /.landingwrapper -->
+
+    <script>
+      $('.landingslider__slider').slick({
+        centerMode: true,
+        centerPadding: '16px',
+        variableWidth: true,
+        arrows: false,
+        dots: false,
+        infinite: true
+      })
+    </script>

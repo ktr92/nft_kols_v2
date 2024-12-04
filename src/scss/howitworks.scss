@@ -1,0 +1,182 @@
+/* .landlayout_half {
+  background-image: url(../img/landlayout_bg1.svg), url(../img/landlayout_bg2.svg); 
+  background-size: 50% cover, 50% cover;
+  background-position: left top, right top;
+  background-repeat: no-repeat, no-repeat;
+} */
+
+.landlayout_halfs {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.landlayout__half {
+  width: 50%;
+}
+.landlayout__half_1 {
+  background-image: url(../img/landlayout_bg1.svg);
+  background-size: cover;
+  background-position: top left;
+}
+.landlayout__half_2 {
+  background-image: url(../img/landlayout_bg2.svg);
+  background-size: cover;
+  background-position: top left;
+}
+
+.landwrapper {
+  position: absolute;
+ padding-top: get-vw-large(42px);
+ padding-bottom: get-vw-large(42px);
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.landheader__buttons {
+  .btn_main {
+    padding: get-vw-large(18px) get-vw-large(51px);
+  }
+}
+
+.landwrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.landcontent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.landcontent__title {
+  margin-bottom: get-vw-large(21px);
+font-weight: 700;
+font-size: get-vw-large(40px);
+color: #fff;
+}
+
+.landcontent__text {
+margin-bottom: get-vw-large(36px);
+font-weight: 400;
+font-size: get-vw-large(22px);
+color: #fff
+}
+
+.textwhite {
+  color: #fff;
+}
+.textblack{
+  color: #fff;
+}
+
+.landcontent__icons {
+  display: flex;
+
+  a {
+    display: block;
+    margin-right: get-vw-large(37px);
+  }
+}
+
+.landcontent__textgreen {
+  font-weight: 700;
+font-size: get-vw-large(32px);
+color: #30ca4c;
+}
+
+.landcontent__right {
+  text-align: right;
+}
+
+.landcontent__left .landcontent__item {
+  max-width: get-vw-large(371px);
+}
+
+.sitefooter__copy.textwhite {
+  opacity: 1;
+  font-weight: 700;
+font-size: get-vw-large(16px);
+color: #fff;
+}
+
+
+.landcontent__center {
+}
+.landcontent__item {  
+}
+.landcontent__card {
+}
+.landcard {
+  padding: get-vw-large(33px);
+  border-radius: get-vw-large(12px);
+  text-align: center;
+  width: get-vw-large(382px);
+  background: #fff;
+}
+.landcard__icon {
+  margin-bottom: get-vw-large(13px);
+}
+.landcard__title {
+  margin-bottom: get-vw-large(20px);
+  font-weight: 700;
+font-size: get-vw-large(26px);
+color: #212531;
+}
+.landcard__text {
+  font-weight: 400;
+font-size: get-vw-large(14px);
+text-align: center;
+color: #212531;margin-bottom: get-vw-large(30px);
+}
+.landcard__text:last-child {
+  margin-bottom: 0;
+}
+.green {
+  color: #30ca4c;
+}
+
+.landheader__buttons {
+  .accountmenu__name {
+    color: #fff;
+  }
+  .dropdownblock__links ul li a {
+    color: #212531 !important;
+  }
+}
+.dropdownblock__links ul {
+  list-style: none;
+}
+
+.landcontent__text a {
+  color: #fff;
+ /*  padding-right: 30px;
+  background-image: url(../img//Purchase.svg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  white-space: nowrap; */
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  span {
+    padding-right: get-vw-large(13px);
+
+    text-align: right;
+  }
+
+
+}
+
+.yellowalert {
+  font-weight: 700;
+  color: #ffde46;
+}

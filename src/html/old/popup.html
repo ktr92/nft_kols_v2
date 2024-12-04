@@ -1,0 +1,748 @@
+<% var data = {
+  title: "MAIN",
+  author: ""
+  }; %><%= _.template(require('../includes/head.html').default)(data) %><%= _.template(require('../includes/header.html').default)(data) %> <style>
+  [data-toggle='modal'] {
+    margin-bottom: 5px;
+  }
+</style>
+<main>
+  <div class="container">
+    <br>
+    <br>
+    <a href="#popup_edit" data-toggle='modal' class="btn btn_main"> edit </a>
+    <a href="#popup_auth" data-toggle='modal' class="btn btn_main"> Log In </a>
+    <a href="#popup_sign" data-toggle='modal' class="btn btn_main"> Sign Up </a>
+    <a href="#popup_reset" data-toggle='modal' class="btn btn_main"> Password reset </a>
+    <a href="#popup_reset_password" data-toggle='modal' class="btn btn_main"> Password reset 2</a>
+    <a href="#popup_emailsent" data-toggle='modal' class="btn btn_main">Recovery email sent</a>
+    <a href="#popup_emailcheck" data-toggle='modal' class="btn btn_main">Check email</a>
+    <a href="#popup_success" data-toggle='modal' class="btn btn_main">Success</a>
+    <a href="#popup_error" data-toggle='modal' class="btn btn_main">Error</a>
+    <a href="#popup_report" data-toggle='modal' class="btn btn_main">Report</a>
+    <br>
+    <br>
+    <button data-modalcall="#popup_recommendation">Вызов окна через JS</button>
+    <script>
+      // подробнее https://getbootstrap.com/docs/4.0/components/modal/
+      $('[data-modalcall]').on('click', function(e) {
+        e.preventDefault()
+        const modalname = $(this).attr('data-modalcall')
+        $(`${modalname}`).modal('show')
+      })
+      // закрытие $(`#${modalname}`).modal('hide')
+    </script>
+    <br>
+    <br>
+  </div>
+</main>
+<div class="modal modal_largest fade" tabindex="-1" role="dialog" id='popup_recommendation'>
+  <div class="modal-dialog" role="document">
+    <!--  <form action=""> -->
+    <div class="modal-content">
+      <div class="modal-title">Your repost will look <br> like this: </div>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">
+          <img src="img/closebutton.svg" alt="">
+        </span>
+      </button>
+      <div class="modal-body">
+        <div class="imagecard imagecard_largest">
+          <div class="imagecard__content">
+            <div class="card">
+              <div class="card__wrapper">
+                <div class="card__header flex content-between items-center">
+                  <div class="card__profile cardprofile flex items-center">
+                    <div class="cardprofile__image">
+                      <div class="cardprofile__img">
+                        <img src="img/man.png" alt="">
+                      </div>
+                    </div>
+                    <div class="cardprofile__info">
+                      <div class="cardprofile__name">Victor Ivanov</div>
+                      <div class="cardprofile__stats flex items-center">
+                        <div class="cardstat ">
+                          <div class="cardstat__icon"></div>
+                          <div class="cardstat__text">7 400 followers</div>
+                        </div>
+                        <div class="cardstat ">
+                          <div class="cardstat__icon"></div>
+                          <div class="cardstat__text">518 Shills</div>
+                        </div>
+                        <div class="cardstat cardstat_green">
+                          <div class="cardstat__icon"></div>
+                          <div class="cardstat__text">87% Profitable</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__follow">
+                    <a href="#" class="btn">Follow</a>
+                  </div>
+                </div>
+                <div class="card__main">
+                  <div class="card__item">
+                    <div class="carditem flex items-center">
+                      <div class="carditem__image">
+                        <div class="carditem__img">
+                          <img src="img/card.png" alt="">
+                        </div>
+                        <div class="carditem__sticker">
+                          <div class="sticker sticker_purple">NFT</div>
+                        </div>
+                      </div>
+                      <div class="carditem__main">
+                        <div class="carditem__header flex content-between items-center">
+                          <div class="carditem__title flex items-center">
+                            <span class="carditem__name">The Ugly Duck</span>
+                            <div class="carditem__icon">
+                              <img src="img/ChartArrowRise.svg" alt="">
+                            </div>
+                          </div>
+                          <div class="carditem__stat carditem__stat_green">+79.2%</div>
+                        </div>
+                        <div class="carditem__params flex items-center ">
+                          <div class="carditem__param">
+                            <div class="carditem__paramname">5 SOL</div>
+                            <div class="carditem__paramtext">Entry price</div>
+                          </div>
+                          <div class="carditem__param">
+                            <div class="carditem__paramname">10 SOL</div>
+                            <div class="carditem__paramtext">Current Price</div>
+                          </div>
+                          <div class="carditem__param">
+                            <div class="carditem__paramname green">5</div>
+                            <div class="carditem__paramtext">Bullish</div>
+                          </div>
+                          <div class="carditem__param">
+                            <div class="carditem__paramname red">20</div>
+                            <div class="carditem__paramtext">Bearish</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__footer">
+                  <div class="cardcontent">
+                    <div class="cardcontent__params flex items-center">
+                      <div class="cardcontent__param">29.12.2020</div>
+                      <div class="cardcontent__param">Duration: 29 days</div>
+                    </div>
+                    <div class="cardcontent__text">Vivamus sodales tortor et felis blandit tincidunt. Nullam sit amet elementum nisi. Fusce vitae libero elit. Ut leo</div>
+                    <div class="cardcontent__buttons flex items-center content-between">
+                      <div class="cardcontent__rate flex items-center">
+                        <div class="cardcontent__button cardcontent__like">
+                          <a href="#" class="cardaction">
+                            <div class="cardaction__caption">5</div>
+                            <div class="cardaction__icon">
+                              <div class="cardaction__img">
+                                <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <g opacity="0.2">
+                                    <path d="M5.95833 20.9167H4.58333C3.57087 20.9167 2.75 20.0958 2.75 19.0833V11.2917C2.75 10.2792 3.57087 9.45833 4.58333 9.45833H7.79167V19.0833C7.79167 20.0958 6.97079 20.9167 5.95833 20.9167ZM18.6372 10.6358C18.1995 10.1733 17.595 9.91804 16.934 9.91666H13.5208C13.5208 9.91666 14.0204 7.91054 14.1923 7.23771C14.4517 6.21975 14.504 5.36312 14.3555 4.54179C14.2785 4.11508 14.1414 3.56279 13.7638 3.07375C13.4956 2.72633 13.1601 2.50037 12.766 2.40137C12.1793 2.25516 11.8273 2.44262 11.6165 3.03066C11.599 3.07833 10.862 5.67341 10.862 5.67341C10.8043 5.87829 10.7488 6.04146 10.664 6.173C10.1195 7.02183 9.46138 7.84729 8.70788 8.68879V19.7607C10.752 20.3447 13.8256 20.8795 14.0351 20.8992C14.1543 20.9112 14.2725 20.9167 14.3898 20.9167C16.0435 20.9167 17.4978 19.8025 17.9236 18.1584C18.3077 16.6743 19.0992 13.125 19.0992 13.125C19.1625 12.8908 19.2344 12.6254 19.25 12.3357C19.2844 11.6936 19.0667 11.0905 18.6372 10.6358Z" fill="#212531" />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="cardcontent__button cardcontent__like cardcontent__like_dislike">
+                          <a href="#" class="cardaction">
+                            <div class="cardaction__caption">5</div>
+                            <div class="cardaction__icon">
+                              <div class="cardaction__img">
+                                <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <g opacity="0.2">
+                                    <path d="M16.0417 2.58334H17.4167C18.4291 2.58334 19.25 3.40421 19.25 4.41667V12.2083C19.25 13.2208 18.4291 14.0417 17.4167 14.0417H14.2083V4.41667C14.2083 3.40421 15.0292 2.58334 16.0417 2.58334ZM3.36279 12.8642C3.8005 13.3267 4.40504 13.582 5.06596 13.5833H8.47917C8.47917 13.5833 7.97958 15.5895 7.80771 16.2623C7.54829 17.2803 7.49604 18.1369 7.64454 18.9582C7.72154 19.3849 7.85858 19.9372 8.23625 20.4263C8.50437 20.7737 8.83987 20.9996 9.23404 21.0986C9.82071 21.2448 10.1727 21.0574 10.3835 20.4693C10.401 20.4217 11.138 17.8266 11.138 17.8266C11.1957 17.6217 11.2512 17.4585 11.336 17.327C11.8805 16.4782 12.5386 15.6527 13.2921 14.8112V3.73925C11.248 3.15534 8.17437 2.62046 7.96492 2.60075C7.84575 2.58883 7.7275 2.58334 7.61017 2.58334C5.9565 2.58334 4.50221 3.69755 4.07642 5.34159C3.69233 6.82567 2.90079 10.375 2.90079 10.375C2.83754 10.6092 2.76558 10.8746 2.75 11.1643C2.71562 11.8064 2.93333 12.4095 3.36279 12.8642Z" fill="#212531" />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="cardcontent__actions flex items-center">
+                        <div class="cardcontent__button">
+                          <a href="#" class="cardaction">
+                            <div class="cardaction__icon">
+                              <div class="cardaction__img">
+                                <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <g opacity="0.2">
+                                    <path d="M16.7288 20.4582C16.5872 20.4582 16.4465 20.4146 16.3273 20.3285L10.9997 16.4927L5.67201 20.3285C5.46209 20.4793 5.18617 20.5003 4.95655 20.3825C4.72738 20.2652 4.58301 20.0287 4.58301 19.7707V6.02067C4.58301 4.378 5.91951 3.0415 7.56217 3.0415H14.4372C16.0798 3.0415 17.4163 4.378 17.4163 6.02067V19.7707C17.4163 20.0287 17.272 20.2652 17.0423 20.3825C16.9433 20.433 16.8361 20.4582 16.7288 20.4582Z" fill="#212531" />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                            <div class="cardaction__caption">Save</div>
+                          </a>
+                        </div>
+                        <div class="cardcontent__button">
+                          <a href="#" class="cardaction">
+                            <div class="cardaction__icon">
+                              <div class="cardaction__img">
+                                <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <g opacity="0.2">
+                                    <path d="M16.7295 3.0415C16.2719 3.04208 15.8205 3.14808 15.4104 3.35128C15.0004 3.55448 14.6427 3.84942 14.365 4.21321C14.0874 4.57701 13.8972 4.99988 13.8094 5.44901C13.7216 5.89815 13.7385 6.36148 13.8586 6.80306L13.8058 6.82902L7.67204 9.89502L7.61922 9.92098C7.34108 9.56331 6.98502 9.2738 6.57813 9.07446C6.17124 8.87513 5.72425 8.77123 5.27116 8.77067C4.48103 8.77067 3.72327 9.08455 3.16457 9.64325C2.60587 10.202 2.29199 10.9597 2.29199 11.7498C2.29199 12.54 2.60587 13.2977 3.16457 13.8564C3.72327 14.4151 4.48103 14.729 5.27116 14.729C5.72455 14.7287 6.1719 14.6249 6.57912 14.4256C6.98634 14.2263 7.34268 13.9366 7.62101 13.5787L7.67204 13.6047L13.8058 16.6707L13.856 16.6957C13.7355 17.1376 13.7186 17.6012 13.8065 18.0507C13.8944 18.5002 14.0847 18.9233 14.3627 19.2873C14.6407 19.6512 14.9988 19.9462 15.4093 20.1493C15.8198 20.3523 16.2715 20.458 16.7295 20.4582C17.5196 20.4582 18.2774 20.1443 18.8361 19.5856C19.3948 19.0269 19.7087 18.2691 19.7087 17.479C19.7087 16.6889 19.3948 15.9311 18.8361 15.3724C18.2774 14.8137 17.5196 14.4998 16.7295 14.4998C16.3119 14.5004 15.8991 14.5888 15.5179 14.7592C15.1367 14.9296 14.7955 15.1783 14.5166 15.489L14.4199 15.4407L8.28703 12.3747L8.19124 12.3272C8.26615 11.9462 8.26584 11.5542 8.19035 11.1733L8.28703 11.125L14.4199 8.059L14.5139 8.01156C14.7932 8.32249 15.1348 8.57117 15.5166 8.74143C15.8983 8.9117 16.3115 8.99974 16.7295 8.99984C17.5196 8.99984 18.2774 8.68596 18.8361 8.12726C19.3948 7.56856 19.7087 6.81079 19.7087 6.02067C19.7087 5.23055 19.3948 4.47278 18.8361 3.91408C18.2774 3.35538 17.5196 3.0415 16.7295 3.0415Z" fill="#212531" />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                            <div class="cardaction__caption">Share</div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-submit">
+        <div class="buttonsrow">
+          <div class="buttonsrow__item ">
+            <a href="#" class="btn" data-click="copy-img" data-clickindex="1">
+              <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.43514 18.8147C9.61434 18.9939 9.84855 19.0833 10.0832 19.0833C10.3179 19.0833 10.5521 18.9939 10.7313 18.8147C11.0893 18.4568 11.0893 17.8765 10.7313 17.5185L5.87939 12.6666H18.3332C18.8392 12.6666 19.2499 12.256 19.2499 11.75C19.2499 11.244 18.8392 10.8333 18.3332 10.8333H5.87939L10.7313 5.98138C11.0893 5.62342 11.0893 5.04318 10.7313 4.68522C10.3733 4.32726 9.79309 4.32726 9.43514 4.68522L3.01847 11.1019C2.66051 11.4598 2.66051 12.0401 3.01847 12.3981L9.43514 18.8147Z" fill="#30CA4C" />
+              </svg>
+              <span> Change</span>
+            </a>
+          </div>
+          <div class="buttonsrow__item ">
+            <a href="#" class="btn btn_main" data-click="download-img" data-downloadindex="1">
+              <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.7174 9.24559L18.8357 8.12726C19.9971 6.96584 19.9971 5.07568 18.8357 3.9138C18.2733 3.35189 17.5258 3.04297 16.7287 3.04297C15.9317 3.04297 15.1837 3.35234 14.6218 3.91426L13.5039 5.03214L17.7174 9.24559ZM12.5318 6.00426L4.25014 14.2859C4.07369 14.4623 3.93939 14.6801 3.86148 14.9161L2.32606 19.5549C2.24402 19.8015 2.30864 20.0733 2.49244 20.2571C2.62398 20.3881 2.79906 20.4583 2.97873 20.4583C3.05114 20.4583 3.12402 20.4468 3.19506 20.4234L7.83248 18.8876C8.06944 18.8096 8.2876 18.6753 8.46406 18.4984L16.7452 10.2173L12.5318 6.00426Z" fill="white" />
+              </svg>
+              <span>Publish recommendation</span>
+            </a>
+          </div>
+        </div>
+        <!-- /.buttonsrow -->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_edit'>
+  <div class="modal-dialog" role="document">
+    <form action="">
+      <div class="modal__wrapper">
+        <div class="modal__header">
+          <div class="modal__leftheader">
+            <a href="#" class="modal__back" data-dismiss="modal" aria-label="Close">
+              <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M12.1295 0.26706L1.08264 11.5017C0.404747 12.1911 0.404747 13.3089 1.08264 13.9983L12.1295 25.2329L14.5844 22.7364L6.50078 14.5154H23.5742L23.5742 10.9846L6.50078 10.9846L14.5844 2.76365L12.1295 0.26706Z" fill="#3A4659" />
+              </svg>
+            </a>
+            <div class="modal__title">Edit profile</div>
+          </div>
+          <div class="modal__button">
+            <button class="btn btn_main btn_save">
+              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.84505 3.5C4.45493 3.5 3.32422 4.63071 3.32422 6.02083V17.4792C3.32422 18.8693 4.45493 20 5.84505 20H6.07422V13.3542C6.07422 12.4696 6.7938 11.75 7.67839 11.75H15.4701C16.3546 11.75 17.0742 12.4696 17.0742 13.3542V20H17.3034C18.6935 20 19.8242 18.8693 19.8242 17.4792V7.85417C19.8242 7.658 19.7399 7.47096 19.5933 7.34033L15.4683 3.67367C15.4013 3.61408 15.3238 3.57141 15.2409 3.54207V7.39583C15.2409 8.28042 14.5213 9 13.6367 9H8.13672C7.25214 9 6.53255 8.28042 6.53255 7.39583V3.5H5.84505ZM7.90755 3.5V7.39583C7.90755 7.52233 8.01022 7.625 8.13672 7.625H13.6367C13.7632 7.625 13.8659 7.52233 13.8659 7.39583V3.5H7.90755ZM7.67839 13.125C7.55189 13.125 7.44922 13.2277 7.44922 13.3542V20H15.6992V13.3542C15.6992 13.2277 15.5966 13.125 15.4701 13.125H7.67839Z" fill="white" />
+              </svg>
+              <span>Save</span>
+            </button>
+          </div>
+        </div>
+        <div class="modal__body">
+          <div class="modal__form">
+            <div class="formblock">
+              <div class="formblock__image formAvatar">
+                <label for="fileImage">
+                  <input accept="image/*" type='file' id="fileImage" />
+                  <div class="fileImage__img">
+                    <img id="imgFile" src="img/man.png" alt="" />
+                  </div>
+                  <span class="fileImage__btn">
+                    <img src="img/Camera.svg" alt="">
+                  </span>
+                </label>
+                <script>
+                  const imgInp = document.getElementById('fileImage')
+                  imgInp.onchange = evt => {
+                    const [file] = imgInp.files
+                    if (file) {
+                      document.getElementById('imgFile').src = URL.createObjectURL(file)
+                    }
+                  }
+                </script>
+              </div>
+              <div class="formblock__item">
+                <div class="formblock__title">Name</div>
+                <div class="formblock__input">
+                  <input type="text" value="Victor Ivanov" placeholder="Name" class="input-error">
+                  <small class="inputerror">Username cannot contain characters “@”./,|\’{}[]”</small>
+                </div>
+              </div>
+              <div class="formblock__item">
+                <div class="formblock__title">Username</div>
+                <div class="formblock__input">
+                  <input type="text" value="IVANOV228_SWAG_LIFE_VIP" placeholder="Username">
+                </div>
+              </div>
+              <div class="formblock__item">
+                <div class="formblock__title">Twitter link</div>
+                <div class="formblock__input">
+                  <input type="text" value="twitter.com/xolxllz" placeholder="Twitter link">
+                </div>
+              </div>
+              <div class="formblock__item">
+                <div class="formblock__title">Discord link</div>
+                <div class="formblock__input">
+                  <input type="text" value="@xolxllz" placeholder="Discord link">
+                </div>
+              </div>
+              <div class="formblock__item">
+                <div class="formblock__title">Telergam</div>
+                <div class="formblock__input">
+                  <input type="text" value="xollxlz@gmail.com" placeholder="Telergam">
+                </div>
+              </div>
+              <div class="formblock__item">
+                <div class="formblock__title">Bio</div>
+                <div class="formblock__input">
+                  <span class="formblock__limit">Max: 256 symbols</span>
+                  <textarea name="" id="" rows="8">
+✅ Only profitable recommendations
+🖥 24/7 market monitoring
+💼 NFT, BTC, ETH, TRC, GOLD
+
+Hi, My name is Victor Ivanov, my story is so boring b...
+                  </textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_auth'>
+  <div class="modal-dialog" role="document">
+    <form action="">
+      <div class="modal-content">
+        <div class="modal-title">Log In</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <img src="img/closebutton.svg" alt="">
+          </span>
+        </button>
+        <div class="modal-body">
+          <div class="formblock">
+            <div class="formblock__main">
+              <div class="formblock__item">
+                <div class="formblock__title">Email <span class="red">*</span>
+                </div>
+                <div class="formblock__input">
+                  <input type="text" value="Victor Ivanov" placeholder="Email" class="input-error">
+                  <small class="inputerror">Email cannot contain characters /,|\’{}[]”</small>
+                </div>
+              </div>
+              <div class="formblock__item">
+                <div class="formblock__title">Password <span class="red">*</span>
+                </div>
+                <div class="formblock__input">
+                  <div class="inputpassword">
+                    <input type="password">
+                    <img src="img/Invisible.svg" alt="" data-toggle="password" class="password_invisible">
+                    <img src="img/Eye2.svg" alt="" data-toggle="password" class="password_visible">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.formblock__main -->
+          <div class="flex content-between passwordforgot">
+            <div class="check">
+              <input type="checkbox" id="save" checked="checked" value="Y">
+              <label for="save">Remember me </a>
+              </label>
+            </div>
+            <a href="#">Forgot password?</a>
+          </div>
+          <div class="modal-submit">
+            <div class="buttonsrow">
+              <div class="buttonsrow__item buttonsrow__item_full">
+                <button type='submit' class='btn btn_main'>Log In</button>
+              </div>
+            </div>
+            <!-- /.buttonsrow -->
+          </div>
+          <div class="textlogin flex content-center items-center">
+            <div class="textlogin__text">Don't have an account yet?</div>
+            <div class="textlogin__link">
+              <a href="">
+                <img src="img/Edit.svg" alt="">
+                <span>Register now!</span>
+              </a>
+            </div>
+          </div>
+          <!-- /.textlogin -->
+        </div>
+        <!-- /.formblock -->
+      </div>
+  </div>
+  </form>
+</div>
+</div>
+<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_sign'>
+  <div class="modal-dialog" role="document">
+    <form action="">
+      <div class="modal-content">
+        <div class="modal__leftheader">
+          <a href="#" class="modal__back" data-dismiss="modal" aria-label="Close">
+            <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M12.1295 0.26706L1.08264 11.5017C0.404747 12.1911 0.404747 13.3089 1.08264 13.9983L12.1295 25.2329L14.5844 22.7364L6.50078 14.5154H23.5742L23.5742 10.9846L6.50078 10.9846L14.5844 2.76365L12.1295 0.26706Z" fill="#3A4659" />
+            </svg>
+          </a>
+        </div>
+        <div class="modal-title">Sign Up</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <img src="img/closebutton.svg" alt="">
+          </span>
+        </button>
+        <div class="modal-body">
+          <div class="formblock">
+            <div class="formblock__main">
+              <div class="formblock__item">
+                <div class="formblock__title">Username <span class="red">*</span>
+                </div>
+                <div class="formblock__input">
+                  <input type="text" value="Victor Ivanov" placeholder="Username" class="input-error">
+                  <small class="inputerror">Username cannot contain characters /,|\’{}[]”</small>
+                </div>
+              </div>
+              <div class="formblock__item">
+                <div class="formblock__title">Email <span class="red">*</span>
+                </div>
+                <div class="formblock__input">
+                  <input type="text" placeholder="Email">
+                </div>
+              </div>
+              <div class="formblock__item">
+                <div class="formblock__title">Password <span class="red">*</span>
+                </div>
+                <div class="formblock__input">
+                  <div class="inputpassword">
+                    <input type="password">
+                    <img src="img/Invisible.svg" alt="" data-toggle="password" class="password_invisible">
+                    <img src="img/Eye2.svg" alt="" data-toggle="password" class="password_visible">
+                  </div>
+                </div>
+              </div>
+              <div class="formblock__item">
+                <div class="formblock__title">Once again, please <span class="red">*</span>
+                </div>
+                <div class="formblock__input">
+                  <div class="inputpassword">
+                    <input type="password" value="andr182838">
+                    <img src="img/Invisible.svg" alt="" data-toggle="password" class="password_invisible">
+                    <img src="img/Eye2.svg" alt="" data-toggle="password" class="password_visible">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="captchablock">
+            <img src="img/captcha.png" alt="">
+          </div>
+          <div class="modal-submit">
+            <div class="buttonsrow">
+              <div class="buttonsrow__item buttonsrow__item_full">
+                <button type='submit' class='btn btn_main'>Complete registration</button>
+              </div>
+            </div>
+            <!-- /.buttonsrow -->
+          </div>
+        </div>
+        <!-- /.formblock -->
+      </div>
+  </div>
+  </form>
+</div>
+</div>
+<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_reset'>
+  <div class="modal-dialog" role="document">
+    <form action="">
+      <div class="modal-content">
+        <div class="modal__leftheader">
+          <a href="#" class="modal__back" data-dismiss="modal" aria-label="Close">
+            <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M12.1295 0.26706L1.08264 11.5017C0.404747 12.1911 0.404747 13.3089 1.08264 13.9983L12.1295 25.2329L14.5844 22.7364L6.50078 14.5154H23.5742L23.5742 10.9846L6.50078 10.9846L14.5844 2.76365L12.1295 0.26706Z" fill="#3A4659" />
+            </svg>
+          </a>
+        </div>
+        <div class="modal-title">Password reset</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <img src="img/closebutton.svg" alt="">
+          </span>
+        </button>
+        <div class="modal-body">
+          <div class="formblock">
+            <div class="formblock__main">
+              <div class="formblock__item">
+                <div class="formblock__title">Email <span class="red">*</span>
+                </div>
+                <div class="formblock__input">
+                  <input type="text" placeholder="Email">
+                </div>
+              </div>
+            </div>
+            <div class="captchablock">
+              <img src="img/captcha.png" alt="">
+            </div>
+            <div class="modal-submit">
+              <div class="buttonsrow">
+                <div class="buttonsrow__item buttonsrow__item_full">
+                  <button type='submit' class='btn btn_main'>Reset password</button>
+                </div>
+              </div>
+              <!-- /.buttonsrow -->
+            </div>
+          </div>
+          <!-- /.formblock -->
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_reset_password'>
+  <div class="modal-dialog" role="document">
+    <form action="">
+      <div class="modal-content">
+        <div class="modal__leftheader">
+          <a href="#" class="modal__back" data-dismiss="modal" aria-label="Close">
+            <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M12.1295 0.26706L1.08264 11.5017C0.404747 12.1911 0.404747 13.3089 1.08264 13.9983L12.1295 25.2329L14.5844 22.7364L6.50078 14.5154H23.5742L23.5742 10.9846L6.50078 10.9846L14.5844 2.76365L12.1295 0.26706Z" fill="#3A4659" />
+            </svg>
+          </a>
+        </div>
+        <div class="modal-title">Reset password</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <img src="img/closebutton.svg" alt="">
+          </span>
+        </button>
+        <div class="modal-body">
+          <div class="formblock">
+            <div class="formblock__main">
+              <div class="formblock__item">
+                <div class="formblock__title">New Password <span class="red">*</span>
+                </div>
+                <div class="formblock__input">
+                  <div class="inputpassword">
+                    <input type="password" value="andr182838">
+                    <img src="img/Invisible.svg" alt="" data-toggle="password" class="password_invisible">
+                    <img src="img/Eye2.svg" alt="" data-toggle="password" class="password_visible">
+                  </div>
+                </div>
+              </div>
+              <div class="formblock__item">
+                <div class="formblock__title">Once again, please <span class="red">*</span>
+                </div>
+                <div class="formblock__input">
+                  <div class="inputpassword">
+                    <input type="password" value="andr182838">
+                    <img src="img/Invisible.svg" alt="" data-toggle="password" class="password_invisible">
+                    <img src="img/Eye2.svg" alt="" data-toggle="password" class="password_visible">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="captchablock">
+            <img src="img/captcha.png" alt="">
+          </div>
+          <div class="modal-submit">
+            <div class="buttonsrow">
+              <div class="buttonsrow__item buttonsrow__item_full">
+                <button type='submit' class='btn btn_main'>Complete registration</button>
+              </div>
+            </div>
+            <!-- /.buttonsrow -->
+          </div>
+        </div>
+        <!-- /.formblock -->
+      </div>
+  </div>
+  </form>
+</div>
+</div>
+<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_emailsent'>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">
+          <img src="img/closebutton.svg" alt="">
+        </span>
+      </button>
+      <div class="modal-body">
+        <div class="modalinfo">
+          <div class="modalinfo__image">
+            <img src="img/send.svg" alt="">
+          </div>
+          <div class="modalinfo__title">Recovery email sent to <br>
+            <span class="green">*****llz@gmail.com</span>
+          </div>
+          <div class="modalinfo__text">To reset your password, follow the instructions in&nbsp;the&nbsp;email we’ve sent you.</div>
+        </div>
+        <div class="modalclose">
+          <button href="#" data-dismiss="modal" class="btn btn_main">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_emailcheck'>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">
+          <img src="img/closebutton.svg" alt="">
+        </span>
+      </button>
+      <div class="modal-body">
+        <div class="modalinfo">
+          <div class="modalinfo__image">
+            <img src="img/send.svg" alt="">
+          </div>
+          <div class="modalinfo__title">To complete registration, please check your email </div>
+          <div class="modalinfo__text">The instructions should be in your inbox. </div>
+        </div>
+        <div class="modalclose">
+          <button href="#" data-dismiss="modal" class="btn btn_main">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_success'>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">
+          <img src="img/closebutton.svg" alt="">
+        </span>
+      </button>
+      <div class="modal-body">
+        <div class="modalinfo">
+          <div class="modalinfo__image">
+            <img src="img/success.svg" alt="">
+          </div>
+          <div class="modalinfo__title">Congratulations, your account has been successfully created! </div>
+        </div>
+        <div class="modalclose">
+          <button href="#" class="btn btn_main">Log In</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_error'>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">
+          <img src="img/closebutton.svg" alt="">
+        </span>
+      </button>
+      <div class="modal-body">
+        <div class="modalinfo">
+          <div class="modalinfo__image">
+            <img src="img/error.svg" alt="">
+          </div>
+          <div class="modalinfo__title">Congratulations, your account has been successfully created! </div>
+        </div>
+        <div class="modalclose">
+          <button href="#" class="btn btn_main btn_red">Log In</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_report'>
+  <div class="modal-dialog" role="document">
+    <form action="">
+      <div class="modal-content">
+        <div class="modal-title text-left">Select a reason for reporting this reccomendation?</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <img src="img/closebutton.svg" alt="">
+          </span>
+        </button>
+        <div class="modal-body">
+          <div class="formblock">
+            <div class="formblock__main">
+              <div class="formblock__item">
+                <div class="checkblock checkblock_red">
+                  <div class="fdropdown__item">
+                    <div class="dcheckbox">
+                      <label for="checkbox-1" class="dcheckbox__label">
+                        <span>
+                          <input type="checkbox" id="checkbox-1">
+                          <span class="dcheckbox__text">SPAM</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="fdropdown__item">
+                    <div class="dcheckbox">
+                      <label for="checkbox-2" class="dcheckbox__label">
+                        <span>
+                          <input type="checkbox" id="checkbox-2">
+                          <span class="dcheckbox__text">Plagiarism</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="fdropdown__item">
+                    <div class="dcheckbox">
+                      <label for="checkbox-3" class="dcheckbox__label">
+                        <span>
+                          <input type="checkbox" id="checkbox-3">
+                          <span class="dcheckbox__text">Inapropriet content</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="fdropdown__item">
+                    <div class="dcheckbox">
+                      <label for="checkbox-4" class="dcheckbox__label">
+                        <span>
+                          <input type="checkbox" id="checkbox-4">
+                          <span class="dcheckbox__text">Other</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="formblock__item">
+                <div class="formblock__title">Your message <span class="red">*</span>
+                </div>
+                <div class="formblock__input">
+                  <textarea rows="6" placeholder="Text..."></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.formblock__main -->
+          <div class="modal-submit">
+            <div class="buttonsrow">
+              <div class="buttonsrow__item buttonsrow__item_full">
+                <button type='submit' class='btn  btn_red'>Send</button>
+              </div>
+            </div>
+            <!-- /.buttonsrow -->
+          </div>
+        </div>
+        <!-- /.formblock -->
+      </div>
+  </div>
+  </form>
+</div>
+</div><%= _.template(require('../includes/footer.html').default)(data) %>

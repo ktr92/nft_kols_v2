@@ -1,0 +1,618 @@
+
+  <!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>
+    MAIN
+  </title>
+  <!--   <link rel="shortcut icon" href="favicon/favicon.ico" />
+ -->
+  <link rel="preload" href="fonts/FuturaDemiC.woff" as="font" type="font/woff" crossorigin>
+
+
+
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery.datetimepicker.min.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/slick.min.css">
+  <link rel="stylesheet" href="css/slick-theme.min.css">
+  <link rel="stylesheet" href="css/lightbox.min.css" />
+  <link rel="stylesheet" href="css/nouislider.min.css" />
+  <link rel="stylesheet" href="css/style.bundle.css" />
+  <link rel="stylesheet" href="css/v3.css" />
+  <link rel="stylesheet" href="css/howitworks.css" />
+  <link rel="stylesheet" href="css/howitworks_fix.css" />
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/selectbox.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/flatpickr.js"></script>
+  <script src="js/html2canvas.min.js"></script>
+  <script src="js/lightbox.min.js"></script>
+  <script src="js/nouislider.min.js"></script>
+  <script src="js/jquery.datetimepicker.min.js"></script>
+
+  <script src="js/jquery.inputmask.min.js"></script>
+  <script src="js/inputmask.binding.js"></script>
+
+</head>
+
+<body>
+    <div class='darkmode sm_mode'>
+      <div class="jsbackdrop jsbackdrop_v2"></div>
+
+<header id="header" class="siteheader siteheader_v2">
+  <div class="siteheader__main">
+    <div class="container">
+      <div class="flex content-between items-center relative">
+        <div class="siteheader__left flex items-center">
+          <div class="logo logo_default"><a href="/"><img src="img/leakme_darkmode.svg" alt=""></a></div>
+          <div class="siteheader__nav">
+            <div class="tabsnav onlyDesktop">
+              <div class="tabsnav__links flex content-between items-center tabsnav__links_wallets">
+                <div class="itemsnav itemsnav_table flex items-center content-between mt-0 ">
+                  <div class="flex items-center content-between itemsnav_v2 itemsnav_desktop">
+                    <ul class="flex tabsbuttons ">
+                      <li>
+                        <a class="change_leaderboard_tab" data-name="popular_tokens" href="#">Watchlist</a>
+                      </li>
+                      <li>
+                        <a class="change_leaderboard_tab" data-name="popular_presales" href="#">+3 KOL Calls <span
+                            class="iconlink__count">5</span></a>
+                      </li>
+                      <li class="active">
+                        <a class="change_leaderboard_tab " data-name="top_calls" href="#">New Projects <span
+                            class="iconlink__count">5</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.siteheader__nav -->
+
+        </div>
+
+        <div class="siteheader__right flex">
+          <div class="accountblock accountblock_authored flex items-center">
+
+            <!-- <div class="subscribelink onlyDesktop">
+            <a href='#' class="subscribelink__wrapper flex items-center">
+              <div class="subscribelink__main flex items-center">
+                <div class="subscribelink__icon"><img src="img/coin_3305481.svg" alt=""></div>
+                <div class="subscribelink__content">
+                  <div class="subscribelink__title">Start subscription</div>
+                  <div class="subscribelink__text">
+                    <div class="subscribelink__price">For $49.00</div>
+                    <div class="subscribelink__subprice">/month</div>
+                  </div>
+                </div>
+              </div>
+              <div class="subscribelink__link">Sign In</div>
+            </a>
+          </div> -->
+
+            <div class="headersearch_v2 ">
+              <div class="pagesearch__slide onlyMobile">
+                <a href="#" data-toggleclick="headersearch" class="active"><img src="img/Search.svg" alt=""></a>
+                <div class="headersearch" data-toggle="headersearch" data-togglewrapper="suggestions">
+                  <form action="">
+                    <div class="headersearch__wrapper">
+                      <div class="headersearch__bg">
+                        <input type="text" placeholder="Search by ticker">
+                        <a href="#" data-toggleclick="headersearch" class="headersearch__close">
+                          <img src="img/closesearch.svg" alt="">
+                        </a>
+                      </div><!-- /.headersearch__bg -->
+
+                      <button type="submit" class="headersearch__button">
+                        <img src="img/Search.svg" alt="">
+                      </button>
+                    </div>
+
+                  </form>
+                </div>
+              </div><!-- /.pagesearch__slide -->
+            </div>
+
+
+
+            <div class="accountmenu" data-toggleclick="accountmenu">
+              <div class="accountmenu__wrapper flex items-center">
+                <div class="accountmenu__icon">
+                  <div class="accountmenu__img"><img src="img/Heart_white.svg" alt=""></div>
+                </div>
+                <div class="accountmenu__name">
+                  <span>Andrew M.</span>
+                  <img src="img/ChevronDown_white.svg" alt="">
+                </div>
+              </div>
+              <div class="accountmenu__menu dropdownblock" data-toggle="accountmenu">
+                <div class="dropdownblock__wrapper">
+                  <div class="dropdownblock__links">
+                    <ul>
+                      <li class="signout"><a href="">Sign Out</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="accountblock accountblock_unauthored">
+            <a href="" class="accountblock__link">Sign In</a>
+        </div> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mobilemenu mobilemenu_v2" data-menu="mobilemenu">
+    <div class="mobilemenu__wrapper">
+      <div class="mobilemenu__block">
+        <div class="mobilemenu__title">Filters</div><!-- /.mobilemenu__title -->
+        <div class="mobilemenu__nav">
+          <div class="tabsnav ">
+            <div class="tabsnav__links  tabsnav__links_wallets">
+              <div class="itemsnav_v2">
+                <ul class="flex tabsbuttons ">
+                  <li>
+                    <a class="change_leaderboard_tab" data-name="popular_tokens" href="#">New</a>
+                  </li>
+                  <li>
+                    <a class="change_leaderboard_tab" data-name="popular_presales" href="#">Curated</a>
+                  </li>
+                  <li class="active">
+                    <a class="change_leaderboard_tab " data-name="top_calls" href="#">Everyone</a>
+                  </li>
+                </ul>
+                <div class="flex items-center">
+                  <div class="linkset linkset_v2">
+                    <div class="linkset__items statistics_ranges">
+                      <div class="linkset__item"><a data-value="15m" href="#" class="linkset__link ">15m</a></div>
+                      <div class="linkset__item"><a data-value="30m" href="#" class="linkset__link ">30m</a></div>
+                      <div class="linkset__item"><a data-value="1h" href="#" class="linkset__link ">1h</a></div>
+                      <div class="linkset__item"><a data-value="3h" href="#" class="linkset__link ">3h</a></div>
+                      <div class="linkset__item"><a data-value="6h" href="#" class="linkset__link ">6h</a></div>
+                      <div class="linkset__item"><a data-value="12h" href="#" class="linkset__link ">12h</a></div>
+                      <div class="linkset__item"><a data-value="24h" href="#" class="linkset__link active">24h</a>
+                      </div>
+                      <div class="linkset__item"><a data-value="3d" href="#" class="linkset__link ">3d</a></div>
+                      <div class="linkset__item"><a data-value="7d" href="#" class="linkset__link ">7d</a></div>
+                    </div>
+                  </div>
+                </div><!-- /.flex -->
+              </div><!-- /.flex -->
+            </div>
+          </div>
+        </div><!-- /.mobilemenu__nav -->
+      </div>
+      <!-- /.mobilemenu__block -->
+      <div class="mobilemenu__footer">
+        <div class="mobilemenu__item  mobilemenu__signout mb-0">
+          <div class="mobilemenu__content">
+            <a href='#' class="mobilemenu__link">
+              <span class='mobilemenu__icon'><img src="img/Logout.svg" alt=""></span>
+              <span class='mobilemenu__name'>Sign Out</span>
+            </a>
+          </div>
+        </div>
+        <!-- <div class="subscribelink ">
+            <a href='#' class="subscribelink__wrapper flex items-center">
+              <div class="subscribelink__main flex items-center">
+                <div class="subscribelink__icon"><img src="img/coin_3305481.svg" alt=""></div>
+                <div class="subscribelink__content">
+                  <div class="subscribelink__title">Start subscription</div>
+                  <div class="subscribelink__text">
+                    <div class="subscribelink__price">For $49.00</div>
+                    <div class="subscribelink__subprice">/month</div>
+                  </div>
+                </div>
+              </div>
+              <div class="subscribelink__link">Sign In</div>
+            </a>
+          </div> -->
+
+      </div>
+    </div>
+  </div>
+
+  <div class="siteheader__nav tabsnav_mobile">
+    <div class="container">
+      <div class="tabsnav  ">
+        <div class="tabsnav__links flex content-between items-center tabsnav__links_wallets">
+          <div class="itemsnav itemsnav_table flex items-center content-between mt-0 ">
+            <div class="flex items-center content-between itemsnav_v2">
+              <ul class="flex tabsbuttons ">
+                <li>
+                  <a class="change_leaderboard_tab" data-name="popular_tokens" href="#">Watchlist</a>
+                </li>
+                <li>
+                  <a class="change_leaderboard_tab" data-name="popular_presales" href="#">+3 KOL Calls <span
+                      class="iconlink__count">5</span></a>
+                </li>
+                <li class="">
+                  <a class="change_leaderboard_tab " data-name="top_calls" href="#">New Projects <span
+                      class="iconlink__count">5</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.container -->
+  </div><!-- /.siteheader__nav -->
+
+  <div class="navcontent">
+
+    <div class="tabsnav tabsnav_v2">
+      <div class="container">
+        <div class="tabsnav__links flex content-between items-center tabsnav__links_wallets">
+          <div class="linkset__items statistics_ranges flex">
+
+            <div class="linkset__item"><a data-value="15m" href="#" class="linkset__link ">15m</a></div>
+            <div class="linkset__item"><a data-value="30m" href="#" class="linkset__link active">30m</a></div>
+            <div class="linkset__item"><a data-value="1h" href="#" class="linkset__link ">1h</a></div>
+            <div class="linkset__item"><a data-value="3h" href="#" class="linkset__link ">3h</a></div>
+            <div class="linkset__item"><a data-value="6h" href="#" class="linkset__link ">6h</a></div>
+            <div class="linkset__item"><a data-value="12h" href="#" class="linkset__link ">12h</a></div>
+            <div class="linkset__item"><a data-value="24h" href="#" class="linkset__link ">24h</a></div>
+            <div class="linkset__item"><a data-value="3d" href="#" class="linkset__link ">3d</a></div>
+            <div class="linkset__item"><a data-value="7d" href="#" class="linkset__link ">7d</a></div>
+          </div>
+          <div class="itemsnav itemsnav_table flex items-center content-between mt-0">
+            <a href="#" data-toggleclick="searchv2" class="searchv2"><img src="img/searchv2.svg" alt=""></a>
+
+            <div class="itemsnav__right" data-togglewrapper="searchv2" data-toggle="searchv2">
+              <div class="pagesearch">
+                <div class="pagesearch__form">
+                  <form action="">
+                    <div class="pagesearch__input">
+                      <div class="searchinput">
+                        <input type="text" placeholder="Search by Twitter Handle" oninput="" value=''>
+
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- /#header.header -->
+        <main>
+
+
+          <div class="navcontent">
+  
+              <div class="tabsnav tabsnav_v2">
+                <div class="container">
+                <div class="tabsnav__links flex content-between items-center tabsnav__links_wallets">
+                  <div class="linkset__items statistics_ranges flex">
+
+                    <div class="linkset__item"><a data-value="15m" href="#" class="linkset__link ">15m</a></div>
+                    <div class="linkset__item"><a data-value="30m" href="#" class="linkset__link active">30m</a></div>
+                    <div class="linkset__item"><a data-value="1h" href="#" class="linkset__link ">1h</a></div>
+                    <div class="linkset__item"><a data-value="3h" href="#" class="linkset__link ">3h</a></div>
+                    <div class="linkset__item"><a data-value="6h" href="#" class="linkset__link ">6h</a></div>
+                    <div class="linkset__item"><a data-value="12h" href="#" class="linkset__link ">12h</a></div>
+                    <div class="linkset__item"><a data-value="24h" href="#" class="linkset__link ">24h</a></div>
+                    <div class="linkset__item"><a data-value="3d" href="#" class="linkset__link ">3d</a></div>
+                    <div class="linkset__item"><a data-value="7d" href="#" class="linkset__link ">7d</a></div>
+                  </div>
+                  <div class="itemsnav itemsnav_table flex items-center content-between mt-0">
+                    <a href="#" data-toggleclick="searchv2" class="searchv2"><img src="img/searchv2.svg" alt=""></a>
+
+                    <div class="itemsnav__right" data-togglewrapper="searchv2" data-toggle="searchv2">
+                      <div class="pagesearch" >
+                        <div class="pagesearch__form">
+                          <form action="">
+                            <div class="pagesearch__input">
+                              <div class="searchinput">
+                                <input type="text" placeholder="Search by Twitter Handle" oninput="" value=''>
+
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tableblock tableblock_tab tableblock_tab_full tableblock__kols">
+                <div class="tableblock__wrapper">
+                  <div class="tableblock__table">
+                    <div class="tableblock__scroll">
+                      <div class="tableblock__header">
+                        <div class="tableblock__row">
+                          <div
+                          class="tableblock__col tableblock__param tableblock__param_roi flex items-center   tableblock__col_fav">
+                          <span class="tableblock__title"></span>
+                        </div>
+
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_roi flex items-center   tableblock__col_project">
+                            <span class="tableblock__title">Project</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_bullish flex items-center   tableblock__col_date" >
+                            <a href='#' class="tableblock__title" >
+                              <span>Date</span>
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.4">
+                                <path d="M2.2339 2.35988C2.3804 2.21337 2.61765 2.21337 2.76415 2.35988L5.99915 5.59488L9.2339 2.35988C9.3804 2.21337 9.61765 2.21337 9.76415 2.35988L11.3891 3.98488C11.5356 4.13138 11.5356 4.36862 11.3891 4.51513L6.26415 9.64013C6.19115 9.71363 6.09515 9.75013 5.99915 9.75013C5.90315 9.75013 5.80715 9.71363 5.7339 9.64038L0.608898 4.51538C0.462399 4.36888 0.462399 4.13163 0.608898 3.98513L2.2339 2.35988Z" fill="white"/>
+                                </g>
+                                </svg>
+                                
+                            </a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_shiller flex items-center   tableblock__col_newkols">
+                            <a href='#' class="tableblock__title">
+                              <span>New Kols</span>
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.4">
+                                <path d="M2.2339 2.35988C2.3804 2.21337 2.61765 2.21337 2.76415 2.35988L5.99915 5.59488L9.2339 2.35988C9.3804 2.21337 9.61765 2.21337 9.76415 2.35988L11.3891 3.98488C11.5356 4.13138 11.5356 4.36862 11.3891 4.51513L6.26415 9.64013C6.19115 9.71363 6.09515 9.75013 5.99915 9.75013C5.90315 9.75013 5.80715 9.71363 5.7339 9.64038L0.608898 4.51538C0.462399 4.36888 0.462399 4.13163 0.608898 3.98513L2.2339 2.35988Z" fill="white"/>
+                                </g>
+                                </svg>
+                                
+                            </a>
+
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center    tableblock__col_time">
+                            <a href='#' class="tableblock__title">
+                              <span>24h</span>
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.4">
+                                <path d="M2.2339 2.35988C2.3804 2.21337 2.61765 2.21337 2.76415 2.35988L5.99915 5.59488L9.2339 2.35988C9.3804 2.21337 9.61765 2.21337 9.76415 2.35988L11.3891 3.98488C11.5356 4.13138 11.5356 4.36862 11.3891 4.51513L6.26415 9.64013C6.19115 9.71363 6.09515 9.75013 5.99915 9.75013C5.90315 9.75013 5.80715 9.71363 5.7339 9.64038L0.608898 4.51538C0.462399 4.36888 0.462399 4.13163 0.608898 3.98513L2.2339 2.35988Z" fill="white"/>
+                                </g>
+                                </svg>
+                                
+                            </a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center    tableblock__col_watchlist">
+                            <a href='#' class="tableblock__title">
+                              <span>Watchlist</span>
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.4">
+                                <path d="M2.2339 2.35988C2.3804 2.21337 2.61765 2.21337 2.76415 2.35988L5.99915 5.59488L9.2339 2.35988C9.3804 2.21337 9.61765 2.21337 9.76415 2.35988L11.3891 3.98488C11.5356 4.13138 11.5356 4.36862 11.3891 4.51513L6.26415 9.64013C6.19115 9.71363 6.09515 9.75013 5.99915 9.75013C5.90315 9.75013 5.80715 9.71363 5.7339 9.64038L0.608898 4.51538C0.462399 4.36888 0.462399 4.13163 0.608898 3.98513L2.2339 2.35988Z" fill="white"/>
+                                </g>
+                                </svg>
+                                
+                            </a>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center    tableblock__col_hashtags">
+                            <span class="tableblock__title">Hashtags</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center    tableblock__col_notes">
+                            <span class="tableblock__title">Notes</span>
+                          </div>
+                          <div
+                            class="tableblock__col tableblock__param tableblock__param_total flex items-center    tableblock__col_count">
+                            <span class="tableblock__title"></span>
+                          </div>
+
+
+
+                        </div>
+                      </div>
+                     
+
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="emptyblock emptyblock_lg vhblock">
+            <div class="emptyblock__wrapper flex  items-center">
+              <div class="emptyblock__image">
+                <div class="emptyblock__img">
+                  <img src="img/empty_folder_dark.svg" alt="">
+                </div>
+              </div>
+              <div class="emptyblock__text"> There are no trending projects here. </div>
+            </div>
+          </div>
+
+        </main>
+        
+<footer id="footer" class="sitefooter sitefooter_sm">
+  <div class="sitefooter__wrapper">
+    <div class="container">
+      <div class="sitefooter__items flex content-between items-center">
+        <div class="sitefooter__left flex items-center">
+          <a href="#" class="notesbtn" data-toggleclick='notesbtn'>
+            <img src="img/note.svg" alt="">
+
+              
+            <span>Notes</span>
+          </a>
+
+          <div class="messageblock messageblock_notes dropdownblock " data-toggle="notesbtn">
+            <div class="messageblock__wrapper dropdownblock__wrapper">
+              <div class="messageblock__items">
+                <div class="messageblock__item">
+                  <div class="messageblock__header">
+                    <div class="messageblock__left">
+                      <div class="messageblock__user">
+                        <div class="messageblock__usericon">
+                          <img src="img/messageblock__usericon.svg" alt="">
+                        </div>
+                        <div class="messageblock__username">Username</div>
+                      </div><!-- /.messageblock__user -->
+                      <div class="messageblock__thing">
+                        <div class="messageblock__thingimg">
+                          <img src="img/messageblock__thingimg.png" alt="">
+
+                        </div>
+                        <div class="messageblock__thingtitle">BABYBTC</div>
+                      </div><!-- /.messageblock__thing -->
+                    </div><!-- /.messageblock__left -->
+                    <div class="messageblock__right">
+                      <div class="messageblock__param">2 hours ago</div>
+                    </div><!-- /.messageblock__right -->
+                  </div><!-- /.messageblock__header -->
+
+                  <div class="messageblock__content">
+                    <div class="messageblock__note">
+                      <div class="messageblock__noteimg">
+                        <img src="img/note.svg" alt="">
+                      </div>
+                      <div class="messageblock__notetext">Vestibulum ut velit ultrices, consequat risus sed, semper dolor. Aliquam semper pulvinar diam, sed bibendum tellus congue ac. In lorem est, pharetra non tincidunt vel,</div>
+                    </div><!-- /.messageblock__note -->
+                  </div><!-- /.messageblock__content -->
+                  
+                </div>
+               
+                <div class="messageblock__item">
+                  <div class="messageblock__header">
+                    <div class="messageblock__left">
+                      <div class="messageblock__user">
+                        <div class="messageblock__usericon">
+                          <img src="img/messageblock__usericon.svg" alt="">
+                        </div>
+                        <div class="messageblock__username">Username</div>
+                      </div><!-- /.messageblock__user -->
+                      <div class="messageblock__thing">
+                        <div class="messageblock__thingimg">
+                          <img src="img/messageblock__thingimg.png" alt="">
+
+                        </div>
+                        <div class="messageblock__thingtitle">Arie</div>
+                      </div><!-- /.messageblock__thing -->
+                    </div><!-- /.messageblock__left -->
+                    <div class="messageblock__right">
+                      <div class="messageblock__param">2 hours ago</div>
+                    </div><!-- /.messageblock__right -->
+                  </div><!-- /.messageblock__header -->
+
+                  <div class="messageblock__content">
+                    <div class="messageblock__note">
+                      <div class="messageblock__noteimg">
+                        <img src="img/note.svg" alt="">
+                      </div>
+                      <div class="messageblock__notetext">Vestibulum ut velit ultrices, consequat risus sed, semper dolor. Aliquam semper pulvinar diam, sed bibendum tellus congue ac. In lorem est, pharetra non tincidunt vel,</div>
+                    </div><!-- /.messageblock__note -->
+                  </div><!-- /.messageblock__content -->
+                  
+                </div>
+               
+                <div class="messageblock__item">
+                  <div class="messageblock__header">
+                    <div class="messageblock__left">
+                      <div class="messageblock__user">
+                        <div class="messageblock__usericon">
+                          <img src="img/messageblock__usericon.svg" alt="">
+                        </div>
+                        <div class="messageblock__username">Username</div>
+                      </div><!-- /.messageblock__user -->
+                      <div class="messageblock__thing">
+                        <div class="messageblock__thingimg">
+                          <img src="img/messageblock__thingimg.png" alt="">
+
+                        </div>
+                        <div class="messageblock__thingtitle">Arie</div>
+                      </div><!-- /.messageblock__thing -->
+                    </div><!-- /.messageblock__left -->
+                    <div class="messageblock__right">
+                      <div class="messageblock__param">2 hours ago</div>
+                    </div><!-- /.messageblock__right -->
+                  </div><!-- /.messageblock__header -->
+
+                  <div class="messageblock__content">
+                    <div class="messageblock__note">
+                      <div class="messageblock__noteimg">
+                        <img src="img/note.svg" alt="">
+                      </div>
+                      <div class="messageblock__notetext">Vestibulum ut velit ultrices, consequat risus sed, semper dolor. Aliquam semper pulvinar diam, sed bibendum tellus congue ac. In lorem est, pharetra non tincidunt vel,</div>
+                    </div><!-- /.messageblock__note -->
+                  </div><!-- /.messageblock__content -->
+                  
+                </div>
+               
+                <div class="messageblock__item">
+                  <div class="messageblock__header">
+                    <div class="messageblock__left">
+                      <div class="messageblock__user">
+                        <div class="messageblock__usericon">
+                          <img src="img/messageblock__usericon.svg" alt="">
+                        </div>
+                        <div class="messageblock__username">Username</div>
+                      </div><!-- /.messageblock__user -->
+                      <div class="messageblock__thing">
+                        <div class="messageblock__thingimg">
+                          <img src="img/messageblock__thingimg.png" alt="">
+
+                        </div>
+                        <div class="messageblock__thingtitle">Arie</div>
+                      </div><!-- /.messageblock__thing -->
+                    </div><!-- /.messageblock__left -->
+                    <div class="messageblock__right">
+                      <div class="messageblock__param">2 hours ago</div>
+                    </div><!-- /.messageblock__right -->
+                  </div><!-- /.messageblock__header -->
+
+                  <div class="messageblock__content">
+                    <div class="messageblock__note">
+                      <div class="messageblock__noteimg">
+                        <img src="img/note.svg" alt="">
+                      </div>
+                      <div class="messageblock__notetext">Vestibulum ut velit ultrices, consequat risus sed, semper dolor. Aliquam semper pulvinar diam, sed bibendum tellus congue ac. In lorem est, pharetra non tincidunt vel,</div>
+                    </div><!-- /.messageblock__note -->
+                  </div><!-- /.messageblock__content -->
+                  
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sitefooter__right">
+          <div class="sitefooter__info">
+            <div class="sitefooter__text onlyDesktop">
+              <a href="#">How this tool works?</a>
+            </div>
+            <div class="sitefooter__text onlyDesktop">Last Update: 17 June 2024, 5:30pm</div>
+            <div class="sitefooter__text onlyMobile">17 June 2024, 5:30pm</div>
+          </div><!-- /.sitefooter__info -->
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/index.js"></script>
+<script src="js/v3.js"></script>
+<script src="js/v4.js"></script>
+
+
+
+    </div>
