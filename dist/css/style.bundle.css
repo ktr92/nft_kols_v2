@@ -16501,6 +16501,7 @@ main {
   border-radius: 555px; }
 
 .tablehashtags__list ul {
+  line-height: 1;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -16925,12 +16926,12 @@ i.icon-datepicker-plus {
   height: calc(100vh - 182px); }
 
 .tableblock_tab.tableblock__kols .tableblock__header .tableblock__col {
-  padding-top: 5px;
+  padding-top: 6px;
   padding-bottom: 5px;
   height: 62px; }
 
 .tableblock_tab.tableblock__kols .tableblock__body .tableblock__col {
-  padding-top: 5px;
+  padding-top: 6px;
   padding-bottom: 5px;
   height: 62px; }
 
